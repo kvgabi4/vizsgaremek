@@ -1,3 +1,12 @@
+### Fullstack API - Vizsgaremek
+
+## **Gyümölcsfákat árusító webáruház adminisztrációs felülete**
+<br>
+
+---
+# ***Dokumentáció***
+<br>
+
 ## **1. Az alkalmazás célja**
 
 Az alkalmazás egy gyümölcsfa csemetéket árusító webshop adminisztrációs felülete. Feladata, hogy belépés után hozzáférhetővé váljanak a webshop adatai és azokon lekérdezéseket, alapvető CRUD műveleteket végre tudjunk hajtani.
