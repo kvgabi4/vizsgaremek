@@ -12,6 +12,6 @@ export class BillService extends BaseService<Bill> {
     public http: HttpClient,
   ) {
     super(http);
-    this.entity = 'customers';
+    this.entity = 'bills';
   }
 }
