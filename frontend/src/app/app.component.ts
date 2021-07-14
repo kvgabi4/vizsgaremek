@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Customer } from './model/customer';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontend';
+
+  customers: Observable<Customer[]> = this.customerService.getAll();
+
+  constructor(
+    private customerService: CustomerService,
+  ) {}
 }

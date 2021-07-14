@@ -1,0 +1,40 @@
+{
+  "customers": [
+    {
+      "_id": "123456abc",
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "jd@gmail.com",
+      "address": "Budapest",
+      "active": true
+    }
+  ],
+  "products": [
+    {
+      "_id": "987fgh",
+      "name": "Mutsu",
+      "category": "apple",
+      "price": 300,
+      "active": true,
+      "description": "This is a green apple."
+    }
+  ],
+  "orders": [
+    {
+      "_id": "246ace",
+      "customerId": "123456abc",
+      "productIds": [
+        "987fgh"
+      ],
+      "amount": "5000",
+      "status": "new"
+    }
+  ],
+  "bills": [
+    {
+      "_id": "987654mnb",
+      "orderId": "246ace",
+      "status": "new"
+    }
+  ]
+}
