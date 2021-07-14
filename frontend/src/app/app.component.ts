@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Customer } from './model/customer';
+import { CustomerService } from './service/customer.service';
 
 @Component({
   selector: 'app-root',
