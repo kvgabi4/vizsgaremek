@@ -1,7 +1,7 @@
 export class Order {
   _id: string = '';
   customerId: string = '';
-  productId: string = '';
+  productIds: string[] = [];
   amount: number = 0;
-  status: "new" | "paid" | "shipped" = "new";
+  status: "new" | "shipped" | "cancelled" = "new";
 }
