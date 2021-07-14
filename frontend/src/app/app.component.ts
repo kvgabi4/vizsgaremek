@@ -4,7 +4,9 @@ import { Bill } from './model/bill';
 import { Customer } from './model/customer';
 import { Order } from './model/order';
 import { Product } from './model/product';
+import { BillService } from './service/bill.service';
 import { CustomerService } from './service/customer.service';
+import { OrderService } from './service/order.service';
 import { ProductService } from './service/product.service';
 
 @Component({
