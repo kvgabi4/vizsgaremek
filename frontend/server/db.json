@@ -7,6 +7,14 @@
       "email": "jd@gmail.com",
       "address": "Budapest",
       "active": true
+    },
+    {
+      "_id": "123000abc",
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "email": "janed@gmail.com",
+      "address": "Budapest",
+      "active": true
     }
   ],
   "products": [
@@ -17,6 +25,14 @@
       "price": 300,
       "active": true,
       "description": "This is a green apple."
+    },
+    {
+      "_id": "999fff",
+      "name": "Bosc kobak",
+      "category": "pear",
+      "price": 350,
+      "active": true,
+      "description": "This is a delicious pear."
     }
   ],
   "orders": [
@@ -24,9 +40,19 @@
       "_id": "246ace",
       "customerId": "123456abc",
       "productIds": [
-        "987fgh"
+        "987fgh",
+        "999fff"
       ],
       "amount": "5000",
+      "status": "new"
+    },
+    {
+      "_id": "246acc",
+      "customerId": "123000abc",
+      "productIds": [
+        "987fgh"
+      ],
+      "amount": "3000",
       "status": "new"
     }
   ],
@@ -34,6 +60,11 @@
     {
       "_id": "987654mnb",
       "orderId": "246ace",
+      "status": "new"
+    },
+    {
+      "_id": "980000aaa",
+      "orderId": "246acc",
       "status": "new"
     }
   ]
