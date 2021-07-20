@@ -1,3 +1,4 @@
+import { CurrencyPipe } from '@angular/common';
 import { Injectable } from '@angular/core';
 
 export interface ITableColumn {
@@ -7,7 +8,7 @@ export interface ITableColumn {
   outputTransform?: any;
   htmlOutput?: any;
   pipes?: any[];
-  pipeArgs?: any[][];
+  pipeArgs?: [any[]];
 }
 
 @Injectable({
@@ -36,9 +37,9 @@ export class ConfigService {
     {key: "_id", title: "#"},
     {key: "name", title: "Name"},
     {key: "category", title: "Category"},
-    // {key: "price", title: "Price", pipes: [new CurrencyPipe('hu-HU')], pipeArgs: [['HUF', 'symbol', '3.0']]},
+    {key: "price", title: "Price", pipes: [new CurrencyPipe('hu-HU')], pipeArgs: [['HUF', 'symbol', '3.0']]},
     // {key: "active", title: "Active", htmlOutput: ConfigService.activeOrInactiveSign },
-    {key: "price", title: "Price", },
+    // {key: "price", title: "Price", },
     {key: "active", title: "Active", },
     {key: "image", title: "Image"},
     {key: "description", title: "Description"},
