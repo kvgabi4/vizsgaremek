@@ -5,7 +5,11 @@
       "firstName": "John",
       "lastName": "Doe",
       "email": "jd@gmail.com",
-      "address": "Budapest",
+      "address": {
+        "zip": 1183,
+        "city": "Budapest",
+        "street": "Széchenyi u. 1/A."
+      },
       "active": true,
       "phone": "+36301234567",
       "coupon": 235,
@@ -16,8 +20,12 @@
       "firstName": "Jane",
       "lastName": "Doe",
       "email": "janed@gmail.com",
-      "address": "Budapest",
-      "active": true,
+      "address": {
+        "zip": 1115,
+        "city": "Budapest",
+        "street": "Kossuth u. 3."
+      },
+      "active": false,
       "phone": "+36301234500",
       "coupon": 200,
       "numberOfOrders": 2
@@ -49,8 +57,10 @@
         "987fgh",
         "999fff"
       ],
+      "time": 1627700000000,
       "amount": "5000",
-      "status": "new"
+      "status": "new",
+      "note": "Please call me before delivery."
     },
     {
       "_id": "246acc",
@@ -58,20 +68,23 @@
       "productIds": [
         "987fgh"
       ],
+      "time": 1626699947303,
       "amount": "3000",
-      "status": "new"
+      "status": "shipped"
     }
   ],
   "bills": [
     {
       "_id": "987654mnb",
       "orderId": "246ace",
+      "time": 1626699947303,
       "status": "new"
     },
     {
       "_id": "980000aaa",
       "orderId": "246acc",
-      "status": "new"
+      "time": 1627700000000,
+      "status": "paid"
     }
   ]
 }
