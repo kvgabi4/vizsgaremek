@@ -13,6 +13,7 @@ import { CustomersComponent } from './page/customers/customers.component';
 import { OrdersComponent } from './page/orders/orders.component';
 import { ProductsComponent } from './page/products/products.component';
 import { DataTableComponent } from './common/data-table/data-table.component';
+import { XPipePipe } from './pipe/x-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DataTableComponent } from './common/data-table/data-table.component';
     CustomersComponent,
     OrdersComponent,
     ProductsComponent,
-    DataTableComponent
+    DataTableComponent,
+    XPipePipe
   ],
   imports: [
     BrowserModule,
