@@ -16,4 +16,8 @@ export class BaseService<T> {
   getAll(): Observable<T[]> {
     return this.http.get<T[]>(`${this.apiUrl}${this.entity}`);
   }
+
+  get(_id: string): Observable<T> {
+    return this.http.get<T>(`${this.apiUrl}${this.entity}/${_id}`);
+  }
 }
