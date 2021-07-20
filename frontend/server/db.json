@@ -6,7 +6,10 @@
       "lastName": "Doe",
       "email": "jd@gmail.com",
       "address": "Budapest",
-      "active": true
+      "active": true,
+      "phone": "+36301234567",
+      "coupon": 235,
+      "numberOfOrders": 5
     },
     {
       "_id": "123000abc",
@@ -14,7 +17,10 @@
       "lastName": "Doe",
       "email": "janed@gmail.com",
       "address": "Budapest",
-      "active": true
+      "active": true,
+      "phone": "+36301234500",
+      "coupon": 200,
+      "numberOfOrders": 2
     }
   ],
   "products": [

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ITableColumn, ConfigService } from 'src/app/service/config.service';
 
 @Component({
   selector: 'app-products',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() { }
+  productColumns: ITableColumn[] = this.config.productColumns;
+  entity: string = 'Products';
+
+  constructor(
+    private config: ConfigService
+  ) { }
 
   ngOnInit(): void {
   }
