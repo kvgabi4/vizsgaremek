@@ -12,8 +12,7 @@
       },
       "active": true,
       "phone": "+36301234567",
-      "coupon": 235,
-      "numberOfOrders": 5
+      "coupon": 235
     },
     {
       "_id": "123000abc",
@@ -27,8 +26,7 @@
       },
       "active": false,
       "phone": "+36301234500",
-      "coupon": 200,
-      "numberOfOrders": 2
+      "coupon": 200
     }
   ],
   "products": [

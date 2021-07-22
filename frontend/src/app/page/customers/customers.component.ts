@@ -13,7 +13,7 @@ export class CustomersComponent implements OnInit {
 
   customerColumns: ITableColumn[] = this.config.customerColumns;
   list$: Observable<Customer[]> = this.customerService.getAll();
-  entity: string = 'Customers';
+  entity: string = 'Vásárlók';
 
   constructor(
     private config: ConfigService,

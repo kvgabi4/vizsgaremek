@@ -13,7 +13,7 @@ export class OrdersComponent implements OnInit {
 
   orderColumns: ITableColumn[] = this.config.orderColumns;
   list$: Observable<Order[]> = this.orderService.getAll();
-  entity: string = 'Orders';
+  entity: string = 'Megrendelések';
 
   constructor(
     private config: ConfigService,

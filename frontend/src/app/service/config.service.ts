@@ -21,43 +21,42 @@ export class ConfigService {
 
   customerColumns: ITableColumn[] = [
     {key: "_id", title: "#"},
-    {key: "firstName", title: "First Name"},
-    {key: "lastName", title: "Last Name"},
+    {key: "lastName", title: "Vezetéknév"},
+    {key: "firstName", title: "Keresztnév"},
     {key: "email", title: "Email"},
     {
-      key: "address", title: "Address",
+      key: "address", title: "Cím",
       pipes: [ConfigService.getSubProperty],
       pipeArgs: [['zip', 'city', 'street']]
     },
-    {key: "active", title: "Active", htmlOutput: ConfigService.activeOrInactiveSign },
-    {key: "coupon", title: "Coupon" },
-    {key: "numberOfOrders", title: "Number of orders"},
+    {key: "active", title: "Aktív", htmlOutput: ConfigService.activeOrInactiveSign },
+    {key: "coupon", title: "Kupon" }
   ];
 
   productColumns: ITableColumn[] = [
     {key: "_id", title: "#"},
-    {key: "name", title: "Name"},
-    {key: "category", title: "Category"},
-    {key: "price", title: "Price", pipes: [new CurrencyPipe('hu-HU')], pipeArgs: [['HUF', 'symbol', '3.0']]},
-    {key: "active", title: "Active", htmlOutput: ConfigService.activeOrInactiveSign },
-    {key: "image", title: "Image"},
-    {key: "description", title: "Description"},
+    {key: "name", title: "Megnevezés"},
+    {key: "category", title: "Kategória"},
+    {key: "price", title: "Ár", pipes: [new CurrencyPipe('hu-HU')], pipeArgs: [['HUF', 'symbol', '3.0']]},
+    {key: "active", title: "Aktív", htmlOutput: ConfigService.activeOrInactiveSign },
+    {key: "image", title: "Kép"},
+    {key: "description", title: "Leírás"},
   ];
 
   orderColumns: ITableColumn[] = [
     {key: "_id", title: "#"},
     {
       key: "customerId",
-      title: "Customer",
+      title: "Vásárló",
       pipes: [ConfigService.getSubProperty],
       pipeArgs: [['firstName', 'lastName']]
     },
-    {key: "productIds", title: "Products"},
-    {key: "time", title: "Time", pipes: [ConfigService.sqlDate]},
-    {key: "amount", title: "Amount"},
-    {key: "status", title: "Status"},
+    {key: "productIds", title: "Termékek"},
+    {key: "time", title: "Dátum", pipes: [ConfigService.sqlDate]},
+    {key: "amount", title: "Összeg"},
+    {key: "status", title: "Státusz"},
     {
-      key: "note", title: "Note",
+      key: "note", title: "Megjegyzés",
       pipes: [ConfigService.curveLongString],
       pipeArgs: [[0, 15]]
     },
@@ -65,9 +64,9 @@ export class ConfigService {
 
   billColumns: ITableColumn[] = [
     {key: "_id", title: "#"},
-    {key: "orderId", title: "OrderId"},
-    {key: "time", title: "Time", pipes: [ConfigService.sqlDate]},
-    {key: "status", title: "Status"},
+    {key: "orderId", title: "Megrendelés"},
+    {key: "time", title: "Dátum", pipes: [ConfigService.sqlDate]},
+    {key: "status", title: "Státusz"},
   ];
 
   constructor() { }

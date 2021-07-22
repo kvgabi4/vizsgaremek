@@ -13,7 +13,7 @@ export class BillsComponent implements OnInit {
 
   billColumns: ITableColumn[] = this.config.billColumns;
   list$: Observable<Bill[]> = this.billService.getAll();
-  entity: string = 'Bills';
+  entity: string = 'Számlák';
 
   constructor(
     private config: ConfigService,

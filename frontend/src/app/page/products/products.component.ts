@@ -13,7 +13,7 @@ export class ProductsComponent implements OnInit {
 
   productColumns: ITableColumn[] = this.config.productColumns;
   list$: Observable<Product[]> = this.productService.getAll();
-  entity: string = 'Products';
+  entity: string = 'Termékek';
 
   constructor(
     private config: ConfigService,
