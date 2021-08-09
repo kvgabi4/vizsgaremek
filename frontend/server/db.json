@@ -27,6 +27,20 @@
       "active": false,
       "phone": "+36301234500",
       "coupon": 200
+    },
+    {
+      "_id": "222222def",
+      "firstName": "Paul",
+      "lastName": "Butts",
+      "email": "pb@vmail.com",
+      "address": {
+        "zip": 3535,
+        "city": "Miskolc",
+        "street": "Árpád u. 3."
+      },
+      "active": false,
+      "phone": "+36701111111",
+      "coupon": 500
     }
   ],
   "products": [

@@ -14,6 +14,8 @@ export class OrdersComponent implements OnInit {
   orderColumns: ITableColumn[] = this.config.orderColumns;
   list$: Observable<Order[]> = this.orderService.getAll();
   entity: string = 'Megrendelések';
+  filterKeys: string[][] = this.config.orderColumns.map(item => [item.key, item.title]);
+  filterKey: string[] = this.filterKeys[1];
 
   constructor(
     private config: ConfigService,

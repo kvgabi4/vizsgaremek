@@ -11,6 +11,9 @@ export class DataTableComponent<T extends {[propname: string]: any}> implements 
 
   @Input() tableColumns: ITableColumn[] = [];
   @Input() list$: Observable<T[]> | null = null;
+  @Input() filterKeys: string[][] = [];
+  @Input() filterKey: string[] = [];
+  phrase: string = '';
 
   constructor(
     private config: ConfigService

@@ -23,7 +23,7 @@ export class ConfigService {
     {key: "_id", title: "#"},
     {key: "lastName", title: "Vezetéknév"},
     {key: "firstName", title: "Keresztnév"},
-    {key: "email", title: "Email"},
+    {key: "email", title: "E-mail"},
     {
       key: "address", title: "Cím",
       pipes: [ConfigService.getSubProperty],

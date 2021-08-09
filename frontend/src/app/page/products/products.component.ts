@@ -14,6 +14,9 @@ export class ProductsComponent implements OnInit {
   productColumns: ITableColumn[] = this.config.productColumns;
   list$: Observable<Product[]> = this.productService.getAll();
   entity: string = 'Termékek';
+  filterKeys: string[][] = this.config.productColumns.map(item => [item.key, item.title]);
+  filterKey: string[] = this.filterKeys[1];
+
 
   constructor(
     private config: ConfigService,

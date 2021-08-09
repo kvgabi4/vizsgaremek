@@ -14,6 +14,9 @@ export class BillsComponent implements OnInit {
   billColumns: ITableColumn[] = this.config.billColumns;
   list$: Observable<Bill[]> = this.billService.getAll();
   entity: string = 'Számlák';
+  filterKeys: string[][] = this.config.billColumns.map(item => [item.key, item.title]);
+  filterKey: string[] = this.filterKeys[1];
+
 
   constructor(
     private config: ConfigService,
