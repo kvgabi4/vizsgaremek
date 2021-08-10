@@ -48,12 +48,30 @@ export class ConfigService {
     {
       key: "customerId",
       title: "Vásárló",
-      pipes: [ConfigService.getSubProperty],
-      pipeArgs: [['firstName', 'lastName']]
+      // pipes: [ConfigService.getSubProperty],
+      // pipeArgs: [['firstName', 'lastName']]
     },
-    {key: "productIds", title: "Termékek"},
-    {key: "time", title: "Dátum", pipes: [ConfigService.sqlDate]},
-    {key: "amount", title: "Összeg"},
+    { key: "productIds", title: "Termékek" },
+    // {
+    //   key: "products", title: "Termékek",
+    //   pipes: [ConfigService.getArrayItems],
+    //   pipeArgs: [['productId', 'amount']]
+    // },
+    // {key: "products[0].amounts", title: "Mennyiségek"},
+    // db.json:
+    // "products": [
+    //   {
+    //     "productId": "987fgh",
+    //     "amount": 3
+    //   },
+    //   {
+    //     "productId": "999fff",
+    //     "amount": 15
+    //   }
+    // ],
+
+
+    {key: "date", title: "Dátum", pipes: [ConfigService.sqlDate]},
     {key: "status", title: "Státusz"},
     {
       key: "note", title: "Megjegyzés",
@@ -65,11 +83,13 @@ export class ConfigService {
   billColumns: ITableColumn[] = [
     {key: "_id", title: "#"},
     {key: "orderId", title: "Megrendelés"},
-    {key: "time", title: "Dátum", pipes: [ConfigService.sqlDate]},
+    {key: "date", title: "Dátum", pipes: [ConfigService.sqlDate]},
     {key: "status", title: "Státusz"},
   ];
 
-  constructor() { }
+  constructor() {
+    console.log(this.orderColumns)
+   }
 
   static activeOrInactiveSign(v: boolean): string {
     const icon: string = v ? 'fa-check' : 'fa-ban';
@@ -79,6 +99,10 @@ export class ConfigService {
   static getSubProperty(obj: any, ...keys: string[]): string | number | boolean | undefined {
     return keys.map( key => get(obj, key) ).join(' ');
   }
+
+  // static getArrayItems(arr: (string | number)[], keys: string): any[] {
+  //   return arr.map( item => ConfigService.getSubProperty(item, keys));
+  // }
 
   static sqlDate(jsTime: number): string | number | boolean | undefined {
     const options: Intl.DateTimeFormatOptions = {

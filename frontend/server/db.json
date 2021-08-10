@@ -65,23 +65,16 @@
     {
       "_id": "246ace",
       "customerId": "123456abc",
-      "productIds": [
-        "987fgh",
-        "999fff"
-      ],
-      "time": 1627700000000,
-      "amount": "5000",
+      "productIds": ["987fgh", "999fff"],
+      "date": 1627700000000,
       "status": "new",
       "note": "Please call me before delivery."
     },
     {
       "_id": "246acc",
       "customerId": "123000abc",
-      "productIds": [
-        "987fgh"
-      ],
-      "time": 1626699947303,
-      "amount": "3000",
+      "productIds": ["987fgh"],
+      "date": 1626699947303,
       "status": "shipped"
     }
   ],
@@ -89,13 +82,13 @@
     {
       "_id": "987654mnb",
       "orderId": "246ace",
-      "time": 1626699947303,
+      "date": 1626699947303,
       "status": "new"
     },
     {
       "_id": "980000aaa",
       "orderId": "246acc",
-      "time": 1627700000000,
+      "date": 1627700000000,
       "status": "paid"
     }
   ]
