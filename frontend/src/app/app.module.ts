@@ -19,6 +19,7 @@ import { ProductsComponent } from './page/products/products.component';
 import { DataTableComponent } from './common/data-table/data-table.component';
 import { XPipePipe } from './pipe/x-pipe.pipe';
 import { FilterPipe } from './pipe/filter.pipe';
+import { LoginComponent } from './page/login/login.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { FilterPipe } from './pipe/filter.pipe';
     ProductsComponent,
     DataTableComponent,
     XPipePipe,
-    FilterPipe
+    FilterPipe,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
