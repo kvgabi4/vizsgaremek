@@ -1,9 +1,14 @@
 export class Order {
   _id: string = '';
   customerId: string = '';
-  productIds: string[] = [];
-  time: Date = new Date();
-  amount: number = 0;
+  products:[{
+    productId: string,
+    amount: number
+  }] = [{
+    productId: '',
+    amount: 0
+  }];
+  date: Date = new Date();
   status: "new" | "shipped" | "cancelled" = "new";
-  note: string = '';
+  note?: string = '';
 }

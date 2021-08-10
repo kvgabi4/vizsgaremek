@@ -1,6 +1,6 @@
 export class Bill {
   _id: string = '';
   orderId: string = '';
-  time: Date = new Date();
+  date: Date = new Date();
   status: "new" | "paid" = "new";
 }

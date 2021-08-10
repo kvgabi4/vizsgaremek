@@ -3,13 +3,13 @@ export class Customer {
   firstName: string = '';
   lastName: string = '';
   address: {
-      "zip": string | number,
-      "city": string,
-      "street": string
+      zip: string | number,
+      city: string,
+      street: string
     } = {
-      "zip": '',
-      "city": '',
-      "street": ''
+      zip: '',
+      city: '',
+      street: ''
     };
   email: string = '';
   phone: string = '';
