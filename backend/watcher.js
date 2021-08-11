@@ -12,7 +12,7 @@ setTimeout( () => {
     }
 
     running = true;
-    exec('docker restart vizsgaremek', (error, stdout, stderr) => {
+    exec('docker restart backend', (error, stdout, stderr) => {
       running = false;
       if (error) {
         console.error(`exec error: ${error}`);
