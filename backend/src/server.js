@@ -40,6 +40,7 @@ app.post('/logout', authHandler.logout);
 app.use('/person', authenticateJwt, require('./controllers/person/person.routes'));
 app.use('/post', authenticateJwt, adminOnly, require('./controllers/post/post.routes'));
 app.use('/orders', authenticateJwt, require('./controllers/order/routes'));
+app.use('/products', authenticateJwt, require('./controllers/product/routes'));
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use( (err, req, res, next) => {

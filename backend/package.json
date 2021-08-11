@@ -1,12 +1,12 @@
 {
-  "name": "vizsgaremek",
+  "name": "backend",
   "version": "1.0.0",
   "description": "* Node.js - Download and Install [Node.js](http://www.nodejs.org/download/).\r * MongoDB - Download and Install [MongoDB](http://www.mongodb.org/downloads) - Make sure it's running on the default port (27017).",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
     "test": "jest",
-    "docker:build": "docker build -t vizsgaremek:latest .",
+    "docker:build": "docker build -t backend:latest .",
     "docker-compose:up": "docker-compose up",
     "start-watch": "node watcher.js",
     "dev": "concurrently --kill-others \"node watcher.js\" \"docker-compose up\""
@@ -14,6 +14,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "config": "^3.3.6",
+    "cors": "^2.8.5",
     "dotenv": "^9.0.2",
     "express": "4.17.1",
     "http-errors": "^1.8.0",

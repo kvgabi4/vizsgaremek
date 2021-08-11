@@ -1,7 +1,7 @@
 const express = require('express');
 const createError = require('http-errors');
 
-const currentModel = require('../../models/user.model');
+const currentModel = require('../../models/product.model');
 const currentService = require('./service');
 
 const checkModel = (model, body, next) => {
@@ -47,7 +47,7 @@ module.exports.findOne = (req, res, next) => {
     return currentService.findOne(req.params.id)
         .then( item => {
             if (!item) {
-                return next(new createError.NotFound("User is not found"));
+                return next(new createError.NotFound("Product is not found"));
             }
             return res.json(item);
         });
