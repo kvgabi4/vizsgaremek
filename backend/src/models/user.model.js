@@ -15,6 +15,10 @@ const UserSchema = mongoose.Schema(
     active: {
       type: Boolean,
       default: true,
+    },
+    role: {
+      type: Number,
+      default: 0
     }
   },
   {

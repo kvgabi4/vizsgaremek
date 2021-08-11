@@ -2,12 +2,12 @@ const mongoose = require('mongoose');
 const idValidator = require('mongoose-id-validator');
 
 const OrderSchema = mongoose.Schema({
-    customerId: {
+    customer: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Customer',
         required: true
     },
-    productIds: {
+    products: {
         type: [mongoose.Schema.Types.ObjectId],
         ref: 'Product',
         required: true

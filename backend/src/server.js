@@ -16,7 +16,7 @@ const authHandler = require('./auth/authHandler');
 
 const swaggerDocument = YAML.load('./docs/swager.yaml');
 
-const { username, password, host } = config.get('database');
+const { host } = config.get('database');
 mongoose
     .connect(`mongodb://${host}`, {
         useNewUrlParser: true,
@@ -39,6 +39,7 @@ app.post('/logout', authHandler.logout);
 
 app.use('/person', authenticateJwt, require('./controllers/person/person.routes'));
 app.use('/post', authenticateJwt, adminOnly, require('./controllers/post/post.routes'));
+app.use('/orders', authenticateJwt, require('./controllers/order/routes'));
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use( (err, req, res, next) => {
