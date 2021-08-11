@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const swaggerUi = require('swagger-ui-express');
 const YAML = require('yamljs');
+const cors = require('./config/cors');
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
@@ -28,7 +29,8 @@ mongoose
         process.exit();
     });
 
-app.use(morgan('combined', {stream: logger.stream}));
+app.use(cors());
+app.use(morgan('combined', { stream: logger.stream }));
 app.use(express.static('public'));
 app.use(bodyParser.json());
 
