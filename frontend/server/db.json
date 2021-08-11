@@ -65,7 +65,10 @@
     {
       "_id": "246ace",
       "customerId": "123456abc",
-      "productIds": ["987fgh", "999fff"],
+      "productIds": [
+        "987fgh",
+        "999fff"
+      ],
       "date": 1627700000000,
       "status": "new",
       "note": "Please call me before delivery."
@@ -73,7 +76,9 @@
     {
       "_id": "246acc",
       "customerId": "123000abc",
-      "productIds": ["987fgh"],
+      "productIds": [
+        "987fgh"
+      ],
       "date": 1626699947303,
       "status": "shipped"
     }
@@ -90,6 +95,24 @@
       "orderId": "246acc",
       "date": 1627700000000,
       "status": "paid"
+    }
+  ],
+  "users": [
+    {
+      "_id": "aff158735de2abc555",
+      "firstName": "János",
+      "lastName": "File",
+      "email": "jfile@gmail.com",
+      "active": true,
+      "password": "$2a$10$gM4bsxl5NDA6O3X330UmDOWZWCixRWFR36gNg5yLXf5c6cO0FGq9e"
+    },
+    {
+      "_id": "dsjfhi45hsdofh",
+      "firstName": "Elemér",
+      "lastName": "Kocsis",
+      "email": "elemer@gmail.com",
+      "active": true,
+      "password": "$2a$10$cUP88ByYtUYesfPyOP9jEe/LLDflUpn5zQKSPlsauOSwdDs/CBIg."
     }
   ]
 }
