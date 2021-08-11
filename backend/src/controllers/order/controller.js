@@ -1,15 +1,29 @@
 const express = require('express');
 const createError = require('http-errors');
 
+const currentModel = require('../../models/order.model');
 const currentService = require('./service');
+
+const checkModel = (model, body, next) => {
+    const validationErrors = new model(body).validateSync();
+    if (validationErrors) {
+        next(
+            new createError.BadRequest(
+                JSON.stringify({
+                    message: 'Scmema validation error',
+                    error: validationErrors
+                })
+            )
+        );
+        return false;
+    }
+    return true;
+};
 
 // Create.
 module.exports.create = (req, res, next) => {
-    const validationErrors = new Model(req.body).validateSync();
-    if (validationErrors) {
-        return next(
-            new createError.BadRequest(validationErrors)
-        );
+    if (!checkModel(currentModel, req.body, next)) {
+        return;
     }
 
     return currentService.create(req.body)
@@ -20,7 +34,7 @@ module.exports.create = (req, res, next) => {
         .catch(err => next(new createError.InternalServerError(err.message)));
 };
 
-// Get.
+// Read.
 module.exports.findAll = (req, res, next) => {
     return currentService.findAll()
         .then( items => {
@@ -28,7 +42,7 @@ module.exports.findAll = (req, res, next) => {
         });
 };
 
-// Get one.
+// Read one.
 module.exports.findOne = (req, res, next) => {
     return currentService.findOne(req.params.id)
         .then( item => {
@@ -41,11 +55,8 @@ module.exports.findOne = (req, res, next) => {
 
 // Update.
 module.exports.update = (req, res, next) => {
-    const validationErrors = new Model(req.body).validateSync();
-    if (validationErrors) {
-        return next(
-            new createError.BadRequest(validationErrors)
-        );
+    if (!checkModel(currentModel, req.body, next)) {
+        return;
     }
 
     return currentService.update(req.params.id, req.body)

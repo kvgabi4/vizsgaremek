@@ -108,11 +108,19 @@
     },
     {
       "_id": "dsjfhi45hsdofh",
-      "firstName": "Elemér",
+      "firstName": "user",
       "lastName": "Kocsis",
       "email": "elemer@gmail.com",
       "active": true,
       "password": "$2a$10$cUP88ByYtUYesfPyOP9jEe/LLDflUpn5zQKSPlsauOSwdDs/CBIg."
+    },
+    {
+      "_id": "uuuuuuuuuu",
+      "firstName": "user",
+      "lastName": "user",
+      "email": "user@gmail.com",
+      "active": true,
+      "password": "$2a$10$KMlogEPzneW1jyYA3RAxg.TmRIM6eq/AQDNYDR3CNQY4ob5ImcgCy"
     }
   ]
 }

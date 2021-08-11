@@ -7,12 +7,12 @@ const Users = [
     {
         email: 'admin',
         password: 'admin_pw',
-        role: 'admin'
+        role: 2
     },
     {
-        email: 'user',
+        email: 'user@gmail.com',
         password: 'user_pw',
-        role: 'user'
+        role: 1
     }
 ];
 
@@ -24,7 +24,6 @@ module.exports.login = (req, res) => {
     const user = Users.find(
         u => u.email === email && u.password === password
     );
-
     if (user) {
         const accessToken = jwt.sign({
             email: user.email,
