@@ -3,22 +3,16 @@ const createError = require('http-errors');
 
 const currentService = require('./service');
 
-// Create a new person.
+// Create.
 module.exports.create = (req, res, next) => {
-    const { customer, products, note } = req.body;
-    if (!customer || !products) {
+    const validationErrors = new Model(req.body).validateSync();
+    if (validationErrors) {
         return next(
-            new createError.BadRequest("Missing properties!")
+            new createError.BadRequest(validationErrors)
         );
     }
 
-    const newOrder = {
-        customer: customer,
-        products: products,
-        note: note || ''
-    };
-
-    return currentService.create(newOrder)
+    return currentService.create(req.body)
         .then(cp => {
             res.status(201);
             res.json(cp);
@@ -26,6 +20,7 @@ module.exports.create = (req, res, next) => {
         .catch(err => next(new createError.InternalServerError(err.message)));
 };
 
+// Get.
 module.exports.findAll = (req, res, next) => {
     return currentService.findAll()
         .then( items => {
@@ -33,6 +28,7 @@ module.exports.findAll = (req, res, next) => {
         });
 };
 
+// Get one.
 module.exports.findOne = (req, res, next) => {
     return currentService.findOne(req.params.id)
         .then( item => {
@@ -43,12 +39,12 @@ module.exports.findOne = (req, res, next) => {
         });
 };
 
+// Update.
 module.exports.update = (req, res, next) => {
-    const id = req.params.id;
-    const { first_name, last_name, email } = req.body;
-    if (!customer || !products) {
+    const validationErrors = new Model(req.body).validateSync();
+    if (validationErrors) {
         return next(
-            new createError.BadRequest("Missing properties!")
+            new createError.BadRequest(validationErrors)
         );
     }
 
@@ -61,6 +57,7 @@ module.exports.update = (req, res, next) => {
         });
 };
 
+// Delete.
 module.exports.delete = (req, res, next) => {
     return currentService.delete(req.params.id)
         .then( () => res.json({}) )
