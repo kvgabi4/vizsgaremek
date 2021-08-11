@@ -1,7 +1,6 @@
 const { exec } = require('child_process');
 const fs = require('fs');
 
-// let run = false;
 let running = false;
 
 setTimeout( () => {
@@ -12,7 +11,7 @@ setTimeout( () => {
     }
 
     running = true;
-    exec('docker restart backend', (error, stdout, stderr) => {
+    exec('docker restart vizsgaremek', (error, stdout, stderr) => {
       running = false;
       if (error) {
         console.error(`exec error: ${error}`);
