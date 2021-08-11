@@ -5,5 +5,6 @@ export class User {
   email?: string = '';
   active?: boolean = true;
   password?: string = '';
-  accessToken?: string = ';'
+  accessToken?: string = '';
+  role?: number = 0;
 }
