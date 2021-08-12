@@ -23,6 +23,7 @@ import { LoginComponent } from './page/login/login.component';
 import { ProductEditComponent } from './page/product-edit/product-edit.component';
 import { CustomerEditComponent } from './page/customer-edit/customer-edit.component';
 import { OrderEditComponent } from './page/order-edit/order-edit.component';
+import { BillEditComponent } from './page/bill-edit/bill-edit.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { OrderEditComponent } from './page/order-edit/order-edit.component';
     LoginComponent,
     ProductEditComponent,
     CustomerEditComponent,
-    OrderEditComponent
+    OrderEditComponent,
+    BillEditComponent
   ],
   imports: [
     BrowserModule,

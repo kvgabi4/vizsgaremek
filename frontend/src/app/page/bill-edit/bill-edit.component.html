@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+    <div *ngIf="(bill$ | async) as bill" class="col-6 offset-3">
+      <h3 class="py-2">Adatok szerkesztése</h3>
+      <form #billForm="ngForm" (ngSubmit)="onUpdate(billForm, bill)">
+
+        <div class="form-group mt-3">
+          <div class="d-flex justify-content-between">
+            <label for="">Azonosító</label>
+          </div>
+          <input name="id" [(ngModel)]="bill._id" type="text" class="form-control" disabled required>
+        </div>
+
+        <div class="form-group mt-3">
+          <div class="d-flex justify-content-between">
+            <label for="">Dátum</label>
+            <div [hidden]="billForm.controls.date?.valid" class="error-message mt-1">
+              A dátum formátuma: yyyy-mm-dd!
+            </div>
+          </div>
+          <input name="date" [(ngModel)]="bill.date" type="text" class="form-control"
+            pattern="^[1-9][0-9]{3}-[0-9]{2}-[0-9]{2}.+"
+            required>
+        </div>
+
+        <div class="form-group mt-3">
+          <div class="d-flex justify-content-between">
+            <label for="">Státusz</label>
+            <div [hidden]="billForm.controls.status?.valid" class="error-message mt-1">
+              Válassz státuszt (új, kifizetett)!
+            </div>
+          </div>
+          <!-- <input name="status" [(ngModel)]="bill.status" type="text" class="form-control"
+            pattern="^'new'||'shipped'||'paid'$" required> -->
+
+            <select class="custom-select border col-12 mr-5" name="status" [(ngModel)]="bill.status" required >
+              <option *ngFor="let key of ['új', 'kifizetett']" [value]="[key]">{{key}}</option>
+            </select>
+        </div>
+
+        <!--<button [disabled]="billForm.invalid || clicked" (click)="showHtmlToaster(bill)" type="submit"
+          class="btn btn-success btn-block btn-lg mt-2">
+          <i *ngIf="!clicked" class="fa fa-save"></i>
+          <i *ngIf="clicked" class="fa fa-refresh"></i>
+        </button>--->
+        <!-- <button [disabled]="billForm.invalid || clicked" (click)="showNotification('top','center', bill)" type="submit" class="btn btn-success btn-block btn-lg mt-2"> -->
+        <button [disabled]="billForm.invalid || clicked" type="submit" class="btn btn-success col-12 btn-lg mt-2">
+          <i *ngIf="!clicked" class="fa fa-save"></i>
+          <i *ngIf="clicked" class="fa fa-refresh"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

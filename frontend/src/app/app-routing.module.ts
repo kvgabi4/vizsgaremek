@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { BillEditComponent } from './page/bill-edit/bill-edit.component';
 import { BillsComponent } from './page/bills/bills.component';
 import { CustomerEditComponent } from './page/customer-edit/customer-edit.component';
 import { CustomersComponent } from './page/customers/customers.component';
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'bill/:_id',
+    component: BillEditComponent,
   },
   {
     path: 'customer/:_id',

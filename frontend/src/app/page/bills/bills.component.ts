@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Bill } from 'src/app/model/bill';
 import { BillService } from 'src/app/service/bill.service';
@@ -20,10 +21,20 @@ export class BillsComponent implements OnInit {
 
   constructor(
     private config: ConfigService,
-    private billService: BillService
+    private billService: BillService,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
   }
 
+  onSelectOne(bill: Bill): void {
+    this.router.navigate(['/', 'bill', bill._id])
+  }
+
+  onDeleteOne(bill: Bill): void {
+    this.billService.remove(bill._id).subscribe(
+      () => this.list$ = this.billService.getAll()
+      )
+  }
 }
