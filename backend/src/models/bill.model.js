@@ -2,13 +2,14 @@ const mongoose = require('mongoose');
 const idValidator = require('mongoose-id-validator');
 
 const BillSchema = mongoose.Schema({
-    orderId: {
+    order: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Order',
         required: true
     },
     date: {
         type: Date,
+        default: new Date(),
         required: true
     },
     status: {

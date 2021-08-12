@@ -9,13 +9,13 @@ module.exports.create = data => {
             customer.orders.push(order._id);
             return customer.save();
         })
-        .then( () => post );
+        .then( () => customer );
 ;
 };
 
-module.exports.findAll = () => Order.find().populate('customer', 'product');
+module.exports.findAll = () => Order.find().populate('product');
 
-module.exports.findOne = id => Order.findById(id).populate('customer', 'product');
+module.exports.findOne = id => Order.findById(id).populate('product');
 
 module.exports.update = (id, updateData) => Order.findByIdAndUpdate(id, updateData, {new: true});
 

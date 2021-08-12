@@ -83,7 +83,7 @@ export class ConfigService {
 
   billColumns: ITableColumn[] = [
     {key: "_id", title: "#"},
-    {key: "orderId", title: "Megrendelés"},
+    {key: "order", title: "Megrendelés"},
     {key: "date", title: "Dátum", pipes: [ConfigService.sqlDate]},
     {key: "status", title: "Státusz"},
   ];
