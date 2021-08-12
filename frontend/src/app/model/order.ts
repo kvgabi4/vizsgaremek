@@ -1,7 +1,10 @@
+import { Customer } from "./customer";
+import { Product } from "./product";
+
 export class Order {
   _id: string = '';
-  customerId: string = '';
-  productIds: string[] = [];
+  customer: Customer = new Customer();
+  products: Product[] = [];
   // products:[{
   //   productId: string,
   //   amount: number

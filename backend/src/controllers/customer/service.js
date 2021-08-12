@@ -7,7 +7,7 @@ module.exports.create = data => {
 
 module.exports.findAll = () => Customer.find().populate();
 
-module.exports.findOne = id => Customer.findById(id).populate();
+module.exports.findOne = id => Customer.findById(id).populate('orders');
 
 module.exports.update = (id, updateData) => Customer.findByIdAndUpdate(id, updateData, {new: true});
 

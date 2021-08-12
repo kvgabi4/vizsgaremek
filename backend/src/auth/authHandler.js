@@ -7,7 +7,7 @@ const Users = [
     {
         email: 'admin',
         password: 'admin_pw',
-        role: 2
+        role: 3
     },
     {
         email: 'user@gmail.com',

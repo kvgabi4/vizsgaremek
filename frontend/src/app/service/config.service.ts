@@ -17,7 +17,7 @@ export interface ITableColumn {
 })
 export class ConfigService {
 
-  public readonly apiUrl: string = 'http://127.0.0.1:3000/';
+  public readonly apiUrl: string = 'http://localhost:3000/';
 
   customerColumns: ITableColumn[] = [
     {key: "_id", title: "#"},
@@ -46,16 +46,16 @@ export class ConfigService {
   orderColumns: ITableColumn[] = [
     {key: "_id", title: "#"},
     {
-      key: "customerId",
+      key: "customer",
       title: "Vásárló",
       // pipes: [ConfigService.getSubProperty],
-      // pipeArgs: [['firstName', 'lastName']]
+      // pipeArgs: [['customer.firstName', 'customer.lastName']]
     },
-    { key: "productIds", title: "Termékek" },
+    { key: "products", title: "Termékek" },
     // {
     //   key: "products", title: "Termékek",
-    //   pipes: [ConfigService.getArrayItems],
-    //   pipeArgs: [['productId', 'amount']]
+    //   pipes: [ConfigService.getSubProperty],
+    //   pipeArgs: [['product[name]']]
     // },
     // {key: "products[0].amounts", title: "Mennyiségek"},
     // db.json:
@@ -71,7 +71,8 @@ export class ConfigService {
     // ],
 
 
-    {key: "date", title: "Dátum", pipes: [ConfigService.sqlDate]},
+    // {key: "date", title: "Dátum", pipes: [ConfigService.sqlDate]},
+    {key: "date", title: "Dátum"},
     {key: "status", title: "Státusz"},
     {
       key: "note", title: "Megjegyzés",

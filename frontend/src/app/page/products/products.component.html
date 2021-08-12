@@ -1,15 +1,16 @@
 <div class="container-fluid px-4">
-  <h1 class="mt-4">{{entity}}</h1>
+  <h1>{{entity}}</h1>
   <div class="card mb-4">
     <div class="card-header">
         <i class="fas fa-table me-1"></i>
         {{entity}} listája
     </div>
-  <app-data-table
-    [tableColumns]="productColumns"
-    [list$]="list$"
-    [filterKeys]="filterKeys"
-    [filterKey]="filterKey">
-  </app-data-table>
-</div>
+    <app-data-table
+      [tableColumns]="productColumns"
+      [list$]="list$"
+      [filterKeys]="filterKeys"
+      [filterKey]="filterKey"
+      (selectOne)="onSelectOne($event)">
+    </app-data-table>
+  </div>
 </div>

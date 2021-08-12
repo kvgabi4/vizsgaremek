@@ -5,6 +5,7 @@ import { CustomersComponent } from './page/customers/customers.component';
 import { DashboardComponent } from './page/dashboard/dashboard.component';
 import { LoginComponent } from './page/login/login.component';
 import { OrdersComponent } from './page/orders/orders.component';
+import { ProductEditComponent } from './page/product-edit/product-edit.component';
 import { ProductsComponent } from './page/products/products.component';
 
 const routes: Routes = [
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'product/:_id',
+    component: ProductEditComponent,
   },
   {
     path: '**',

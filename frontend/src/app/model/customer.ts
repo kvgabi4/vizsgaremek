@@ -1,3 +1,5 @@
+import { Order } from "./order";
+
 export class Customer {
   _id: string = '';
   firstName: string = '';
@@ -14,5 +16,6 @@ export class Customer {
   email: string = '';
   phone: string = '';
   active: boolean = true;
-  coupon: number = 0
+  coupon: number = 0;
+  orders?: Order[] = [];
 }

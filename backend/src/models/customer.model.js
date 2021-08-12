@@ -13,7 +13,7 @@ const AddressSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-})
+});
 
 const CustomerSchema = mongoose.Schema(
   {
@@ -44,6 +44,12 @@ const CustomerSchema = mongoose.Schema(
       required: true,
       default: 0,
     },
+    orders: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Order",
+      },
+    ],
   },
   {
     timestamps: true,

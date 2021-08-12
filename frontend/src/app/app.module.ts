@@ -20,6 +20,7 @@ import { DataTableComponent } from './common/data-table/data-table.component';
 import { XPipePipe } from './pipe/x-pipe.pipe';
 import { FilterPipe } from './pipe/filter.pipe';
 import { LoginComponent } from './page/login/login.component';
+import { ProductEditComponent } from './page/product-edit/product-edit.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { LoginComponent } from './page/login/login.component';
     DataTableComponent,
     XPipePipe,
     FilterPipe,
-    LoginComponent
+    LoginComponent,
+    ProductEditComponent
   ],
   imports: [
     BrowserModule,
