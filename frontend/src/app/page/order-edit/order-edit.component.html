@@ -18,7 +18,7 @@
               A megrendelő azonosítója minimum 6 karakter kell legyen!
             </div>
           </div>
-          <input name="category" [(ngModel)]="order.customer._id" type="text" class="form-control"
+          <input name="category" [(ngModel)]="order.customer" type="text" class="form-control"
             pattern=".{6,}" required>
         </div>
 
@@ -29,8 +29,8 @@
               A megrendelő azonosítója minimum 6 karakter kell legyen!
             </div>
           </div>
-          <textarea name="products" [(ngModel)]="order.products" type="textarea" class="form-control"
-            pattern=".{6,}" required></textarea>
+          <input name="products" [(ngModel)]="order.products" type="text" class="form-control"
+            pattern=".{6,}" required>
         </div>
 
         <div class="form-group mt-3">
@@ -49,14 +49,14 @@
           <div class="d-flex justify-content-between">
             <label for="">Státusz</label>
             <div [hidden]="orderForm.controls.status?.valid" class="error-message mt-1">
-              Choose a status (new, shipped, paid)!
+              Válassz státuszt (új, kiszállított, kifizetett)!
             </div>
           </div>
           <!-- <input name="status" [(ngModel)]="order.status" type="text" class="form-control"
             pattern="^'new'||'shipped'||'paid'$" required> -->
 
             <select class="custom-select border col-12 mr-5" name="status" [(ngModel)]="order.status" required >
-              <option *ngFor="let key of ['new', 'shipped', 'paid']" [value]="[key]">{{key}}</option>
+              <option *ngFor="let key of ['új', 'kiszállított', 'kifizetett']" [value]="[key]">{{key}}</option>
             </select>
         </div>
 
@@ -77,7 +77,7 @@
           <i *ngIf="clicked" class="fa fa-refresh"></i>
         </button>--->
         <!-- <button [disabled]="orderForm.invalid || clicked" (click)="showNotification('top','center', order)" type="submit" class="btn btn-success btn-block btn-lg mt-2"> -->
-        <button [disabled]="orderForm.invalid || clicked" type="submit" class="btn btn-success col-12 btn-lg mt-2">
+        <button [disabled]="orderForm.invalid || clicked" type="submit" class="btn btn-success col-12 btn-lg mt-5">
           <i *ngIf="!clicked" class="fas fa-save"></i>
           <i *ngIf="clicked" class="fas fa-sync"></i>
         </button>

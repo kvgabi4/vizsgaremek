@@ -18,7 +18,7 @@
               <li><a class="dropdown-item" href="#!">Settings</a></li>
               <li><a class="dropdown-item" href="#!">Activity Log</a></li>
               <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" (click)="onLogout()">Logout</a></li>
+              <li><a class="dropdown-item" (click)="onLogout()">Kijelentkezés</a></li>
           </ul>
       </li>
       <button routerLink="/login" *ngIf="!(user$ | async)" class="btn btn-success">
@@ -26,5 +26,3 @@
       </button>
   </ul>
 </nav>
-
-{{user$ | async | json}}
