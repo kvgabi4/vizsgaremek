@@ -22,6 +22,7 @@ import { FilterPipe } from './pipe/filter.pipe';
 import { LoginComponent } from './page/login/login.component';
 import { ProductEditComponent } from './page/product-edit/product-edit.component';
 import { CustomerEditComponent } from './page/customer-edit/customer-edit.component';
+import { OrderEditComponent } from './page/order-edit/order-edit.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { CustomerEditComponent } from './page/customer-edit/customer-edit.compon
     FilterPipe,
     LoginComponent,
     ProductEditComponent,
-    CustomerEditComponent
+    CustomerEditComponent,
+    OrderEditComponent
   ],
   imports: [
     BrowserModule,
