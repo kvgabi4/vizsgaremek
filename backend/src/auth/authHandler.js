@@ -40,8 +40,7 @@ module.exports.login = (req, res) => {
 
         res.json({
             accessToken,
-            refreshToken,
-            user
+            refreshToken
         });
     } else {
         res.send('Email or password incorrect.');

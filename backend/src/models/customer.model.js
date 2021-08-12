@@ -1,5 +1,20 @@
 const mongoose = require("mongoose");
 
+const AddressSchema = mongoose.Schema({
+  zip: {
+    type: String | Number,
+    required: false,
+  },
+  city: {
+    type: String,
+    required: true,
+  },
+  street: {
+    type: String,
+    required: true,
+  },
+})
+
 const CustomerSchema = mongoose.Schema(
   {
     firstName: {
@@ -10,20 +25,7 @@ const CustomerSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    address: {
-      zip: {
-        type: String | Number,
-        required: true,
-      },
-      city: {
-        type: String,
-        required: true,
-      },
-      street: {
-        type: String,
-        required: true,
-      },
-    },
+    address: AddressSchema,
     email: {
       type: String,
       required: true,
