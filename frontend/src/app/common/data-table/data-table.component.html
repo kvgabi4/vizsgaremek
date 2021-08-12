@@ -41,15 +41,17 @@
                     <span [innerHTML]="col.htmlOutput(row[col.key])"></span>
                   </ng-template>
                 </td>
-                <div class="btn-group">
-                  <button (click)="onSelect(row)" class="btn btn-info">
-                    <i class="fa fa-pencil-alt"></i>
-                  </button>
-                  <button (click)="onDelete(row)"
-                  class="btn btn-danger">
-                    <i class="fa fa-trash"></i>
-                  </button>
-                </div>
+                <td>
+                  <div class="btn-group text-center">
+                    <button (click)="onSelect(row)" class="btn btn-info">
+                      <i class="fa fa-pencil-alt"></i>
+                    </button>
+                    <button (click)="onDelete(row)"
+                    class="btn btn-danger">
+                      <i class="fa fa-trash"></i>
+                    </button>
+                  </div>
+                </td>
               </tr>
             </ng-container>
           </tbody>

@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const AddressSchema = mongoose.Schema({
   zip: {
-    type: String | Number,
+    type: String,
     required: false,
   },
   city: {

@@ -5,7 +5,7 @@ export class Customer {
   firstName: string = '';
   lastName: string = '';
   address: {
-      zip: string | number,
+      zip: string,
       city: string,
       street: string
     } = {
