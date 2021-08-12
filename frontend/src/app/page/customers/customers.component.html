@@ -1,9 +1,8 @@
-<div class="container-fluid px-4">
-  <h1>{{entity}}</h1>
+<div class="container-fluid px-4 mt-2">
   <div class="card mb-4">
-    <div class="card-header">
+    <div class="card-header d-flex flex-row align-items-center">
         <i class="fas fa-table me-1"></i>
-        {{entity}} listája
+        <h4 class="fw-bold text-uppercase ps-3 mt-1"> {{entity}} listája</h4>
     </div>
   <app-data-table
     [tableColumns]="customerColumns"
