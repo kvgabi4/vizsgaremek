@@ -45,6 +45,7 @@ app.use('/bills', require('./controllers/bill/routes'));
 app.use('/orders', require('./controllers/order/routes'));
 app.use('/products', require('./controllers/product/routes'));
 app.use('/customers', require('./controllers/customer/routes'));
+app.use('/users', require('./controllers/user/routes'));
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use( (err, req, res, next) => {

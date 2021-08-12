@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'src/app/model/user';
 import { AuthService } from 'src/app/service/auth.service';
@@ -13,6 +13,8 @@ export class LoginComponent implements OnInit {
 
   user: User = new User();
 
+  @Output() currentUser: EventEmitter<User> = new EventEmitter<User>();
+
   constructor(
     private userService: UserService,
     private auth: AuthService,
@@ -23,6 +25,7 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin(): void {
+    this.currentUser.emit(this.user);
     this.auth.login(this.user).subscribe(
       user => {
         if (user) {

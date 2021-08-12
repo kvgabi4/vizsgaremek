@@ -10,6 +10,7 @@ import { OrderEditComponent } from './page/order-edit/order-edit.component';
 import { OrdersComponent } from './page/orders/orders.component';
 import { ProductEditComponent } from './page/product-edit/product-edit.component';
 import { ProductsComponent } from './page/products/products.component';
+import { UserProfileComponent } from './page/user-profile/user-profile.component';
 
 const routes: Routes = [
   {
@@ -51,6 +52,10 @@ const routes: Routes = [
   {
     path: 'product/:_id',
     component: ProductEditComponent,
+  },
+  {
+    path: 'profile',
+    component: UserProfileComponent,
   },
   {
     path: '**',

@@ -16,12 +16,14 @@ const Users = [
     }
 ];
 
+const users = require('../models/user.model')
+
 const refreshTokens = [];
 
 module.exports.login = (req, res) => {
     const { email, password } = req.body;
 
-    const user = Users.find(
+    const user = users.find(
         u => u.email === email && u.password === password
     );
     if (user) {

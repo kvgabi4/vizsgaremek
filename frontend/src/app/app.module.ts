@@ -24,6 +24,7 @@ import { ProductEditComponent } from './page/product-edit/product-edit.component
 import { CustomerEditComponent } from './page/customer-edit/customer-edit.component';
 import { OrderEditComponent } from './page/order-edit/order-edit.component';
 import { BillEditComponent } from './page/bill-edit/bill-edit.component';
+import { UserProfileComponent } from './page/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { BillEditComponent } from './page/bill-edit/bill-edit.component';
     ProductEditComponent,
     CustomerEditComponent,
     OrderEditComponent,
-    BillEditComponent
+    BillEditComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
