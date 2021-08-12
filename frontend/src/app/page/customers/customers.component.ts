@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Customer } from 'src/app/model/customer';
 import { ConfigService, ITableColumn } from 'src/app/service/config.service';
@@ -19,10 +20,20 @@ export class CustomersComponent implements OnInit {
 
   constructor(
     private config: ConfigService,
-    private customerService: CustomerService
+    private customerService: CustomerService,
+    private router: Router,
   ) {}
 
   ngOnInit(): void {
   }
 
+  onSelectOne(customer: Customer): void {
+    this.router.navigate(['/', 'customer', customer._id])
+  }
+
+  onDeleteOne(customer: Customer): void {
+    this.customerService.remove(customer._id).subscribe(
+      () => this.list$ = this.customerService.getAll()
+      )
+  }
 }

@@ -1,0 +1,129 @@
+<div class="container">
+  <div class="row mt-5">
+    <div *ngIf="(customer$ | async) as customer" class="col-6 offset-3">
+      <h3 class="py-2">Adatok szerkesztése</h3>
+      <form #customerForm="ngForm" (ngSubmit)="onUpdate(customerForm, customer)">
+
+        <div class="form-group mt-3">
+          <div class="d-flex justify-content-between">
+            <label for="">Azonosító</label>
+          </div>
+          <input name="id" [(ngModel)]="customer._id" type="text" class="form-control" disabled required>
+        </div>
+
+        <div class="form-group mt-3">
+          <div class="d-flex justify-content-between">
+            <label for="">Vezetéknév</label>
+            <div [hidden]="customerForm.controls.lastName?.valid" class="error-message mt-1">
+              A vezetéknév nagybetűvel kezdődjön, és 2-20 karkter hosszú lehet!
+            </div>
+          </div>
+          <input name="lastName" [(ngModel)]="customer.lastName" type="text" class="form-control"
+            pattern="^[A-ZÁÉÓÖŐÜÚŰÍ].{2,19}$" required>
+        </div>
+
+        <div class="form-group mt-3">
+          <div class="d-flex justify-content-between">
+            <label for="">Keresztnév</label>
+            <div [hidden]="customerForm.controls.firstName?.valid" class="error-message mt-1">
+              A keresztnév nagybetűvel kezdődjön, és 2-20 karkter hosszú lehet!
+            </div>
+          </div>
+          <input name="firstName" [(ngModel)]="customer.firstName" type="text" class="form-control"
+            pattern="^[A-ZÁÉÓÖŐÜÚŰÍ].{2,19}$" required>
+        </div>
+
+        <div class="form-group mt-3">
+          <div class="d-flex justify-content-between">
+            <label for="">Irányítószám</label>
+            <div [hidden]="customerForm.controls.zip?.valid" class="error-message mt-1">
+              Az irányítószám minimum 3 karakter hosszú kell legyen!
+            </div>
+          </div>
+          <input name="zip" [(ngModel)]="customer.address.zip" type="text" class="form-control"
+            pattern="^.{3,}$" required>
+        </div>
+
+        <div class="form-group mt-3">
+          <div class="d-flex justify-content-between">
+            <label for="">Város</label>
+            <div [hidden]="customerForm.controls.city?.valid" class="error-message mt-1">
+              A város nagy betűvel kezdődjön!
+            </div>
+          </div>
+          <input name="city" [(ngModel)]="customer.address.city" type="text" class="form-control"
+            pattern="^[A-ZÁÉÍÓÖŐÜÚŰ].+" required>
+        </div>
+
+        <div class="form-group mt-3">
+          <div class="d-flex justify-content-between">
+            <label for="">Utca</label>
+            <div [hidden]="customerForm.controls.street?.valid" class="error-message mt-1">
+              Az utca nagy betűvel kezdődjön!
+            </div>
+          </div>
+          <input name="street" [(ngModel)]="customer.address.street" type="text" class="form-control"
+            pattern="^[A-ZÁÉÍÓÖŐÜÚŰ].+" required>
+        </div>
+
+        <div class="form-group mt-3">
+          <div class="d-flex justify-content-between">
+            <label for="">E-mail</label>
+            <div [hidden]="customerForm.controls.email?.valid" class="error-message mt-1">
+              Az e-mail ilyen formátumú legyen: felhasználónév@emailkiszolgáló.domain!
+            </div>
+          </div>
+          <textarea name="email" [(ngModel)]="customer.email" type="input" class="form-control"
+            pattern="^[\w\.]+@([\w-]+\.)+.[\w-]{2,6}$" required></textarea>
+        </div>
+
+        <div class="form-group mt-3">
+          <div class="d-flex justify-content-between">
+            <label for="">Telefonszám</label>
+            <div [hidden]="customerForm.controls.phone?.valid" class="error-message mt-1">
+              A telefonszám 9-12 karakterből állhat, csak + jel és számjegyek szerepelhetnek benne!
+            </div>
+          </div>
+          <input name="phone" [(ngModel)]="customer.phone" type="text" class="form-control"
+            pattern="^[+0-9][0-9]{8,11}$"
+            required>
+        </div>
+
+        <div class="form-group mt-3">
+          <div class="d-flex justify-content-between">
+            <label for="">Aktív <span>*</span></label>
+          </div>
+          <div class="form-check my-3">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" name="active" [(ngModel)]="customer.active">true
+              <span class="form-check-sign">
+                <span class="check"></span>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group mt-3">
+          <div class="d-flex justify-content-between">
+            <label for="">Megrendelések</label>
+            <div [hidden]="customerForm.controls.orders?.valid" class="error-message mt-1">
+              A megrendelések azonosítja minimum 6 karakter kell legyen!
+            </div>
+          </div>
+          <input name="orders" [(ngModel)]="customer.orders" type="text" class="form-control"
+            pattern=".{6,}">
+        </div>
+        <!--<button [disabled]="customerForm.invalid || clicked" (click)="showHtmlToaster(customer)" type="submit"
+          class="btn btn-success btn-block btn-lg mt-2">
+          <i *ngIf="!clicked" class="fa fa-save"></i>
+          <i *ngIf="clicked" class="fa fa-refresh"></i>
+        </button>--->
+        <!-- <button [disabled]="customerForm.invalid || clicked" (click)="showNotification('top','center', customer)" type="submit" class="btn btn-success btn-block btn-lg mt-2"> -->
+        <button [disabled]="customerForm.invalid || clicked" type="submit" class="btn btn-success col-12 btn-lg mt-2">
+          <i *ngIf="!clicked" class="fa fa-save"></i>
+          <i *ngIf="clicked" class="fa fa-refresh"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

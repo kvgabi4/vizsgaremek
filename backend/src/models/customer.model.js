@@ -39,11 +39,6 @@ const CustomerSchema = mongoose.Schema(
       required: true,
       default: true,
     },
-    coupon: {
-      type: Number,
-      required: true,
-      default: 0,
-    },
     orders: [
       {
         type: mongoose.Schema.Types.ObjectId,

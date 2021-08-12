@@ -21,6 +21,7 @@ import { XPipePipe } from './pipe/x-pipe.pipe';
 import { FilterPipe } from './pipe/filter.pipe';
 import { LoginComponent } from './page/login/login.component';
 import { ProductEditComponent } from './page/product-edit/product-edit.component';
+import { CustomerEditComponent } from './page/customer-edit/customer-edit.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ProductEditComponent } from './page/product-edit/product-edit.component
     XPipePipe,
     FilterPipe,
     LoginComponent,
-    ProductEditComponent
+    ProductEditComponent,
+    CustomerEditComponent
   ],
   imports: [
     BrowserModule,

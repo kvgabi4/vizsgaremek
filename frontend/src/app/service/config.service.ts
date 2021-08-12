@@ -30,7 +30,7 @@ export class ConfigService {
       pipeArgs: [['zip', 'city', 'street']]
     },
     {key: "active", title: "Aktív", htmlOutput: ConfigService.activeOrInactiveSign },
-    {key: "coupon", title: "Kupon" }
+    {key: "orders", title: "Megrendelések" }
   ];
 
   productColumns: ITableColumn[] = [
