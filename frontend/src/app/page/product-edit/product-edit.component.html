@@ -3,12 +3,14 @@
     <div *ngIf="(product$ | async) as product" class="col-6 offset-3">
       <h3 class="py-2">Adatok szerkesztése</h3>
       <form #productForm="ngForm" (ngSubmit)="onUpdate(productForm, product)">
+
         <div class="form-group mt-3">
           <div class="d-flex justify-content-between">
             <label for="">Azonosító</label>
           </div>
           <input name="id" [(ngModel)]="product._id" type="text" class="form-control" disabled required>
         </div>
+
         <div class="form-group mt-3">
           <div class="d-flex justify-content-between">
             <label for="">Megnevezés</label>
@@ -19,6 +21,7 @@
           <input name="name" [(ngModel)]="product.name" type="text" class="form-control"
             pattern="^[A-ZÁÉÓÖŐÜÚŰÍ].{2,20}" required>
         </div>
+
         <div class="form-group mt-3">
           <div class="d-flex justify-content-between">
             <label for="">Kategória</label>
@@ -29,6 +32,7 @@
           <input name="category" [(ngModel)]="product.category" type="text" class="form-control"
             pattern="[a-záéüöóőúűí\.\s]{1,50}" required>
         </div>
+
         <div class="form-group mt-3">
           <div class="d-flex justify-content-between">
             <label for="">Leírás</label>
@@ -39,6 +43,7 @@
           <textarea name="description" [(ngModel)]="product.description" type="textarea" class="form-control"
             pattern="^.{2,1400}$" required></textarea>
         </div>
+
         <div class="form-group mt-3">
           <div class="d-flex justify-content-between">
             <label for="">Ár (Ft)</label>
@@ -50,6 +55,7 @@
             pattern="^[1-9][0-9]{1,4}$"
             required>
         </div>
+
         <div class="form-group mt-3">
           <div class="d-flex justify-content-between">
             <label for="">Aktív <span>*</span></label>
