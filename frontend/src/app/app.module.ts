@@ -25,6 +25,8 @@ import { CustomerEditComponent } from './page/customer-edit/customer-edit.compon
 import { OrderEditComponent } from './page/order-edit/order-edit.component';
 import { BillEditComponent } from './page/bill-edit/bill-edit.component';
 import { UserProfileComponent } from './page/user-profile/user-profile.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,13 @@ import { UserProfileComponent } from './page/user-profile/user-profile.component
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 5000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+    })
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'hu-HU'}

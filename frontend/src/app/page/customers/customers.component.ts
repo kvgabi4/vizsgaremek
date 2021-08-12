@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Customer } from 'src/app/model/customer';
 import { ConfigService, ITableColumn } from 'src/app/service/config.service';
 import { CustomerService } from 'src/app/service/customer.service';
+import { ToasterService } from 'src/app/service/toaster.service';
 
 @Component({
   selector: 'app-customers',
@@ -22,6 +23,7 @@ export class CustomersComponent implements OnInit {
     private config: ConfigService,
     private customerService: CustomerService,
     private router: Router,
+    private toastr: ToasterService
   ) {}
 
   ngOnInit(): void {
@@ -32,8 +34,26 @@ export class CustomersComponent implements OnInit {
   }
 
   onDeleteOne(customer: Customer): void {
-    this.customerService.remove(customer._id).subscribe(
-      () => this.list$ = this.customerService.getAll()
+    if (window.confirm('Biztosan törli ezt a vásárlót?')) {
+      this.customerService.remove(customer._id).subscribe(
+        () => this.list$ = this.customerService.getAll()
       )
+      this.toastr.showSuccessWithTimeout(`
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Vásárló azonosítója</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>${customer._id}</td>
+            </tr>
+          </tbody>
+        </table>
+        </span>`,
+        "A vásárló sikeresen törlődött:",
+        5000)
+  }
   }
 }

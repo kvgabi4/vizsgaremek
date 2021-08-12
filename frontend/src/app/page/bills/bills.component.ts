@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Bill } from 'src/app/model/bill';
 import { BillService } from 'src/app/service/bill.service';
 import { ITableColumn, ConfigService } from 'src/app/service/config.service';
+import { ToasterService } from 'src/app/service/toaster.service';
 
 @Component({
   selector: 'app-bills',
@@ -23,6 +24,7 @@ export class BillsComponent implements OnInit {
     private config: ConfigService,
     private billService: BillService,
     private router: Router,
+    private toastr: ToasterService
   ) { }
 
   ngOnInit(): void {
@@ -33,8 +35,26 @@ export class BillsComponent implements OnInit {
   }
 
   onDeleteOne(bill: Bill): void {
-    this.billService.remove(bill._id).subscribe(
-      () => this.list$ = this.billService.getAll()
-      )
+    if (window.confirm('Biztosan törli ezt a számlát?')) {
+      this.billService.remove(bill._id).subscribe(
+        () => this.list$ = this.billService.getAll()
+      );
+      this.toastr.showSuccessWithTimeout(`
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Számla azonosítója</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>${bill._id}</td>
+            </tr>
+          </tbody>
+        </table>
+        </span>`,
+        "A számla sikeresen törlődött:",
+        5000)
+  }
   }
 }

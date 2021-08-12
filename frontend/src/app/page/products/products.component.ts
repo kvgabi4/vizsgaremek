@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Product } from 'src/app/model/product';
 import { ITableColumn, ConfigService } from 'src/app/service/config.service';
 import { ProductService } from 'src/app/service/product.service';
+import { ToasterService } from 'src/app/service/toaster.service';
 
 @Component({
   selector: 'app-products',
@@ -23,6 +24,7 @@ export class ProductsComponent implements OnInit {
     private config: ConfigService,
     private productService: ProductService,
     private router: Router,
+    private toastr: ToasterService
   ) { }
 
   ngOnInit(): void {
@@ -33,8 +35,26 @@ export class ProductsComponent implements OnInit {
   }
 
   onDeleteOne(product: Product): void {
-    this.productService.remove(product._id).subscribe(
-      () => this.list$ = this.productService.getAll()
+    if (window.confirm('Biztosan törli ezt a terméket?')) {
+      this.productService.remove(product._id).subscribe(
+        () => this.list$ = this.productService.getAll()
       )
+      this.toastr.showSuccessWithTimeout(`
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Termék azonosítója</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>${product._id}</td>
+          </tr>
+        </tbody>
+      </table>
+      </span>`,
+        "A termék sikeresen törlődött:",
+        5000)
+    }
   }
 }
