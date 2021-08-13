@@ -1,8 +1,72 @@
 <div class="container-fluid px-4 mt-3">
-  <div class="row">
+
+  <div class="row my-2">
     <div *ngFor="let card of cards" class="col-lg-3 col-md-6 col-sm-6 mb-5">
-      <app-info-card [cardClass]="card.cardClass" [icon]="card.icon" [title]="card.title"
-      [content]="card.content | async | number:'1.0-0':'en-US'" [footer]="card.footer"></app-info-card>
+      <app-info-card
+        [cardClass]="card.cardClass"
+        [icon]="card.icon"
+        [title]="card.title"
+        [content]="card.content | async | number:'1.0-0':'en-US'"
+        [footer]="card.footer">
+      </app-info-card>
     </div>
+  </div>
+
+  <div class="row d-flex flex-row flex-wrap">
+
+    <div class="col-lg-6 col-xl-4 my-2">
+      <div class="card card-chart">
+        <div class="card-header card-header-success">
+          <app-bar-chart
+            [barChartLabels]="productChartLabels"
+            [barChartData]="productChartData"
+            [barChartColor]="productChartColor">
+          </app-bar-chart>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Termékek</h4>
+          <p class="card-category">
+            <span class="text-success"><i class="fas fa-long-arrow-alt-up"></i> </span> Active and featured products
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-xl-4 my-2">
+      <div class="card card-chart">
+        <div class="card-header card-header-primary">
+          <app-bar-chart
+            [barChartLabels]="orderChartLabels"
+            [barChartData]="orderChartData"
+            [barChartColor]="orderChartColor">
+          </app-bar-chart>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Megrendelések</h4>
+          <p class="card-category">
+            <span class="text-primary"><i class="fas fa-long-arrow-alt-up"></i> </span> Megrendelések státusza
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 my-2">
+      <div class="card card-chart">
+        <div class="card-header card-header-success">
+          <app-bar-chart
+            [barChartLabels]="productChartLabels"
+            [barChartData]="productAllChartData"
+            [barChartColor]="productChartColor">
+          </app-bar-chart>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Termékek</h4>
+          <p class="card-category">
+            <span class="text-success"><i class="fas fa-long-arrow-alt-up"></i> </span> Termékek ára
+          </p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>

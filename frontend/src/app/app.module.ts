@@ -29,6 +29,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InfoCardComponent } from './common/info-card/info-card.component';
 import { BarChartComponent } from './common/chart/bar-chart/bar-chart.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { BarChartComponent } from './common/chart/bar-chart/bar-chart.component'
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
+    ChartsModule,
     ToastrModule.forRoot({
       timeOut: 5000,
       positionClass: 'toast-top-right',

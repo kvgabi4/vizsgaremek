@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { map } from 'lodash';
 import { Observable } from 'rxjs';
 import { InfoCard } from 'src/app/common/info-card/info-card.component';
 import { Bill } from 'src/app/model/bill';
@@ -10,8 +9,9 @@ import { BillService } from 'src/app/service/bill.service';
 import { CustomerService } from 'src/app/service/customer.service';
 import { OrderService } from 'src/app/service/order.service';
 import { ProductService } from 'src/app/service/product.service';
-import { ChartDataset } from 'chart.js';
-import { switchMap, tap } from 'rxjs/operators';
+import { ChartDataSets } from 'chart.js';
+import { switchMap } from 'rxjs/operators';
+import { Label, Color } from 'ng2-charts';
 
 @Component({
   selector: 'app-dashboard',
@@ -35,164 +35,156 @@ export class DashboardComponent implements OnInit {
     .filter(item => item.active)?.length));
 
   notPaidBillsAmount = this.billList$.pipe(switchMap(async params => await params
-    .filter(item => item.status === 'új')));
+    .filter(item => item.status === 'új')?.length));
     // .reduce((acc, one) => acc + parseInt('' + one.order.amount), 0));
 
 
   cards: InfoCard[] = [
     {
-      title: 'Customers',
+      title: 'Vásárlók',
       content: this.activeCustomers,
-      cardClass: 'card-header-warning',
-      footer: 'Number of active customers.',
+      cardClass: 'bg-warning',
+      footer: 'Aktív vásárlók száma.',
       icon: 'fas fa-user-alt',
     },
     {
-      title: 'Products',
+      title: 'Termékek',
       content: this.activeProducts,
-      cardClass: 'card-header-success',
-      footer: 'Number of active products.',
+      cardClass: 'bg-success',
+      footer: 'Aktív termékek száma.',
       icon: 'fas fa-seedling',
     },
     {
-      title: 'Orders',
+      title: 'Megrendelések',
       content: this.notPaidOrders,
-      cardClass: 'card-header-primary',
-      footer: 'Number of unpaid orders.',
+      cardClass: 'bg-primary',
+      footer: 'Kifizetetlen megrendelések száma.',
       icon: 'fas fa-table',
     },
     {
-      title: 'Invoices',
+      title: 'Számlák',
       content: this.notPaidBillsAmount,
-      cardClass: 'card-header-info',
-      footer: 'Amount of unpaid bills in HUF.',
+      cardClass: 'bg-info',
+      footer: 'Kifizetetlen számlák összege Ft-ban.',
       icon: 'fas fa-receipt',
     }
   ];
 
-  // orderChartLabels: Label[] = [''];
-  orderChartData: ChartDataset[] = [
+  orderChartLabels: Label[] = [''];
+  orderChartData: ChartDataSets[] = [
     {
       data: [0],
-      label: 'new    ',
+      label: 'új  ',
       borderColor: ['#fff'],
       borderWidth: [2]
     },
     {
       data: [0],
-      label: 'shipped    ',
+      label: 'kiszállított  ',
       borderColor: ['#fff'],
       borderWidth: [2]
     },
     {
       data: [0],
-      label: 'paid',
+      label: 'kifizetett',
       borderColor: ['#fff'],
       borderWidth: [2]
     },
   ];
-  // orderChartColor: Color[] = [
-  //   { // first color
-  //     // backgroundColor: ['#ff9800']
-  //     backgroundColor: ['rgba(255,200,255,.8)']
-  //   },
-  //   { // second color
-  //     // backgroundColor: ['#4caf50']
-  //     backgroundColor: ['rgba(200,110,170,.8)']
-  //   },
-  //   { // third color
-  //     // backgroundColor: ['#00bcd4']
-  //     backgroundColor: ['rgba(210,160,210,.8)']
-  //   },
-  // ];
+  orderChartColor: Color[] = [
+    { // first color
+      // backgroundColor: ['#ff9800']
+      backgroundColor: ['rgba(255,200,255,.8)']
+    },
+    { // second color
+      // backgroundColor: ['#4caf50']
+      backgroundColor: ['rgba(200,110,170,.8)']
+    },
+    { // third color
+      // backgroundColor: ['#00bcd4']
+      backgroundColor: ['rgba(210,160,210,.8)']
+    },
+  ];
 
-  billChartData: ChartDataset[] = [{ data: [0, 0] }];
-  // billChartLabels: Label[] = ['number of new bills', 'number of paid bills'];
-  // billChartColor: Color[] = [
-  //   {
-  //     // backgroundColor: ['#ff9800', '#4caf50', '#00bcd4']
-  //     backgroundColor: ['rgba(0,230,230,.9)', 'rgba(10, 160, 180, 0.9)']
-  //   }
-  // ];
+  billChartData: ChartDataSets[] = [{ data: [0, 0] }];
+  billChartLabels: Label[] = ['új számlák száma', 'kifizetett számlák száma'];
+  billChartColor: Color[] = [
+    {
+      // backgroundColor: ['#ff9800', '#4caf50', '#00bcd4']
+      backgroundColor: ['rgba(0,230,230,.9)', 'rgba(10, 160, 180, 0.9)']
+    }
+  ];
 
   // billSumChartLabels: Label[] = ['sum of new bills', 'sum of paid bills'];
-  billSumChartData: ChartDataset[] = [{ data: [0, 0] }];
-  // billSumChartColor: Color[] = [
-  //   {
-  //     // backgroundColor: ['#ff9800', '#8e24aa']
-  //     backgroundColor: ['rgba(0,170,170,.9)', 'rgba(10, 110, 130, 0.9)']
-  //   }
-  // ];
-
-  productAllChartData: ChartDataset[] = [];
-  // productAllChartLabels: Label[] = [];
-  // productAllChartColor: Color[] = [];
-
-  productChartData: ChartDataset[] = [
-      {
-        data: [0],
-        label: 'active  ',
-        borderColor: ['#fff'],
-        borderWidth: [2]
-      },
-      {
-        data: [0],
-        label: 'featured  ',
-        borderColor: ['#fff'],
-        borderWidth: [2]
-      },
-      {
-        data: [0],
-        label: 'active & featured',
-        borderColor: ['#fff'],
-        borderWidth: [2]
-      },
+  billSumChartData: ChartDataSets[] = [{ data: [0, 0] }];
+  billSumChartColor: Color[] = [
+    {
+      // backgroundColor: ['#ff9800', '#8e24aa']
+      backgroundColor: ['rgba(0,170,170,.9)', 'rgba(10, 110, 130, 0.9)']
+    }
   ];
-  // productChartLabels: Label[] = [''];
-  // productChartColor: Color[] = [
-  //   // {
-  //   //   backgroundColor: ['#ff9800']
-  //   // },
-  //   // {
-  //   //   backgroundColor: ['#8e24aa']
-  //   // },
-  //   // {
-  //   //   backgroundColor: ['#00bcd4']76 175 80
-  //   // },
-  //   {
-  //     backgroundColor: ['rgba(180, 250, 150, 0.9)']
-  //   },
-  //   {
-  //     backgroundColor: ['rgba(110, 215, 110, 0.9)']
-  //   },
-  //   {
-  //     backgroundColor: ['rgba(255,255,200,.8)']
-  //   },
-  // ];
 
-  customerChartData: ChartDataset[] = [
+  productAllChartData: ChartDataSets[] = [];
+  productAllChartLabels: Label[] = [];
+  productAllChartColor: Color[] = [];
+
+  productChartData: ChartDataSets[] = [
+      {
+        data: [0],
+        label: 'aktív  ',
+        borderColor: ['#fff'],
+        borderWidth: [2]
+      },
+      {
+        data: [1],
+        label: 'inaktív  ',
+        borderColor: ['#fff'],
+        borderWidth: [2]
+      }
+  ];
+  productChartLabels: Label[] = [''];
+  productChartColor: Color[] = [
+    // {
+    //   backgroundColor: ['#ff9800']
+    // },
+    // {
+    //   backgroundColor: ['#8e24aa']
+    // },
+    // {
+    //   backgroundColor: ['#00bcd4']76 175 80
+    // },
+    {
+      backgroundColor: ['rgba(180, 250, 150, 0.9)']
+    },
+    {
+      backgroundColor: ['rgba(110, 215, 110, 0.9)']
+    },
+    {
+      backgroundColor: ['rgba(255,255,200,.8)']
+    },
+  ];
+
+  customerChartData: ChartDataSets[] = [
     {
     data: [0, 0],
     // borderColor: ['#fff'],
     // borderWidth: [0]
   },
   ];
-  // customerChartLabels: Label[] = ['active customers', 'inactive customers'];
-  // customerChartColor: Color[] = [
-  //   {
-  //     backgroundColor: ['rgba(255, 190, 20, 0.9)', 'rgba(255,255,150,.8)']
-  //     // backgroundColor: [ '#4caf50', '#00bcd4' ]
-  //   }
-  // ];
+  customerChartLabels: Label[] = ['aktív vásárlók', 'inaktív vásárlók'];
+  customerChartColor: Color[] = [
+    {
+      backgroundColor: ['rgba(255, 190, 20, 0.9)', 'rgba(255,255,150,.8)']
+      // backgroundColor: [ '#4caf50', '#00bcd4' ]
+    }
+  ];
 
   constructor(
     private billService: BillService,
     private customerService: CustomerService,
     private orderService: OrderService,
     private productService: ProductService,
-  ) {
-    console.log('this.activeCustomers', this.activeCustomers)
-   }
+  ) { }
 
   ngOnInit(): void {
     this.orderList$.subscribe(
@@ -236,8 +228,8 @@ export class DashboardComponent implements OnInit {
         // Product chart.
         const activeProducts: number =
           data.filter(o => o.active).length;
-        // const featuredProducts: number =
-        //   data.filter(o => o.featured).length;
+        const inactiveProducts: number =
+          data.filter(o => !o.active).length;
         // const activeAndFeaturedProducts: number =
         //   data.filter(o => o.active && o.featured).length;
 
@@ -258,7 +250,7 @@ export class DashboardComponent implements OnInit {
           });
 
         this.productChartData[0].data = [ activeProducts ];
-        // this.productChartData[1].data = [ featuredProducts ];
+        this.productChartData[1].data = [ inactiveProducts ];
         // this.productChartData[2].data = [ activeAndFeaturedProducts ];
         // console.log(this.productAllChartData, this.productAllChartLabels)
       }

@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ChartOptions, ChartType } from 'chart.js';
+import { ChartDataSets } from 'chart.js';
+import { Label, Color } from 'ng2-charts';
 
 @Component({
   selector: 'app-bar-chart',
@@ -6,6 +9,63 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bar-chart.component.scss']
 })
 export class BarChartComponent implements OnInit {
+
+  @Input() barChartLabels: Label[] = ['új', 'kiszállított', 'kifizetett'];
+  @Input() barChartData: ChartDataSets[] = [
+    {
+      data: [0, 0, 0],
+      label: 'Megrendelések',
+    },
+  ];
+  @Input() barChartColor: Color[] = [];
+
+  // @Input() maxValue: number;
+
+  public barChartOptions: ChartOptions = {
+
+    // legend: {
+    //   labels: {
+    //       // This more specific font property overrides the global property
+    //     fontColor: 'white',
+    //   },
+    //   position: 'bottom',
+    // },
+    responsive: true,
+    // We use these empty structures as placeholders for dinamic theming.
+    scales: {
+      xAxes: [{
+        gridLines: {
+          color: 'rgba(230,230,230,1)',
+          lineWidth: 1
+        },
+        ticks: {
+          fontColor: 'rgba(255,255,255,1)'
+        }
+      }],
+      yAxes: [{
+        gridLines: {
+          color: 'rgba(230,230,230,1)',
+          lineWidth: 1
+        },
+        ticks: {
+          fontColor: 'rgba(230,230,230,1)',
+          // max: this.maxValue,
+          min: 0,
+          // stepSize: 5
+        }
+      }]
+    },
+    // plugins: {
+    //   datalabels: {
+    //     anchor: 'end',
+    //     align: 'end',
+    //   }
+    // }
+  };
+
+  public barChartType: ChartType = 'bar';
+  public barChartLegend = true;
+  public barChartPlugins = [];
 
   constructor() { }
 
