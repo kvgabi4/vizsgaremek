@@ -8,8 +8,8 @@ const BillSchema = mongoose.Schema({
         required: true
     },
     date: {
-        type: Date,
-        default: new Date(),
+        type: String,
+        default: new Date().toLocaleDateString('hu-HU'),
         required: true
     },
     status: {

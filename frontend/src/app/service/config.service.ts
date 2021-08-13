@@ -105,16 +105,16 @@ export class ConfigService {
   //   return arr.map( item => ConfigService.getSubProperty(item, keys));
   // }
 
-  static sqlDate(jsTime: number): string | number | boolean | undefined {
-    const options: Intl.DateTimeFormatOptions = {
-      year: 'numeric',
-      month: 'numeric',
-      day: 'numeric',
-      hour: 'numeric',
-      minute: 'numeric'
-    };
-    return Intl.DateTimeFormat('hu', options).format(jsTime);
-  }
+  // static sqlDate(jsTime: number): string | number | boolean | undefined {
+  //   const options: Intl.DateTimeFormatOptions = {
+  //     year: 'numeric',
+  //     month: 'numeric',
+  //     day: 'numeric',
+  //     hour: 'numeric',
+  //     minute: 'numeric'
+  //   };
+  //   return Intl.DateTimeFormat('hu', options).format(jsTime);
+  // }
 
   static curveLongString(
     data: string,

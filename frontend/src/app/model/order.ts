@@ -3,7 +3,7 @@ import { Product } from "./product";
 
 export class Order {
   _id: string = '';
-  customer: Customer = new Customer();
+  customer: string = '';
   products: Product[] = [];
   // products:[{
   //   productId: string,
@@ -12,7 +12,7 @@ export class Order {
   //   productId: '',
   //   amount: 0
   // }];
-  date: Date = new Date();
+  date: string = new Date().toLocaleDateString('hu-HU');
   status: "new" | "shipped" | "cancelled" = "new";
   note?: string = '';
 }

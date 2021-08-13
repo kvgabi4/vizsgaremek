@@ -1,6 +1,6 @@
 export class Bill {
   _id: string = '';
   order: string = '';
-  date: Date = new Date();
+  date: string = new Date().toLocaleDateString('hu-HU');
   status: "új" | "kifizetett" = "új";
 }
