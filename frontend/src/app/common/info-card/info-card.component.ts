@@ -6,6 +6,7 @@ export interface InfoCard {
   title: string;
   content: any;
   footer: string;
+  unit: string
 }
 
 @Component({
@@ -20,6 +21,7 @@ export class InfoCardComponent implements OnInit {
   @Input() title: string = 'title';
   @Input() content: any = '';
   @Input() footer: string = '';
+  @Input() unit: string = '';
 
   constructor() { }
 

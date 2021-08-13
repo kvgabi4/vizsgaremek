@@ -30,6 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InfoCardComponent } from './common/info-card/info-card.component';
 import { BarChartComponent } from './common/chart/bar-chart/bar-chart.component';
 import { ChartsModule } from 'ng2-charts';
+import { PieChartComponent } from './common/chart/pie-chart/pie-chart.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { ChartsModule } from 'ng2-charts';
     BillEditComponent,
     UserProfileComponent,
     InfoCardComponent,
-    BarChartComponent
+    BarChartComponent,
+    PieChartComponent
   ],
   imports: [
     BrowserModule,

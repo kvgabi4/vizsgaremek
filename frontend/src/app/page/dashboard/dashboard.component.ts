@@ -44,29 +44,33 @@ export class DashboardComponent implements OnInit {
       title: 'Vásárlók',
       content: this.activeCustomers,
       cardClass: 'bg-warning',
-      footer: 'Aktív vásárlók száma.',
+      footer: 'Aktív vásárlók',
       icon: 'fas fa-user-alt',
+      unit: 'db',
     },
     {
       title: 'Termékek',
       content: this.activeProducts,
       cardClass: 'bg-success',
-      footer: 'Aktív termékek száma.',
+      footer: 'Aktív termékek',
       icon: 'fas fa-seedling',
+      unit: 'db',
     },
     {
       title: 'Megrendelések',
       content: this.notPaidOrders,
       cardClass: 'bg-primary',
-      footer: 'Kifizetetlen megrendelések száma.',
+      footer: 'Kifizetetlen megrendelések',
       icon: 'fas fa-table',
+      unit: 'db',
     },
     {
       title: 'Számlák',
       content: this.notPaidBillsAmount,
       cardClass: 'bg-info',
-      footer: 'Kifizetetlen számlák összege Ft-ban.',
+      footer: 'Kifizetetlen számlák',
       icon: 'fas fa-receipt',
+      unit: 'Ft',
     }
   ];
 
@@ -115,7 +119,7 @@ export class DashboardComponent implements OnInit {
     }
   ];
 
-  // billSumChartLabels: Label[] = ['sum of new bills', 'sum of paid bills'];
+  billSumChartLabels: Label[] = ['új számlák összege', 'kifizetett számlák összege'];
   billSumChartData: ChartDataSets[] = [{ data: [0, 0] }];
   billSumChartColor: Color[] = [
     {
