@@ -27,6 +27,8 @@ import { BillEditComponent } from './page/bill-edit/bill-edit.component';
 import { UserProfileComponent } from './page/user-profile/user-profile.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InfoCardComponent } from './common/info-card/info-card.component';
+import { BarChartComponent } from './common/chart/bar-chart/bar-chart.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CustomerEditComponent,
     OrderEditComponent,
     BillEditComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    InfoCardComponent,
+    BarChartComponent
   ],
   imports: [
     BrowserModule,

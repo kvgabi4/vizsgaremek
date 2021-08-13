@@ -14,6 +14,6 @@ export class Order {
   //   amount: 0
   // }];
   date: string = new Date().toLocaleDateString('hu-HU');
-  status: "new" | "shipped" | "cancelled" = "new";
+  status: "új" | "kiszállított" | "kifizetett" = "új";
   note?: string = '';
 }

@@ -1,18 +1,8 @@
-<div class="container-fluid px-4">
-  <h1 class="mt-4">Sidenav Light</h1>
-  <ol class="breadcrumb mb-4">
-      <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-      <li class="breadcrumb-item active">Sidenav Light</li>
-  </ol>
-  <div class="card mb-4">
-      <div class="card-body">
-          This page is an example of using the light side navigation option. By appending the
-          <code>.sb-sidenav-light</code>
-          class to the
-          <code>.sb-sidenav</code>
-          class, the side navigation will take on a light color scheme. The
-          <code>.sb-sidenav-dark</code>
-          is also available for a darker option.
-      </div>
+<div class="container-fluid px-4 mt-3">
+  <div class="row">
+    <div *ngFor="let card of cards" class="col-lg-3 col-md-6 col-sm-6 mb-5">
+      <app-info-card [cardClass]="card.cardClass" [icon]="card.icon" [title]="card.title"
+      [content]="card.content | async | number:'1.0-0':'en-US'" [footer]="card.footer"></app-info-card>
+    </div>
   </div>
 </div>
