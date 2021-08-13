@@ -35,15 +35,17 @@ export class ProductEditComponent implements OnInit {
 
   onUpdate(form: NgForm, product: Product): void {
     this.clicked = true;
-    if (!product._id) {
-      this.productService.create(product);
-      this.router.navigate(['products']);
-      } else {
-        this.productService.update(product).subscribe(
-          () => this.router.navigate(['products'])
-        );
-      }
-      //console.log('onUpdate:',form.value, product)
+    if (product._id === '') {
+      this.productService.create(form.value).subscribe(
+        () => this.router.navigate(['products']),
+        err => console.error(err)
+      );
+    } else {
+      this.productService.update(product).subscribe(
+        () => this.router.navigate(['products']),
+        err => console.error(err)
+      );
+    }
   }
 
 }

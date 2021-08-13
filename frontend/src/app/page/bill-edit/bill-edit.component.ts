@@ -35,15 +35,17 @@ export class BillEditComponent implements OnInit {
 
   onUpdate(form: NgForm, bill: Bill): void {
     this.clicked = true;
-    if (!bill._id) {
-      this.billService.create(bill);
-      this.router.navigate(['bills']);
-      } else {
-        this.billService.update(bill).subscribe(
-          () => this.router.navigate(['bills'])
-        );
-      }
-      //console.log('onUpdate:',form.value, bill)
+    if (bill._id === '') {
+      this.billService.create(form.value).subscribe(
+        () => this.router.navigate(['bills']),
+        err => console.error(err)
+      );
+    } else {
+      this.billService.update(bill).subscribe(
+        () => this.router.navigate(['bills']),
+        err => console.error(err)
+      );
+    }
   }
 
 }

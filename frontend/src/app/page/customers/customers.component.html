@@ -2,15 +2,16 @@
   <div class="card mb-4">
     <div class="card-header d-flex flex-row align-items-center">
         <i class="fas fa-table me-1"></i>
-        <h4 class="fw-bold text-uppercase ps-3 mt-1"> {{entity}} listája</h4>
+        <h4 class="fw-bold text-uppercase ps-3 mt-1"> {{entity[1]}} listája</h4>
     </div>
-  <app-data-table
-    [tableColumns]="customerColumns"
-    [list$]="list$"
-    [filterKeys]="filterKeys"
-    [filterKey]="filterKey"
-    (selectOne)="onSelectOne($event)"
-    (deleteOne)="onDeleteOne($event)">
-  </app-data-table>
-</div>
+    <app-data-table
+      [tableColumns]="columns"
+      [list$]="list$"
+      [filterKeys]="filterKeys"
+      [filterKey]="filterKey"
+      [entity]="entity[0]"
+      (selectOne)="onSelectOne($event)"
+      (deleteOne)="onDeleteOne($event)">
+    </app-data-table>
+  </div>
 </div>

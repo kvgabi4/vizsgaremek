@@ -13,9 +13,9 @@ import { ToasterService } from 'src/app/service/toaster.service';
 })
 export class OrdersComponent implements OnInit {
 
-  orderColumns: ITableColumn[] = this.config.orderColumns;
+  columns: ITableColumn[] = this.config.orderColumns;
   list$: Observable<Order[]> = this.orderService.getAll();
-  entity: string = 'Megrendelések';
+  entity: string[] = ['order', 'Megrendelések'];
   filterKeys: string[][] = this.config.orderColumns.map(item => [item.key, item.title]);
   filterKey: string[] = this.filterKeys[1];
 

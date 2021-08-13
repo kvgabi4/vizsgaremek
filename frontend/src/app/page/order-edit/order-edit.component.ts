@@ -35,15 +35,17 @@ export class OrderEditComponent implements OnInit {
 
   onUpdate(form: NgForm, order: Order): void {
     this.clicked = true;
-    if (!order._id) {
-      this.orderService.create(order);
-      this.router.navigate(['orders']);
-      } else {
-        this.orderService.update(order).subscribe(
-          () => this.router.navigate(['orders'])
-        );
-      }
-      //console.log('onUpdate:',form.value, order)
+    if (order._id === '') {
+      this.orderService.create(form.value).subscribe(
+        () => this.router.navigate(['orders']),
+        err => console.error(err)
+      );
+    } else {
+      this.orderService.update(order).subscribe(
+        () => this.router.navigate(['orders']),
+        err => console.error(err)
+      );
+    }
   }
 
 }

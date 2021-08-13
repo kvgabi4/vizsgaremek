@@ -13,12 +13,11 @@ import { ToasterService } from 'src/app/service/toaster.service';
 })
 export class BillsComponent implements OnInit {
 
-  billColumns: ITableColumn[] = this.config.billColumns;
+  columns: ITableColumn[] = this.config.billColumns;
   list$: Observable<Bill[]> = this.billService.getAll();
-  entity: string = 'Számlák';
+  entity: string[] = ['bill', 'Számlák'];
   filterKeys: string[][] = this.config.billColumns.map(item => [item.key, item.title]);
   filterKey: string[] = this.filterKeys[1];
-
 
   constructor(
     private config: ConfigService,

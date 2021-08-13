@@ -35,15 +35,17 @@ export class CustomerEditComponent implements OnInit {
 
   onUpdate(form: NgForm, customer: Customer): void {
     this.clicked = true;
-    if (!customer._id) {
-      this.customerService.create(customer);
-      this.router.navigate(['customers']);
-      } else {
-        this.customerService.update(customer).subscribe(
-          () => this.router.navigate(['customers'])
-        );
-      }
-      //console.log('onUpdate:',form.value, customer)
+    if (customer._id === '') {
+      this.customerService.create(form.value).subscribe(
+        () => this.router.navigate(['customers']),
+        err => console.error(err)
+      );
+    } else {
+      this.customerService.update(customer).subscribe(
+        () => this.router.navigate(['customers']),
+        err => console.error(err)
+      );
+    }
   }
 
 }

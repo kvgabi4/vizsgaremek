@@ -13,6 +13,7 @@ export class DataTableComponent<T extends {[propname: string]: any}> implements 
   @Input() list$: Observable<T[]> | null = null;
   @Input() filterKeys: string[][] = [];
   @Input() filterKey: string[] = [];
+  @Input() entity: string = '';
   phrase: string = '';
 
   @Output() selectOne: EventEmitter<T> = new EventEmitter<T>();
