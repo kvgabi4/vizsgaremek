@@ -20,7 +20,11 @@ export class ConfigService {
   public readonly apiUrl: string = 'http://localhost:3000/';
 
   customerColumns: ITableColumn[] = [
-    {key: "_id", title: "#"},
+    {
+      key: "_id", title: "#",
+      pipes: [ConfigService.curveLongString],
+      pipeArgs: [[0, 6]]
+    },
     {key: "lastName", title: "Vezetéknév"},
     {key: "firstName", title: "Keresztnév"},
     {key: "email", title: "E-mail"},
@@ -34,29 +38,55 @@ export class ConfigService {
   ];
 
   productColumns: ITableColumn[] = [
-    {key: "_id", title: "#"},
+    {
+      key: "_id", title: "#",
+      pipes: [ConfigService.curveLongString],
+      pipeArgs: [[0, 6]]
+    },
     {key: "name", title: "Megnevezés"},
     {key: "category", title: "Kategória"},
     {key: "price", title: "Ár", pipes: [new CurrencyPipe('hu-HU')], pipeArgs: [['HUF', 'symbol', '3.0']]},
     {key: "active", title: "Aktív", htmlOutput: ConfigService.activeOrInactiveSign },
     {key: "image", title: "Kép"},
-    {key: "description", title: "Leírás"},
+    {
+      key: "description", title: "Leírás",
+      pipes: [ConfigService.curveLongString],
+      pipeArgs: [[0, 15]]
+    },
   ];
 
   orderColumns: ITableColumn[] = [
-    {key: "_id", title: "#"},
+    {
+      key: "_id", title: "#",
+      pipes: [ConfigService.curveLongString],
+      pipeArgs: [[0, 6]]
+    },
     {
       key: "customer",
       title: "Vásárló",
-      // pipes: [ConfigService.getSubProperty],
+      pipes: [ConfigService.setNames],
       // pipeArgs: [['customer.firstName', 'customer.lastName']]
     },
-    { key: "products", title: "Termékek" },
+    // { key: "products", title: "Termékek" },
+
+    {
+      key: "products", title: "Termékek",
+      pipes: [ConfigService.getArrayItems],
+      pipeArgs: [['name']]
+    },
+    {
+      key: "amounts", title: "Mennyiségek",
+      // pipes: [ConfigService.getArrayItems],
+      // pipeArgs: [['name']]
+    },
+    // {key: "price", title: "Ár összesen"},
+
     // {
-    //   key: "products", title: "Termékek",
-    //   pipes: [ConfigService.getSubProperty],
-    //   pipeArgs: [['product[name]']]
+    //   key: "orders", title: "Termékek",
+    //   pipes: [ConfigService.getArrayItems],
+    //   pipeArgs: [['name']]
     // },
+
     // {key: "products[0].amounts", title: "Mennyiségek"},
     // db.json:
     // "products": [
@@ -82,8 +112,16 @@ export class ConfigService {
   ];
 
   billColumns: ITableColumn[] = [
-    {key: "_id", title: "#"},
-    {key: "order", title: "Megrendelés"},
+    {
+      key: "_id", title: "#",
+      pipes: [ConfigService.curveLongString],
+      pipeArgs: [[0, 6]]
+    },
+    {
+      key: "order", title: "Megrendelés",
+      pipes: [ConfigService.curveLongString],
+      pipeArgs: [[0, 6]]
+    },
     {key: "date", title: "Dátum"},
     {key: "status", title: "Státusz"},
   ];
@@ -101,9 +139,13 @@ export class ConfigService {
     return keys.map( key => get(obj, key) ).join(' ');
   }
 
-  // static getArrayItems(arr: (string | number)[], keys: string): any[] {
-  //   return arr.map( item => ConfigService.getSubProperty(item, keys));
-  // }
+  static getArrayItems(arr: any[], key: string): any[] {
+    return arr.map(item => ` ${item.name} ${item.category}`);
+  }
+
+  static setNames(data: any, key: string): string {
+    return `${data.lastName} ${data.firstName}`
+  }
 
   // static sqlDate(jsTime: number): string | number | boolean | undefined {
   //   const options: Intl.DateTimeFormatOptions = {

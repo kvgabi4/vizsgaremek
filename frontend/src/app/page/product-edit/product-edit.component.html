@@ -13,7 +13,7 @@
 
         <div class="form-group mt-3">
           <div class="d-flex justify-content-between">
-            <label for="">Megnevezés</label>
+            <label for="">Fajta</label>
             <div [hidden]="productForm.controls.name?.valid" class="error-message mt-1">
               A névnek nagybetűvel kell kezdődni és 2-20 karkter hosszú lehet!
             </div>
@@ -25,14 +25,17 @@
         <div class="form-group mt-3">
           <div class="d-flex justify-content-between">
             <label for="">Kategória</label>
-            <div [hidden]="productForm.controls.category?.valid" class="error-message mt-1">
+            <!-- <div [hidden]="productForm.controls.category?.valid" class="error-message mt-1">
               A kategória minimum 1 maximum 50 karakter lehet!
-            </div>
+            </div> -->
           </div>
-          <input name="category" [(ngModel)]="product.category" type="text" class="form-control"
-            pattern="[a-záéüöóőúűí\.\s]{1,50}" required>
+          <select class="custom-select border col-12 mr-5" name="category" [(ngModel)]="product.category" required >
+            <option *ngFor="let key of ['alma', 'körte', 'kajszi', 'őszibarack', 'szilva', 'birs']" [value]="[key]">{{key}}</option>
+          </select>
+          <!-- <input name="category" [(ngModel)]="product.category" type="text" class="form-control"
+            pattern="[a-záéüöóőúűí\.\s]{1,50}" required> -->
         </div>
-
+        <!-- "alma" | "körte" | "kajszi" | "őszibarack" | "szilva" | "birs" -->
         <div class="form-group mt-3">
           <div class="d-flex justify-content-between">
             <label for="">Leírás</label>

@@ -1,19 +1,26 @@
-const mongoose = require('mongoose');
-const idValidator = require('mongoose-id-validator');
+const mongoose = require("mongoose");
+const idValidator = require("mongoose-id-validator");
 
-const OrderSchema = mongoose.Schema({
+const OrderSchema = mongoose.Schema(
+  {
     customer: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Customer',
-        required: true
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Customer",
+      required: true,
     },
-    products: [{
+    products: [
+      {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Product',
-        required: true
+        ref: "Product",
+        required: true,
+      },
+    ],
+    amounts: [{
+      type: Number,
+      required: true,
     }],
-    // products: [{
-    //     productId: {
+    // orders: [{
+    //     product: {
     //         type: mongoose.Schema.Types.ObjectId,
     //         ref: 'Product',
     //         required: true
@@ -24,23 +31,25 @@ const OrderSchema = mongoose.Schema({
     //     },
     // }],
     date: {
-        type: Date,
-        default: new Date().toLocaleDateString('hu-HU'),
+      type: String,
+      default: new Date().toLocaleDateString("hu-HU"),
     },
     status: {
-        type: String,
-        required: true
+      type: String,
+      required: true,
     },
     note: {
-        type: String,
-    }
-}, {
-    timestamps: true
-});
+      type: String,
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
 
 OrderSchema.plugin(idValidator);
 
-module.exports = mongoose.model('Order', OrderSchema);
+module.exports = mongoose.model("Order", OrderSchema);
 
 /* export class Order {
     _id: string = '';

@@ -3,13 +3,14 @@ import { Product } from "./product";
 
 export class Order {
   _id: string = '';
-  customer: string = '';
+  customer: Customer = new Customer();
   products: Product[] = [];
-  // products:[{
-  //   productId: string,
+  amounts: number[] = [];
+  // orders:[{
+  //   product: string;
   //   amount: number
   // }] = [{
-  //   productId: '',
+  //   product: '',
   //   amount: 0
   // }];
   date: string = new Date().toLocaleDateString('hu-HU');
