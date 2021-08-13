@@ -37,7 +37,7 @@
           <div class="d-flex justify-content-between">
             <label for="">Dátum</label>
             <div [hidden]="orderForm.controls.date?.valid" class="error-message mt-1">
-              A dátum formátuma: yyyy. mm. dd!
+              A dátum formátuma: yyyy. mm. dd.!
             </div>
           </div>
           <input name="date" [(ngModel)]="order.date" type="text" class="form-control"
