@@ -14,7 +14,9 @@ export class DataTableComponent<T extends {[propname: string]: any}> implements 
   @Input() filterKeys: string[][] = [];
   @Input() filterKey: string[] = [];
   @Input() entity: string = '';
+  @Input() color: string[] = [];
   phrase: string = '';
+  // colors: string[] = ['warning', 'success', 'primary', 'info'];
 
   @Output() selectOne: EventEmitter<T> = new EventEmitter<T>();
   @Output() deleteOne: EventEmitter<T> = new EventEmitter<T>();

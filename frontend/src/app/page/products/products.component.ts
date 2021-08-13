@@ -18,7 +18,7 @@ export class ProductsComponent implements OnInit {
   entity: string[] = ['product', 'Termékek'];
   filterKeys: string[][] = this.config.productColumns.map(item => [item.key, item.title]);
   filterKey: string[] = this.filterKeys[1];
-
+  color: string[] = ['bg-success', 'btn-outline-success'];
 
   constructor(
     private config: ConfigService,

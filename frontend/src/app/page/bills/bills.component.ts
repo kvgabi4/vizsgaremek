@@ -18,6 +18,7 @@ export class BillsComponent implements OnInit {
   entity: string[] = ['bill', 'Számlák'];
   filterKeys: string[][] = this.config.billColumns.map(item => [item.key, item.title]);
   filterKey: string[] = this.filterKeys[1];
+  color: string[] = ['bg-info', 'btn-outline-info'];
 
   constructor(
     private config: ConfigService,

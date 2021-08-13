@@ -12,9 +12,9 @@
 </div>
 
 <!-- Add new -->
-<div class="card card-plain mx-3 d-grid gap-2 border-success">
+<div class="card card-plain mx-3 d-grid gap-2">
   <!-- <div > -->
-    <button [routerLink]="['/', entity, '']" type="button" class="btn btn-outline-success fw-bold text-uppercase">
+    <button [routerLink]="['/', entity, '']" type="button" class="btn fw-bold text-uppercase" [class]="color[1]">
       Új elem felvétele
       <i class="fas fa-angle-right mx-2"></i>
     </button>
@@ -23,7 +23,7 @@
 
 <div class="card-body table-responsive">
   <table class="table table-striped table-hover align-middle">
-    <thead class="bg-success text-white align-middle">
+    <thead class="text-white align-middle" [class]="color[0]">
       <tr>
         <th *ngFor="let col of tableColumns">
           {{col.title}}

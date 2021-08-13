@@ -18,6 +18,7 @@ export class CustomersComponent implements OnInit {
   entity: string[] = ['customer', 'Vásárlók'];
   filterKeys: string[][] = this.config.customerColumns.map(item => [item.key, item.title]);
   filterKey: string[] = this.filterKeys[1];
+  color: string[] = ['bg-warning', 'btn-outline-warning'];
 
   constructor(
     private config: ConfigService,

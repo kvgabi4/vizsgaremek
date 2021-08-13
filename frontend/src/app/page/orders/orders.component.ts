@@ -19,6 +19,7 @@ export class OrdersComponent implements OnInit {
   entity: string[] = ['order', 'Megrendelések'];
   filterKeys: string[][] = this.config.orderColumns.map(item => [item.key, item.title]);
   filterKey: string[] = this.filterKeys[1];
+  color: string[] = ['bg-primary', 'btn-outline-primary'];
   // price: number[] = [];
 
   constructor(
