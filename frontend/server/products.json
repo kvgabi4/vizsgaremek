@@ -1,0 +1,18 @@
+[
+    {
+      "name": "Mutsu",
+      "category": "alma",
+      "price": 300,
+      "active": true,
+      "description": "Ez egy zöld alma.",
+      "image": "public/images/150.png"
+    },
+    {
+      "name": "Bosc kobak",
+      "category": "körte",
+      "price": 350,
+      "active": true,
+      "description": "Ez egy finom körte.",
+      "image": "public/images/150.png"
+    }
+  ]
