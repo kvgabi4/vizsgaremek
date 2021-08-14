@@ -1,17 +1,16 @@
 <div class="card card-stats h-100">
-  <div class="card-header card-header-icon d-flex justify-content-between" [class]="cardClass">
-      <div class="card-icon">
-          <i [class]="icon"></i>
-          <!-- <i class="fas fa-user-alt"></i> -->
-          <p class="card-category">{{ title }}</p>
+  <div class="card-header" [class]="cardClass">
+      <div class="card-icon d-flex justify-content-end mt-2">
+          <i class="mt-1 me-2" [class]="icon"></i>
+          <p class="card-category fw-bold text-uppercase">{{ title }}</p>
       </div>
-      <div>
+      <div class=" d-flex justify-content-between">
         <h3 class="card-title text-end fw-bold">{{ content }}</h3>
         <h5 class="card-title text-end">{{ unit }}</h5>
       </div>
   </div>
-  <div class="card-footer mt-auto">
-      <div class="stats">
+  <div class="card-footer bg-white">
+      <div class="stats bg-white mt-auto">
           {{ footer }}
       </div>
   </div>
