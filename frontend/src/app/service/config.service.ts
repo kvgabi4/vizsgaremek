@@ -79,7 +79,7 @@ export class ConfigService {
       // pipes: [ConfigService.getArrayItems],
       // pipeArgs: [['name']]
     },
-    // {key: "price", title: "Ár összesen"},
+    {key: "price", title: "Ár összesen", pipes: [new CurrencyPipe('hu-HU')], pipeArgs: [['HUF', 'symbol', '3.0']]},
 
     // {
     //   key: "orders", title: "Termékek",

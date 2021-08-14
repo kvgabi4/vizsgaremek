@@ -6,6 +6,7 @@ export class Order {
   customer: Customer = new Customer();
   products: Product[] = [];
   amounts: number[] = [];
+  price: number = 0;
   // orders:[{
   //   product: string;
   //   amount: number

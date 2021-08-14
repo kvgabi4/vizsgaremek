@@ -19,6 +19,11 @@ const OrderSchema = mongoose.Schema(
       type: Number,
       required: true,
     }],
+    price: {
+      type: Number,
+      required: true,
+      default: 0,
+    },
     // orders: [{
     //     product: {
     //         type: mongoose.Schema.Types.ObjectId,
