@@ -1,61 +1,63 @@
 const { mockRequest, mockResponse } = require('jest-mock-req-res');
 const createError = require('http-errors');
 
-const personController = require('./controller');
-const personService = require('./service');
+const billController = require('./controller');
+const billService = require('./service');
 
 jest.mock('./service');
 
-describe("order controler", () => {
+describe("bill controler", () => {
     const mockData = [{
         "id": 1,
-        "first_name": "Fiorenze",
-        "last_name": "Dyneley",
-        "email": "fdyneley0@narod.ru"
-    }, {
+        "order": "ObjectId(61191541ebe41f12a013d8f2)",
+        "amount": 6000,
+        "date": "2021. 08. 11.",
+        "status": "kifizetett"
+      },
+      {
         "id": 2,
-        "first_name": "Owen",
-        "last_name": "Jirka",
-        "email": "ojirka1@squidoo.com"
-    }, {
+        "order": "ObjectId(61191541ebe41f12a013d8f3)",
+        "amount": 9000,
+        "date": "2021. 08. 11.",
+        "status": "stornózott"
+      },
+      {
         "id": 3,
-        "first_name": "Terra",
-        "last_name": "Hurdman",
-        "email": "thurdman2@reverbnation.com"
-    }, {
+        "order": "ObjectId(61191541ebe41f12a013d8ef)",
+        "amount": 10000,
+        "date": "2021. 08. 12.",
+        "status": "stornózott"
+      },
+      {
         "id": 4,
-        "first_name": "Thomasin",
-        "last_name": "de Keep",
-        "email": "tdekeep3@fc2.com"
-    }, {
-        "id": 5,
-        "first_name": "Lawrence",
-        "last_name": "Tearle",
-        "email": "ltearle4@infoseek.co.jp"
-    }];
+        "order": "ObjectId(61191541ebe41f12a013d8f0)",
+        "amount": 16000,
+        "date": "2021. 08. 10.",
+        "status": "kifizetett"
+      }];
 
     let response;
     const nextFunction = jest.fn();
 
     beforeEach(() => {
-        personService.__setMockData(mockData);
+        billService.__setMockData(mockData);
         response = mockResponse();
     });
 
     test("find one with valid id", () => {
-        const PERSON_ID = 1;
+        const BILL_ID = 1;
 
         const request = mockRequest({
             params: {
-                id: PERSON_ID
+                id: BILL_ID
             }
         });
 
-        return personController.findOne(request, response, nextFunction)
+        return billController.findOne(request, response, nextFunction)
             .then( () => {
-                expect(personService.findOne).toBeCalledWith(PERSON_ID);
+                expect(billService.findOne).toBeCalledWith(BILL_ID);
                 expect(response.json).toBeCalledWith(
-                    mockData.find(p => p.id === PERSON_ID)
+                    mockData.find(p => p.id === BILL_ID)
                 );                
             })
     });

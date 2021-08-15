@@ -1,61 +1,85 @@
 const { mockRequest, mockResponse } = require('jest-mock-req-res');
 const createError = require('http-errors');
 
-const personController = require('./controller');
-const personService = require('./service');
+const orderController = require('./controller');
+const orderService = require('./service');
 
 jest.mock('./service');
 
 describe("order controler", () => {
     const mockData = [{
         "id": 1,
-        "first_name": "Fiorenze",
-        "last_name": "Dyneley",
-        "email": "fdyneley0@narod.ru"
-    }, {
+        "customer": "ObjectId(61190d2aebe41f12a013d8d3)",
+        "product": "ObjectId(6118fc66ebe41f12a013d883)",
+        "quantity": 5,
+        "price": 10000,
+        "date": "2021. 08. 11.",
+        "status": "új",
+        "note": "Fejlett gyökerű töveket kérek!"
+      },
+      {
         "id": 2,
-        "first_name": "Owen",
-        "last_name": "Jirka",
-        "email": "ojirka1@squidoo.com"
-    }, {
+        "customer": "ObjectId(61190d2aebe41f12a013d8d1)",
+        "product": "ObjectId(6118fc66ebe41f12a013d894)",
+        "quantity": 8,
+        "price": 16000,
+        "date": "2021. 08. 10.",
+        "status": "új",
+        "note": ""
+      },
+      {
         "id": 3,
-        "first_name": "Terra",
-        "last_name": "Hurdman",
-        "email": "thurdman2@reverbnation.com"
-    }, {
+        "customer": "ObjectId(61190d2aebe41f12a013d8d2)",
+        "product": "ObjectId(6118fc66ebe41f12a013d894)",
+        "quantity": 8,
+        "price": 16000,
+        "date": "2021. 08. 10.",
+        "status": "új",
+        "note": ""
+      },
+      {
         "id": 4,
-        "first_name": "Thomasin",
-        "last_name": "de Keep",
-        "email": "tdekeep3@fc2.com"
-    }, {
+        "customer": "ObjectId(61190d2aebe41f12a013d8d4)",
+        "product": "ObjectId(6118fc66ebe41f12a013d8c5)",
+        "quantity": 3,
+        "price": 6000,
+        "date": "2021. 08. 10.",
+        "status": "új",
+        "note": ""
+      },
+      {
         "id": 5,
-        "first_name": "Lawrence",
-        "last_name": "Tearle",
-        "email": "ltearle4@infoseek.co.jp"
-    }];
+        "customer": "ObjectId(61190d2aebe41f12a013d8d8)",
+        "product": "ObjectId(6118fc66ebe41f12a013d8c0)",
+        "quantity": 3,
+        "price": 9000,
+        "date": "2021. 08. 10.",
+        "status": "új",
+        "note": ""
+      }];
 
     let response;
     const nextFunction = jest.fn();
 
     beforeEach(() => {
-        personService.__setMockData(mockData);
+        orderService.__setMockData(mockData);
         response = mockResponse();
     });
 
     test("find one with valid id", () => {
-        const PERSON_ID = 1;
+        const ORDER_ID = 1;
 
         const request = mockRequest({
             params: {
-                id: PERSON_ID
+                id: ORDER_ID
             }
         });
 
-        return personController.findOne(request, response, nextFunction)
+        return orderController.findOne(request, response, nextFunction)
             .then( () => {
-                expect(personService.findOne).toBeCalledWith(PERSON_ID);
+                expect(orderService.findOne).toBeCalledWith(ORDER_ID);
                 expect(response.json).toBeCalledWith(
-                    mockData.find(p => p.id === PERSON_ID)
+                    mockData.find(p => p.id === ORDER_ID)
                 );                
             })
     });

@@ -1,61 +1,126 @@
 const { mockRequest, mockResponse } = require('jest-mock-req-res');
 const createError = require('http-errors');
 
-const personController = require('./controller');
-const personService = require('./service');
+const customerController = require('./controller');
+const customerService = require('./service');
 
 jest.mock('./service');
 
-describe("order controler", () => {
+describe("customer controler", () => {
     const mockData = [{
         "id": 1,
-        "first_name": "Fiorenze",
-        "last_name": "Dyneley",
-        "email": "fdyneley0@narod.ru"
-    }, {
+        "lastName": "Kiss",
+        "firstName": "István",
+        "address": {
+          "zip": 1111,
+          "city": "Budapest",
+          "street": "Nagy László utca 35."
+        },
+        "email": "kissi@gmail.com",
+        "phone": "+36303336666",
+        "active": true
+      },
+      {
         "id": 2,
-        "first_name": "Owen",
-        "last_name": "Jirka",
-        "email": "ojirka1@squidoo.com"
-    }, {
+        "lastName": "Héder",
+        "firstName": "Elek",
+        "address": {
+          "zip": 1310,
+          "city": "Budapest",
+          "street": "Vértes utca 3."
+        },
+        "email": "helek@gmail.com",
+        "phone": "+36303358766",
+        "active": true
+      },
+      {
         "id": 3,
-        "first_name": "Terra",
-        "last_name": "Hurdman",
-        "email": "thurdman2@reverbnation.com"
-    }, {
+        "lastName": "Vajas",
+        "firstName": "Edina",
+        "address": {
+          "zip": 6000,
+          "city": "Kecskemét",
+          "street": "Kossuth utca 49."
+        },
+        "email": "ve@gmail.com",
+        "phone": "+36301155879",
+        "active": true
+      },
+      {
         "id": 4,
-        "first_name": "Thomasin",
-        "last_name": "de Keep",
-        "email": "tdekeep3@fc2.com"
-    }, {
+        "lastName": "Péter",
+        "firstName": "Olga",
+        "address": {
+          "zip": 6000,
+          "city": "Kecskemét",
+          "street": "Torma utca 1."
+        },
+        "email": "polga@gmail.com",
+        "phone": "+36704568876",
+        "active": true
+      },
+      {
         "id": 5,
-        "first_name": "Lawrence",
-        "last_name": "Tearle",
-        "email": "ltearle4@infoseek.co.jp"
-    }];
+        "lastName": "Kocsis",
+        "firstName": "Viola",
+        "address": {
+          "zip": 5600,
+          "city": "Békéscsaba",
+          "street": "Orosházi út 15."
+        },
+        "email": "kv5@gmail.com",
+        "phone": "+36704611769",
+        "active": true
+      },
+      {
+        "id": 6,
+        "lastName": "Kovacsics",
+        "firstName": "Jenő",
+        "address": {
+          "zip": 6726,
+          "city": "Szeged",
+          "street": "Hársfa  út 7."
+        },
+        "email": "kj701203@gmail.com",
+        "phone": "+36701234567",
+        "active": true
+      },
+      {
+        "id": 7,
+        "lastName": "Vigh",
+        "firstName": "Viola",
+        "address": {
+          "zip": 6726,
+          "city": "Szeged",
+          "street": "Piroska  út 72."
+        },
+        "email": "vv@gmail.com",
+        "phone": "+36701234666",
+        "active": true
+      }];
 
     let response;
     const nextFunction = jest.fn();
 
     beforeEach(() => {
-        personService.__setMockData(mockData);
+        customerService.__setMockData(mockData);
         response = mockResponse();
     });
 
     test("find one with valid id", () => {
-        const PERSON_ID = 1;
+        const CUSTOMER_ID = 1;
 
         const request = mockRequest({
             params: {
-                id: PERSON_ID
+                id: CUSTOMER_ID
             }
         });
 
-        return personController.findOne(request, response, nextFunction)
+        return customerController.findOne(request, response, nextFunction)
             .then( () => {
-                expect(personService.findOne).toBeCalledWith(PERSON_ID);
+                expect(customerService.findOne).toBeCalledWith(CUSTOMER_ID);
                 expect(response.json).toBeCalledWith(
-                    mockData.find(p => p.id === PERSON_ID)
+                    mockData.find(p => p.id === CUSTOMER_ID)
                 );                
             })
     });
