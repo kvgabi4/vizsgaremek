@@ -1,0 +1,32 @@
+[
+  {
+    "order": "ObjectId(61191541ebe41f12a013d8f2)",
+    "amount": 6000,
+    "date": "2021. 08. 11.",
+    "status": "kifizetett"
+  },
+  {
+    "order": "ObjectId(61191541ebe41f12a013d8f3)",
+    "amount": 9000,
+    "date": "2021. 08. 11.",
+    "status": "stornózott"
+  },
+  {
+    "order": "ObjectId(61191541ebe41f12a013d8ef)",
+    "amount": 10000,
+    "date": "2021. 08. 12.",
+    "status": "stornózott"
+  },
+  {
+    "order": "ObjectId(61191541ebe41f12a013d8f0)",
+    "amount": 16000,
+    "date": "2021. 08. 10.",
+    "status": "kifizetett"
+  },
+  {
+    "order": "ObjectId(61191541ebe41f12a013d8f1)",
+    "amount": 16000,
+    "date": "2021. 08. 13.",
+    "status": "kifizetett"
+  }
+]

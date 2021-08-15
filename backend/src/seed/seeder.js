@@ -31,7 +31,7 @@ const seedCollection = async (model, fileName) => {
         console.log('CARS NOT FOUND');
     }
 
-    // seedCollection(Bill, 'bills');
+    seedCollection(Bill, 'bills');
     seedCollection(Customer, 'customers');
     seedCollection(Order, 'orders');
     seedCollection(Product, 'products');

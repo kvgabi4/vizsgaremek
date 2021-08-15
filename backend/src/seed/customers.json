@@ -1,7 +1,7 @@
 [
   {
-    "firstName": "Kiss",
-    "lastName": "István",
+    "lastName": "Kiss",
+    "firstName": "István",
     "address": {
       "zip": 1111,
       "city": "Budapest",
@@ -12,8 +12,8 @@
     "active": true
   },
   {
-    "firstName": "Héder",
-    "lastName": "Elek",
+    "lastName": "Héder",
+    "firstName": "Elek",
     "address": {
       "zip": 1310,
       "city": "Budapest",
@@ -24,8 +24,8 @@
     "active": true
   },
   {
-    "firstName": "Vajas",
-    "lastName": "Edina",
+    "lastName": "Vajas",
+    "firstName": "Edina",
     "address": {
       "zip": 6000,
       "city": "Kecskemét",
@@ -36,8 +36,8 @@
     "active": true
   },
   {
-    "firstName": "Péter",
-    "lastName": "Olga",
+    "lastName": "Péter",
+    "firstName": "Olga",
     "address": {
       "zip": 6000,
       "city": "Kecskemét",
@@ -48,8 +48,8 @@
     "active": true
   },
   {
-    "firstName": "Kocsis",
-    "lastName": "Viola",
+    "lastName": "Kocsis",
+    "firstName": "Viola",
     "address": {
       "zip": 5600,
       "city": "Békéscsaba",
@@ -60,8 +60,8 @@
     "active": true
   },
   {
-    "firstName": "Kovacsics",
-    "lastName": "Jenő",
+    "lastName": "Kovacsics",
+    "firstName": "Jenő",
     "address": {
       "zip": 6726,
       "city": "Szeged",
@@ -72,8 +72,8 @@
     "active": true
   },
   {
-    "firstName": "Vigh",
-    "lastName": "Viola",
+    "lastName": "Vigh",
+    "firstName": "Viola",
     "address": {
       "zip": 6726,
       "city": "Szeged",
@@ -84,8 +84,8 @@
     "active": true
   },
   {
-    "firstName": "László",
-    "lastName": "Zoltán",
+    "lastName": "László",
+    "firstName": "Zoltán",
     "address": {
       "zip": 7621,
       "city": "Pécs",
@@ -96,8 +96,8 @@
     "active": true
   },
   {
-    "firstName": "Takács",
-    "lastName": "Edit",
+    "lastName": "Takács",
+    "firstName": "Edit",
     "address": {
       "zip": 9011,
       "city": "Győr",
@@ -108,8 +108,8 @@
     "active": false
   },
   {
-    "firstName": "Szabó",
-    "lastName": "Éva",
+    "lastName": "Szabó",
+    "firstName": "Éva",
     "address": {
       "zip": 3905,
       "city": "Monok",
@@ -120,8 +120,8 @@
     "active": false
   },
   {
-    "firstName": "Horváth",
-    "lastName": "József",
+    "lastName": "Horváth",
+    "firstName": "József",
     "address": {
       "zip": 1212,
       "city": "Budapest",
@@ -132,8 +132,8 @@
     "active": false
   },
   {
-    "firstName": "Vági",
-    "lastName": "Antal",
+    "lastName": "Vági",
+    "firstName": "Antal",
     "address": {
       "zip": 1233,
       "city": "Budapest",
@@ -144,8 +144,8 @@
     "active": true
   },
   {
-    "firstName": "Mérő",
-    "lastName": "Róbert",
+    "lastName": "Mérő",
+    "firstName": "Róbert",
     "address": {
       "zip": 1913,
       "city": "Budapest",
@@ -156,8 +156,8 @@
     "active": true
   },
   {
-    "firstName": "Nagy",
-    "lastName": "Kálmán",
+    "lastName": "Nagy",
+    "firstName": "Kálmán",
     "address": {
       "zip": 3534,
       "city": "Miskolc",
@@ -168,8 +168,8 @@
     "active": true
   },
   {
-    "firstName": "Kiss",
-    "lastName": "Liza",
+    "lastName": "Kiss",
+    "firstName": "Liza",
     "address": {
       "zip": 3525,
       "city": "Miskolc",

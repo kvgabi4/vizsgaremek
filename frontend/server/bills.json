@@ -1,120 +1,120 @@
 [
   {
-    "order": "",
+    "order": "ObjectId()",
     "amount": ,
     "date": "2021. 08. 13.",
     "status": "új"
   },
   {
-    "order": "",
+    "order": "ObjectId()",
     "amount": ,
     "date": "2021. 08. 13.",
     "status": "új"
   },
   {
-    "order": "",
+    "order": "ObjectId()",
     "amount": ,
     "date": "2021. 08. 12.",
     "status": "új"
   },
   {
-    "order": "",
+    "order": "ObjectId()",
     "amount": ,
     "date": "2021. 08. 12.",
     "status": "új"
   },
   {
-    "order": "",
+    "order": "ObjectId()",
     "amount": ,
     "date": "2021. 08. 10.",
     "status": "kifizetett"
   },
   {
-    "order": "",
+    "order": "ObjectId()",
     "amount": ,
     "date": "2021. 08. 09.",
     "status": "kifizetett"
   },
   {
-    "order": "",
+    "order": "ObjectId()",
     "amount": ,
     "date": "2021. 08. 09.",
     "status": "új"
   },
   {
-    "order": "",
+    "order": "ObjectId()",
     "amount": ,
     "date": "2021. 08. 01.",
     "status": "új"
   },
   {
-    "order": "",
-    "amount": ,
+    "order": "ObjectId(61191541ebe41f12a013d8f1)",
+    "amount": 16000,
     "date": "2021. 08. 11.",
     "status": "új"
   },
   {
-    "order": "",
-    "amount": ,
+    "order": "ObjectId(61191541ebe41f12a013d8f2)",
+    "amount": 6000,
     "date": "2021. 08. 11.",
     "status": "kifizetett"
   },
   {
-    "order": "",
-    "amount": ,
+    "order": "ObjectId(61191541ebe41f12a013d8f3)",
+    "amount": 9000,
     "date": "2021. 08. 11.",
     "status": "stornózott"
   },
   {
-    "order": "",
-    "amount": ,
+    "order": "ObjectId(61191541ebe41f12a013d8ef)",
+    "amount": 10000,
     "date": "2021. 08. 12.",
     "status": "stornózott"
   },
   {
-    "order": "",
-    "amount": ,
-    "date": "2021. 08. 05.",
+    "order": "ObjectId(61191541ebe41f12a013d8f0)",
+    "amount": 16000,
+    "date": "2021. 08. 10.",
     "status": "kifizetett"
   },
   {
-    "order": "",
-    "amount": ,
-    "date": "2021. 07. 31.",
+    "order": "ObjectId(61191541ebe41f12a013d8f1)",
+    "amount": 16000,
+    "date": "2021. 08. 13.",
     "status": "kifizetett"
   },
   {
-    "order": "",
+    "order": "ObjectId()",
     "amount": ,
     "date": "2021. 07. 29.",
     "status": "kifizetett"
   },
   {
-    "order": "",
+    "order": "ObjectId()",
     "amount": ,
     "date": "2021. 07. 25.",
     "status": "kifizetett"
   },
   {
-    "order": "",
+    "order": "ObjectId()",
     "amount": ,
     "date": "2021. 07. 20.",
     "status": "kifizetett"
   },
   {
-    "order": "",
+    "order": "ObjectId()",
     "amount": ,
     "date": "2021. 07. 24.",
     "status": "kifizetett"
   },
   {
-    "order": "",
+    "order": "ObjectId()",
     "amount": ,
     "date": "2021. 07. 23.",
     "status": "kifizetett"
   },
   {
-    "order": "",
+    "order": "ObjectId()",
     "amount": ,
     "date": "2021. 07. 29.",
     "status": "kifizetett"
