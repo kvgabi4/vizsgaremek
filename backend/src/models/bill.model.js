@@ -7,6 +7,11 @@ const BillSchema = mongoose.Schema({
         ref: 'Order',
         required: true
     },
+    amount: {
+        type: Number,
+        required: true,
+        default: 0
+    },
     date: {
         type: String,
         default: new Date().toLocaleDateString('hu-HU'),

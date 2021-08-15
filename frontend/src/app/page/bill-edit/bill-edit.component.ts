@@ -41,6 +41,7 @@ export class BillEditComponent implements OnInit {
         err => console.error(err)
       );
     } else {
+      bill.amount = bill.order.price;
       this.billService.update(bill).subscribe(
         () => this.router.navigate(['bills']),
         err => console.error(err)

@@ -120,15 +120,16 @@ export class ConfigService {
     {
       key: "_id", title: "#",
       pipes: [ConfigService.curveLongString],
-      pipeArgs: [[0, 6]]
+      pipeArgs: [[0, 8]]
     },
     {
-      key: "order", title: "Megrendelés",
-      pipes: [ConfigService.curveLongString],
-      pipeArgs: [[0, 6]]
+      key: "order", title: "Megrendelés száma",
+      pipes: [ConfigService.setData],
+      // pipes: [ConfigService.curveLongString],
+      // pipeArgs: [[0, 6]]
     },
     {
-      key: "price", title: "Ár",
+      key: "amount", title: "Végösszeg",
       // pipes: [ConfigService.curveLongString],
       // pipeArgs: [[0, 6]]
     },
@@ -151,6 +152,10 @@ export class ConfigService {
 
   static getArrayItems(arr: any[], key: string): any[] {
     return arr.map(item => ` ${item.name} ${item.category}`);
+  }
+
+  static setData(data: any): string {
+    return `${data._id}`
   }
 
   static setNames(data: any, key: string): string {
