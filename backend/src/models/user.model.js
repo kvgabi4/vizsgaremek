@@ -21,9 +21,13 @@ const UserSchema = mongoose.Schema(
       default: true,
     },
     role: {
-      type: Number,
-      default: 0
-    }
+      type: String,
+      default: ''
+    },
+    accessToken: {
+      type: String,
+      required: false
+  },
   },
   {
     timestamps: true,

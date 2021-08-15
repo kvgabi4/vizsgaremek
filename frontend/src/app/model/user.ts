@@ -6,5 +6,5 @@ export class User {
   active?: boolean = true;
   password?: string = '';
   accessToken?: string = '';
-  role?: number = 0;
+  role?: string = '';
 }

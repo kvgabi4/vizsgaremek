@@ -20,10 +20,13 @@ const users = require('../models/user.model')
 
 const refreshTokens = [];
 
-module.exports.login = (req, res) => {
+module.exports.login = async (req, res) => {
     const { email, password } = req.body;
 
-    const user = users.find(
+    const usersFromDatabase = await users.find({});
+    // console.log(usersFromDatabase)
+
+    const user = usersFromDatabase.find(
         u => u.email === email && u.password === password
     );
     if (user) {
@@ -67,7 +70,7 @@ module.exports.refresh = (req, res, next) => {
         }
 
         const accessToken = jwt.sign({
-            email: user.username,
+            email: user.email,
             role: user.role
         }, process.env.ACCESS_TOKEN_SECRET, {
             expiresIn: process.env.TOKEN_EXPIRY
