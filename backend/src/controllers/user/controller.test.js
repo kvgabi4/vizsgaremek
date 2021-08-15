@@ -1,61 +1,71 @@
 const { mockRequest, mockResponse } = require('jest-mock-req-res');
 const createError = require('http-errors');
 
-const personController = require('./controller');
-const personService = require('./service');
+const userController = require('./controller');
+const userService = require('./service');
 
 jest.mock('./service');
 
-describe("order controler", () => {
+describe("user controler", () => {
     const mockData = [{
         "id": 1,
-        "first_name": "Fiorenze",
-        "last_name": "Dyneley",
-        "email": "fdyneley0@narod.ru"
-    }, {
+        "firstName": "Vitéz",
+        "lastName": "Viola",
+        "email": "vitez@gmail.com",
+        "active": true,
+        "password": "vitez",
+        "role": 3
+      },
+      {
         "id": 2,
-        "first_name": "Owen",
-        "last_name": "Jirka",
-        "email": "ojirka1@squidoo.com"
-    }, {
+        "firstName": "Kérő",
+        "lastName": "Károly",
+        "email": "kero@gmail.com",
+        "active": true,
+        "password": "kero",
+        "role": 2
+      },
+      {
         "id": 3,
-        "first_name": "Terra",
-        "last_name": "Hurdman",
-        "email": "thurdman2@reverbnation.com"
-    }, {
+        "firstName": "Sass",
+        "lastName": "Csaba",
+        "email": "sass@gmail.com",
+        "active": true,
+        "password": "sass",
+        "role": 1
+      },
+      {
         "id": 4,
-        "first_name": "Thomasin",
-        "last_name": "de Keep",
-        "email": "tdekeep3@fc2.com"
-    }, {
-        "id": 5,
-        "first_name": "Lawrence",
-        "last_name": "Tearle",
-        "email": "ltearle4@infoseek.co.jp"
-    }];
+        "firstName": "Siket",
+        "lastName": "Sándor",
+        "email": "siket@gmail.com",
+        "active": true,
+        "password": "siket",
+        "role": 2
+      }];
 
     let response;
     const nextFunction = jest.fn();
 
     beforeEach(() => {
-        personService.__setMockData(mockData);
+        userService.__setMockData(mockData);
         response = mockResponse();
     });
 
     test("find one with valid id", () => {
-        const PERSON_ID = 1;
+        const USER_ID = 1;
 
         const request = mockRequest({
             params: {
-                id: PERSON_ID
+                id: USER_ID
             }
         });
 
-        return personController.findOne(request, response, nextFunction)
+        return userController.findOne(request, response, nextFunction)
             .then( () => {
-                expect(personService.findOne).toBeCalledWith(PERSON_ID);
+                expect(userService.findOne).toBeCalledWith(USER_ID);
                 expect(response.json).toBeCalledWith(
-                    mockData.find(p => p.id === PERSON_ID)
+                    mockData.find(p => p.id === USER_ID)
                 );                
             })
     });
