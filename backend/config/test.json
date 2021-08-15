@@ -1,7 +1,7 @@
 {
     "database": {
-        "username": "dbUser",
-        "password": "a5wh61d5kj8Jtewl",
-        "host": "cluster0.iz7ya.mongodb.net/JestDB?retryWrites=true&w=majority"
+        "username": "NodeUser",
+        "password": "y4iVtgYt6N5oeOHY",
+        "host": "cluster0.td68u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
     }
 }
