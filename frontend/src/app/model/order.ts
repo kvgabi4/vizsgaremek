@@ -7,8 +7,8 @@ export class Order {
   customer: string = '';
   product: string = '';
   // product: Product = new Product();
-  quantity: number = 1;
-  price: number = 0;
+  quantity?: number = 1;
+  price?: number = 0;
   // amounts: number[] = [];
   // price: number = 0;
   // orders:[{
@@ -20,7 +20,7 @@ export class Order {
   //   amount: 0,
   //   price: 0
   // }];
-  date: string = new Date().toLocaleDateString('hu-HU');
-  status: "új" | "kiszállított" | "kifizetett" = "új";
+  date?: string = new Date().toLocaleDateString('hu-HU');
+  status?: "új" | "kiszállított" | "kifizetett" = "új";
   note?: string = '';
 }

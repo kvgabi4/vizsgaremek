@@ -15,6 +15,6 @@ export class Customer {
     };
   email: string = '';
   phone: string = '';
-  active: boolean = true;
+  active?: boolean = true;
   // orders?: Order[] = [];
 }

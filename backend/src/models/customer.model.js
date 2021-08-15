@@ -3,15 +3,12 @@ const mongoose = require("mongoose");
 const AddressSchema = mongoose.Schema({
   zip: {
     type: String,
-    required: false,
   },
   city: {
     type: String,
-    required: true,
   },
   street: {
     type: String,
-    required: true,
   },
 });
 
@@ -25,7 +22,17 @@ const CustomerSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    address: AddressSchema,
+    address: {
+      zip: {
+        type: String,
+      },
+      city: {
+        type: String,
+      },
+      street: {
+        type: String,
+      },
+    },
     email: {
       type: String,
       required: true,
@@ -36,7 +43,6 @@ const CustomerSchema = mongoose.Schema(
     },
     active: {
       type: Boolean,
-      required: true,
       default: true,
     },
     // orders: [

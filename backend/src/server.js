@@ -20,14 +20,14 @@ const swaggerDocument = YAML.load('./docs/swager.yaml');
 
 const { host } = config.get('database');
 mongoose
-    .connect(`mongodb://${host}`, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    })
-    // .connect(`mongodb+srv://NodeUser:y4iVtgYt6N5oeOHY@cluster0.td68u.mongodb.net/vizsgaremek?retryWrites=true&w=majority`, {
+    // .connect(`mongodb://${host}`, {
     //     useNewUrlParser: true,
     //     useUnifiedTopology: true
     // })
+    .connect(`mongodb+srv://NodeUser:y4iVtgYt6N5oeOHY@cluster0.td68u.mongodb.net/vizsgaremek?retryWrites=true&w=majority`, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    })
     .then( () => {
         // Data seeds.
         // require('./seed/seeder');

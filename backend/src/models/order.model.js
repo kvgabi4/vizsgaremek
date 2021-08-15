@@ -40,12 +40,10 @@ const OrderSchema = mongoose.Schema(
     },
     quantity: {
       type: Number,
-      required: true,
       default: 1
     },
     price: {
       type: Number,
-      required: true,
       default: 0
     },
     // products: [{
@@ -69,7 +67,7 @@ const OrderSchema = mongoose.Schema(
     },
     status: {
       type: String,
-      required: true,
+      default: 'új',
     },
     note: {
       type: String,

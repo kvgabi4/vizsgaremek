@@ -35,6 +35,9 @@ export class CustomerEditComponent implements OnInit {
 
   onUpdate(form: NgForm, customer: Customer): void {
     this.clicked = true;
+    form.value.address = customer.address;
+    console.log(form.value.address)
+    console.log(customer.address)
     if (customer._id === '') {
       this.customerService.create(form.value).subscribe(
         () => this.router.navigate(['customers']),
