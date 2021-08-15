@@ -37,9 +37,10 @@ export class BillsComponent implements OnInit {
     this.router.navigate(['/', 'bill', bill._id])
   }
 
-  onDeleteOne(bill: Bill): void {
-    if (window.confirm('Biztosan törli ezt a számlát?')) {
-      this.billService.remove(bill._id).subscribe(
+  onStornoOne(bill: Bill): void {
+    if (window.confirm('Biztosan stornózza ezt a számlát?')) {
+      bill.status = "stornózott"
+      this.billService.update(bill).subscribe(
         () => this.list$ = this.billService.getAll()
       );
       this.toastr.showSuccessWithTimeout(`

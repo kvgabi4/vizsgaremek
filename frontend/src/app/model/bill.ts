@@ -5,5 +5,5 @@ export class Bill {
   order: string = '';
   amount: number = 0;
   date: string = new Date().toLocaleDateString('hu-HU');
-  status: "új" | "kifizetett" = "új";
+  status: "új" | "kifizetett" | "stornózott" = "új";
 }
