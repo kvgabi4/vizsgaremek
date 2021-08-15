@@ -21,7 +21,7 @@ export class ConfigService {
 
   customerColumns: ITableColumn[] = [
     {
-      key: "_id", title: "#",
+      key: "_id", title: "Azonosító",
       pipes: [ConfigService.curveLongString],
       pipeArgs: [[0, 6]]
     },
@@ -39,7 +39,7 @@ export class ConfigService {
 
   productColumns: ITableColumn[] = [
     {
-      key: "_id", title: "#",
+      key: "_id", title: "Azonosító",
       pipes: [ConfigService.curveLongString],
       pipeArgs: [[0, 6]]
     },
@@ -57,7 +57,7 @@ export class ConfigService {
 
   orderColumns: ITableColumn[] = [
     {
-      key: "_id", title: "#",
+      key: "_id", title: "Azonosító",
       pipes: [ConfigService.curveLongString],
       pipeArgs: [[0, 6]]
     },
@@ -118,7 +118,7 @@ export class ConfigService {
 
   billColumns: ITableColumn[] = [
     {
-      key: "_id", title: "#",
+      key: "_id", title: "Azonosító",
       pipes: [ConfigService.curveLongString],
       pipeArgs: [[0, 8]]
     },

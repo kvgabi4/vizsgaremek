@@ -27,7 +27,7 @@ export class BillsComponent implements OnInit {
     private toastr: ToasterService
   ) {
     this.filterKeys[1] = ['order._id', "Megrendelés száma"];
-    this.filterKey = this.filterKeys[1];
+    this.filterKey = this.filterKeys[0];
   }
 
   ngOnInit(): void {
