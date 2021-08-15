@@ -18,7 +18,7 @@
               A megrendelő azonosítója minimum 6 karakter kell legyen!
             </div>
           </div>
-          <input name="order" [(ngModel)]="bill.order._id" type="text" class="form-control"
+          <input name="order" [(ngModel)]="bill.order" type="text" class="form-control"
             pattern=".{6,}" required>
         </div>
 
@@ -26,7 +26,7 @@
           <div class="d-flex justify-content-between">
             <label for="">Végösszeg</label>
           </div>
-          <input class="form-control" name="amount" [(ngModel)]="bill.order.price" type="number">
+          <input class="form-control" name="amount" [(ngModel)]="bill.amount" type="number">
         </div>
 
         <div class="form-group mt-3">

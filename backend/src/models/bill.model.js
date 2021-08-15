@@ -3,8 +3,7 @@ const idValidator = require('mongoose-id-validator');
 
 const BillSchema = mongoose.Schema({
     order: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Order',
+        type: String,
         required: true
     },
     amount: {

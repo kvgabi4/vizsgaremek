@@ -124,7 +124,7 @@ export class ConfigService {
     },
     {
       key: "order", title: "Megrendelés száma",
-      pipes: [ConfigService.setData],
+      // pipes: [ConfigService.setData],
       // pipes: [ConfigService.curveLongString],
       // pipeArgs: [[0, 6]]
     },

@@ -5,9 +5,9 @@ module.exports.create = data => {
     return entity.save();
 };
 
-module.exports.findAll = () => Bill.find().populate('order');
+module.exports.findAll = () => Bill.find().populate();
 
-module.exports.findOne = id => Bill.findById(id).populate('order');
+module.exports.findOne = id => Bill.findById(id).populate();
 
 module.exports.update = (id, updateData) => Bill.findByIdAndUpdate(id, updateData, {new: true});
 
