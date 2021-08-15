@@ -69,23 +69,28 @@ export class ConfigService {
     },
     // { key: "products", title: "Termékek" },
 
-    {
-      key: "products", title: "Termékek",
-      pipes: [ConfigService.getArrayItems],
-      pipeArgs: [['name']]
-    },
-    {
-      key: "amounts", title: "Mennyiségek",
-      // pipes: [ConfigService.getArrayItems],
-      // pipeArgs: [['name']]
-    },
-    {key: "price", title: "Ár összesen", pipes: [new CurrencyPipe('hu-HU')], pipeArgs: [['HUF', 'symbol', '3.0']]},
-
     // {
-    //   key: "orders", title: "Termékek",
+    //   key: "products", title: "Termékek",
     //   pipes: [ConfigService.getArrayItems],
     //   pipeArgs: [['name']]
     // },
+    // {
+    //   key: "amounts", title: "Mennyiségek",
+    //   // pipes: [ConfigService.getArrayItems],
+    //   // pipeArgs: [['name']]
+    // },
+    // {key: "price", title: "Ár összesen", pipes: [new CurrencyPipe('hu-HU')], pipeArgs: [['HUF', 'symbol', '3.0']]},
+
+    {
+      key: "product", title: "Termék",
+      // pipes: [ConfigService.getArrayItems],
+      // pipeArgs: [['name']]
+    },
+    {
+      key: "price", title: "Ár",
+      // pipes: [ConfigService.getArrayItems],
+      // pipeArgs: [['name']]
+    },
 
     // {key: "products[0].amounts", title: "Mennyiségek"},
     // db.json:
@@ -121,6 +126,11 @@ export class ConfigService {
       key: "order", title: "Megrendelés",
       pipes: [ConfigService.curveLongString],
       pipeArgs: [[0, 6]]
+    },
+    {
+      key: "price", title: "Ár",
+      // pipes: [ConfigService.curveLongString],
+      // pipeArgs: [[0, 6]]
     },
     {key: "date", title: "Dátum"},
     {key: "status", title: "Státusz"},

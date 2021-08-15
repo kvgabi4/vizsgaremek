@@ -8,29 +8,48 @@ const OrderSchema = mongoose.Schema(
       ref: "Customer",
       required: true,
     },
-    products: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Product",
-        required: true,
-      },
-    ],
-    amounts: [{
+    // products: [
+    //   {
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref: "Product",
+    //     required: true,
+    //   },
+    // ],
+    // amounts: [{
+    //   type: Number,
+    //   required: true,
+    // }],
+    // price: {
+    //   type: Number,
+    //   required: true,
+    //   default: 0,
+    // },
+    product: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Product",
+      required: true,
+    },
+    quantity: {
       type: Number,
       required: true,
-    }],
+      default: 1
+    },
     price: {
       type: Number,
       required: true,
-      default: 0,
+      default: 0
     },
-    // orders: [{
-    //     product: {
+    // products: [{
     //         type: mongoose.Schema.Types.ObjectId,
     //         ref: 'Product',
     //         required: true
-    //     },
+    // }],
+    // orders: [{
     //     amount: {
+    //         type: Number,
+    //         required: true
+    //     },
+    //     price: {
     //         type: Number,
     //         required: true
     //     },

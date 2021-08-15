@@ -4,7 +4,93 @@
         <i class="fas fa-table me-1"></i>
         <h4 class="fw-bold text-uppercase ps-3 mt-1"> {{entity[1]}} listája</h4>
     </div>
-    <app-data-table
+
+<!-- Search -->
+<div class="search bg-light border rounded p-3 m-3">
+  <div class="fw-bold text-uppercase text-center pb-3">Szűrés oszlopok szerint</div>
+  <div class="search d-flex flex-row">
+    <span class="fw-bold text-uppercase col-1 pt-2">Oszlop :</span>
+    <select class="form-control border col" [(ngModel)]="filterKey[0]">
+      <option *ngFor="let key of filterKeys" [value]="[key[0]]">{{key[1]}}</option>
+    </select>
+    <input [(ngModel)]="phrase" class="filter-search border rounded col-6 px-3 ms-3" type="text"
+      placeholder="Keresés . . .">
+  </div>
+</div>
+
+<!-- Add new -->
+<div class="card card-plain mx-3 d-grid gap-2">
+  <!-- <div > -->
+    <button [routerLink]="['/', entity[0], '']" type="button" class="btn fw-bold text-uppercase" [class]="color[1]">
+      Új elem felvétele
+      <i class="fas fa-angle-right mx-2"></i>
+    </button>
+  <!-- </div> -->
+</div>
+
+<div class="card-body table-responsive">
+  <table class="table table-striped table-hover align-middle">
+    <thead class="text-white align-middle" [class]="color[0]">
+      <tr>
+        <th *ngFor="let col of columns">
+          {{col.title}}
+        </th>
+        <th></th>
+      </tr>
+    </thead>
+    <tfoot class="text-secondary align-middle">
+      <tr>
+        <th *ngFor="let col of columns">
+          {{col.title}}
+        </th>
+        <th></th>
+      </tr>
+    </tfoot>
+    <tbody>
+
+      <ng-container *ngIf="list$">
+        <tr *ngFor="let row of list$ | async| filter:phrase:filterKey[0]; let j = index">
+          <td *ngFor="let col of columns">
+            <span *ngIf="!col.htmlOutput; else elseBlock">
+              <span *ngIf="col.key!=='product'">{{ row[col.key] | xPipe:col.pipes:col.pipeArgs }}</span>
+            </span>
+            <ng-template #elseBlock>
+              <span [innerHTML]="col.htmlOutput(row[col.key])"></span>
+            </ng-template>
+            <span *ngIf="col.key==='product'">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                     {{row.product.name}} {{row.product.category}} - {{row.quantity}} tő - {{row.product.price | currency:'3.0-0':'Ft/tő'}}
+                    </td>
+                  </tr>
+                  <!-- <tr *ngFor="let order of row.orders; let i = index">
+                    <td *ngIf="j===5">
+                     {{row.products[i].name}} {{row.products[i].category}} - {{order.amount}} tő - {{order.price | currency:'3.0-0':'Ft/tő'}}
+                    </td>
+                  </tr> -->
+                </tbody>
+              </table>
+            </span>
+          </td>
+          <td>
+            <div class="btn-group text-center">
+              <button (click)="onSelectOne(row)" class="btn btn-info">
+                <i class="fa fa-pencil-alt"></i>
+              </button>
+              <button (click)="onDeleteOne(row)" class="btn btn-danger">
+                <i class="fa fa-trash"></i>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>
+
+    <!-- <app-data-table
       [tableColumns]="columns"
       [list$]="list$"
       [filterKeys]="filterKeys"
@@ -13,6 +99,6 @@
       [color]="color"
       (selectOne)="onSelectOne($event)"
       (deleteOne)="onDeleteOne($event)">
-    </app-data-table>
+    </app-data-table> -->
   </div>
 </div>

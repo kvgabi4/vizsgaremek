@@ -20,6 +20,7 @@ export class OrdersComponent implements OnInit {
   filterKeys: string[][] = this.config.orderColumns.map(item => [item.key, item.title]);
   filterKey: string[] = this.filterKeys[1];
   color: string[] = ['bg-primary', 'btn-outline-primary'];
+  phrase: string = '';
   // price: number[] = [];
 
   constructor(
