@@ -55,8 +55,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-
-  /bill/{_id}:
+  /bills/{_id}:
     get:
       description: Returns the bill with the given ID
       security:
@@ -86,69 +85,67 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-    # patch:
-    #   description: Updates a bill
-    #   parameters:
-    #     - in: path
-    #       name: _id
-    #       required: true
-    #       schema: 
-    #         type: string
-    #   requestBody:
-    #     required: true
-    #     content:
-    #       application/json:
-    #         schema:
-    #           $ref: '#/components/schemas/Bill'
-    #   responses:
-    #     '200':
-    #       description: Bill has been updated successfully
-    #       content:
-    #         application/json:
-    #           schema:
-    #             $ref: '#/components/schemas/Bill'
-    #     '400':
-    #       description: Invalid request when the post data is invalid
-    #       content:
-    #         application/json:
-    #           schema:
-    #             $ref: '#/components/schemas/Error'
-    #     '500':
-    #       description: Internal server error
-    #       content:
-    #         application/json:
-    #           schema:
-    #             $ref: '#/components/schemas/Error'
-    # delete:
-    #   description: Removes a bill
-    #   parameters:
-    #     - in: path
-    #       name: _id
-    #       required: true
-    #       schema: 
-    #         type: string
-    #   responses:
-    #     '200':
-    #       description: Bill has been deleted successfully
-    #       content:
-    #         application/json:
-    #           schema:
-    #             type: object
-    #             example: {}
-    #     '404':
-    #       description: Bill based on id is doesn't exist
-    #       content:
-    #         application/json:
-    #           schema:
-    #             $ref: '#/components/schemas/Error'
-    #     '500':
-    #       description: Internal server error
-    #       content:
-    #         application/json:
-    #           schema:
-    #             $ref: '#/components/schemas/Error'
-
-
+    patch:
+      description: Updates a bill
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema: 
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Bill'
+      responses:
+        '200':
+          description: Bill has been updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Bill'
+        '400':
+          description: Invalid request when the post data is invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      description: Removes a bill
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: Bill has been deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {}
+        '404':
+          description: Bill based on id is doesn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
   /customers:
     get:
       description: Returns a list of customers
@@ -198,7 +195,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /customer/{_id}:
+  /customers/{_id}:
     get:
       description: Returns the customer with the given ID
       security:
@@ -291,8 +288,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-
-
   /orders:
     get:
       description: Returns a list of orders
@@ -342,7 +337,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /order/{_id}:
+  /orders/{_id}:
     get:
       description: Returns the order with the given ID
       security:
@@ -435,8 +430,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-
-
   /products:
     get:
       description: Returns a list of products
@@ -486,7 +479,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /product/{_id}:
+  /products/{_id}:
     get:
       description: Returns the product with the given ID
       security:
@@ -579,9 +572,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-
-
-
   /users:
     get:
       description: Returns a list of users
@@ -631,7 +621,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /user/{_id}:
+  /users/{_id}:
     get:
       description: Returns the user with the given ID
       security:
@@ -724,8 +714,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-
-
 components:
   securitySchemes:
     bearerAuth:            # arbitrary name for the security scheme
