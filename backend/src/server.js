@@ -16,10 +16,15 @@ const adminOnly = require('./auth/adminOnly');
 const authHandler = require('./auth/authHandler');
 
 const swaggerDocument = YAML.load('./docs/swager.yaml');
+// y4iVtgYt6N5oeOHY
 
-const { host } = config.get('database');
+// const { host } = config.get('database');
 mongoose
-    .connect(`mongodb://${host}`, {
+    // .connect(`mongodb://${host}`, {
+    //     useNewUrlParser: true,
+    //     useUnifiedTopology: true
+    // })
+    .connect(`mongodb+srv://NodeUser:y4iVtgYt6N5oeOHY@cluster0.td68u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
