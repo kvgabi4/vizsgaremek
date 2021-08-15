@@ -39,12 +39,12 @@ const CustomerSchema = mongoose.Schema(
       required: true,
       default: true,
     },
-    orders: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Order",
-      },
-    ],
+    // orders: [
+    //   {
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref: "Order",
+    //   },
+    // ],
   },
   {
     timestamps: true,

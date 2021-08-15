@@ -34,7 +34,7 @@ export class ConfigService {
       pipeArgs: [['zip', 'city', 'street']]
     },
     {key: "active", title: "Aktív", htmlOutput: ConfigService.activeOrInactiveSign },
-    {key: "orders", title: "Megrendelések" }
+    // {key: "orders", title: "Megrendelések" }
   ];
 
   productColumns: ITableColumn[] = [

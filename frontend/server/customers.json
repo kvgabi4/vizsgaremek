@@ -1,0 +1,182 @@
+[
+  {
+    "firstName": "Kiss",
+    "lastName": "István",
+    "address": {
+      "zip": 1111,
+      "city": "Budapest",
+      "street": "Nagy László utca 35."
+    },
+    "email": "kissi@gmail.com",
+    "phone": "+36303336666",
+    "active": true
+  },
+  {
+    "firstName": "Héder",
+    "lastName": "Elek",
+    "address": {
+      "zip": 1310,
+      "city": "Budapest",
+      "street": "Vértes utca 3."
+    },
+    "email": "helek@gmail.com",
+    "phone": "+36303358766",
+    "active": true
+  },
+  {
+    "firstName": "Vajas",
+    "lastName": "Edina",
+    "address": {
+      "zip": 6000,
+      "city": "Kecskemét",
+      "street": "Kossuth utca 49."
+    },
+    "email": "ve@gmail.com",
+    "phone": "+36301155879",
+    "active": true
+  },
+  {
+    "firstName": "Péter",
+    "lastName": "Olga",
+    "address": {
+      "zip": 6000,
+      "city": "Kecskemét",
+      "street": "Torma utca 1."
+    },
+    "email": "polga@gmail.com",
+    "phone": "+36704568876",
+    "active": true
+  },
+  {
+    "firstName": "Kocsis",
+    "lastName": "Viola",
+    "address": {
+      "zip": 5600,
+      "city": "Békéscsaba",
+      "street": "Orosházi út 15."
+    },
+    "email": "kv5@gmail.com",
+    "phone": "+36704611769",
+    "active": true
+  },
+  {
+    "firstName": "Kovacsics",
+    "lastName": "Jenő",
+    "address": {
+      "zip": 6726,
+      "city": "Szeged",
+      "street": "Hársfa  út 7."
+    },
+    "email": "kj701203@gmail.com",
+    "phone": "+36701234567",
+    "active": true
+  },
+  {
+    "firstName": "Vigh",
+    "lastName": "Viola",
+    "address": {
+      "zip": 6726,
+      "city": "Szeged",
+      "street": "Piroska  út 72."
+    },
+    "email": "vv@gmail.com",
+    "phone": "+36701234666",
+    "active": true
+  },
+  {
+    "firstName": "László",
+    "lastName": "Zoltán",
+    "address": {
+      "zip": 7621,
+      "city": "Pécs",
+      "street": "Széchenyi tér 1/A."
+    },
+    "email": "lzoli@gmail.com",
+    "phone": "+36207654321",
+    "active": true
+  },
+  {
+    "firstName": "Takács",
+    "lastName": "Edit",
+    "address": {
+      "zip": 9011,
+      "city": "Győr",
+      "street": "Dunasor út 54/A."
+    },
+    "email": "tedit9@gmail.com",
+    "phone": "+36207776655",
+    "active": false
+  },
+  {
+    "firstName": "Szabó",
+    "lastName": "Éva",
+    "address": {
+      "zip": 3905,
+      "city": "Monok",
+      "street": "Nagy út 44."
+    },
+    "email": "szabo56@gmail.com",
+    "phone": "+36207788995",
+    "active": false
+  },
+  {
+    "firstName": "Horváth",
+    "lastName": "József",
+    "address": {
+      "zip": 1212,
+      "city": "Budapest",
+      "street": "Váci út 444/B."
+    },
+    "email": "jozsi8@gmail.com",
+    "phone": "+36207338995",
+    "active": false
+  },
+  {
+    "firstName": "Vági",
+    "lastName": "Antal",
+    "address": {
+      "zip": 1233,
+      "city": "Budapest",
+      "street": "Váci út 77."
+    },
+    "email": "vagia@gmail.com",
+    "phone": "+36201155998",
+    "active": true
+  },
+  {
+    "firstName": "Mérő",
+    "lastName": "Róbert",
+    "address": {
+      "zip": 1913,
+      "city": "Budapest",
+      "street": "Kondorosi út 125."
+    },
+    "email": "robika5@gmail.com",
+    "phone": "+36206859471",
+    "active": true
+  },
+  {
+    "firstName": "Nagy",
+    "lastName": "Kálmán",
+    "address": {
+      "zip": 3534,
+      "city": "Miskolc",
+      "street": "Csabai kapu 15."
+    },
+    "email": "nagyk@gmail.com",
+    "phone": "+36304446655",
+    "active": true
+  },
+  {
+    "firstName": "Kiss",
+    "lastName": "Liza",
+    "address": {
+      "zip": 3525,
+      "city": "Miskolc",
+      "street": "Bükk utca 15."
+    },
+    "email": "kicsi@gmail.com",
+    "phone": "+36306895324",
+    "active": true
+  }
+]
