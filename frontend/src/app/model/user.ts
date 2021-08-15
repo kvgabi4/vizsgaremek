@@ -4,7 +4,7 @@ export class User {
   lastName?: string = '';
   email?: string = '';
   active?: boolean = true;
-  password?: string = '';
+  password: string = '';
   accessToken?: string = '';
   role?: string = '';
 }

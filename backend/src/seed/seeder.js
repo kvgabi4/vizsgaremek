@@ -35,5 +35,5 @@ const seedCollection = async (model, fileName) => {
     seedCollection(Customer, 'customers');
     seedCollection(Order, 'orders');
     seedCollection(Product, 'products');
-    // seedCollection(User, 'users');
+    seedCollection(User, 'users');
 })();

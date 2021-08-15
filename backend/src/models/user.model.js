@@ -10,7 +10,6 @@ const UserSchema = mongoose.Schema(
     },
     email: {
       type: String,
-      required: true
     },
     password: {
       type: String,
@@ -22,7 +21,7 @@ const UserSchema = mongoose.Schema(
     },
     role: {
       type: String,
-      default: ''
+      default: 1
     },
     accessToken: {
       type: String,

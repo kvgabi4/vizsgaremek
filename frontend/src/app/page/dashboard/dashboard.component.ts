@@ -35,8 +35,9 @@ export class DashboardComponent implements OnInit {
     .filter(item => item.active)?.length));
 
   notPaidBillsAmount = this.billList$.pipe(switchMap(async params => await params
-    .filter(item => item.status === 'új')?.length));
-    // .reduce((acc, one) => acc + parseInt('' + one.order.amount), 0));
+    .filter(item => item.status === 'új')
+    .reduce((acc, one) => acc + parseInt('' + one.amount), 0)
+  ));
 
 
   cards: InfoCard[] = [
@@ -98,15 +99,15 @@ export class DashboardComponent implements OnInit {
   orderChartColor: Color[] = [
     { // first color
       // backgroundColor: ['#ff9800']
-      backgroundColor: ['rgba(255,200,255,.8)']
+      backgroundColor: ['rgba(100,150,255,.8)']
     },
     { // second color
-      // backgroundColor: ['#4caf50']
-      backgroundColor: ['rgba(200,110,170,.8)']
+      // backgroundColor: ['#4caf80']
+      backgroundColor: ['rgba(90,120,220,.8)']
     },
     { // third color
       // backgroundColor: ['#00bcd4']
-      backgroundColor: ['rgba(210,160,210,.8)']
+      backgroundColor: ['rgba(70,100,190,.8)']
     },
   ];
 
