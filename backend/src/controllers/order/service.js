@@ -16,9 +16,9 @@ module.exports.create = data => {
     return entity.save();
 };
 
-module.exports.findAll = () => Order.find().populate('customer').populate('product');
+module.exports.findAll = () => Order.find().populate();
 
-module.exports.findOne = id => Order.findById(id).populate('customer').populate('product');
+module.exports.findOne = id => Order.findById(id).populate();
 
 module.exports.update = (id, updateData) => Order.findByIdAndUpdate(id, updateData, {new: true});
 

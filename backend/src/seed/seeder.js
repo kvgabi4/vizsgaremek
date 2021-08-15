@@ -32,8 +32,8 @@ const seedCollection = async (model, fileName) => {
     }
 
     // seedCollection(Bill, 'bills');
-    // seedCollection(Customer, 'customers');
-    // seedCollection(Order, 'orders');
+    seedCollection(Customer, 'customers');
+    seedCollection(Order, 'orders');
     seedCollection(Product, 'products');
     // seedCollection(User, 'users');
 })();

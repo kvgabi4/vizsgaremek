@@ -3,9 +3,10 @@ import { Product } from "./product";
 
 export class Order {
   _id: string = '';
-  customer: Customer = new Customer();
-  // products: Product[] = [];
-  product: Product = new Product();
+  // customer: Customer = new Customer();
+  customer: string = '';
+  product: string = '';
+  // product: Product = new Product();
   quantity: number = 1;
   price: number = 0;
   // amounts: number[] = [];

@@ -71,7 +71,7 @@ export class OrderEditComponent implements OnInit {
       )
 
     } else {
-      order.price = order.product.price * order.quantity;
+      // order.price = order.product.price * order.quantity;
       this.orderService.update(order).subscribe(
         () => this.router.navigate(['orders']),
         err => console.error(err)

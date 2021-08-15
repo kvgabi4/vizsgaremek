@@ -1,0 +1,47 @@
+[
+  {
+    "customer": "61190d2aebe41f12a013d8d3",
+    "product": "6118fc66ebe41f12a013d883",
+    "quantity": 5,
+    "price": 10000,
+    "date": "2021. 08. 11.",
+    "status": "új",
+    "note": "Fejlett gyökerű töveket kérek!"
+  },
+  {
+    "customer": "61190d2aebe41f12a013d8d1",
+    "product": "6118fc66ebe41f12a013d894",
+    "quantity": 8,
+    "price": 16000,
+    "date": "2021. 08. 10.",
+    "status": "új",
+    "note": ""
+  },
+  {
+    "customer": "61190d2aebe41f12a013d8d2",
+    "product": "6118fc66ebe41f12a013d894",
+    "quantity": 8,
+    "price": 16000,
+    "date": "2021. 08. 10.",
+    "status": "új",
+    "note": ""
+  },
+  {
+    "customer": "61190d2aebe41f12a013d8d4",
+    "product": "6118fc66ebe41f12a013d8c5",
+    "quantity": 3,
+    "price": 6000,
+    "date": "2021. 08. 10.",
+    "status": "új",
+    "note": ""
+  },
+  {
+    "customer": "61190d2aebe41f12a013d8d8",
+    "product": "6118fc66ebe41f12a013d8c0",
+    "quantity": 3,
+    "price": 9000,
+    "date": "2021. 08. 10.",
+    "status": "új",
+    "note": ""
+  }
+]

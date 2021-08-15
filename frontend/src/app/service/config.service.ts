@@ -59,12 +59,13 @@ export class ConfigService {
     {
       key: "_id", title: "Azonosító",
       pipes: [ConfigService.curveLongString],
-      pipeArgs: [[0, 6]]
+      pipeArgs: [[0, 8]]
     },
     {
-      key: "customer",
-      title: "Vásárló",
-      pipes: [ConfigService.setNames],
+      key: "customer", title: "Vásárló",
+      pipes: [ConfigService.curveLongString],
+      pipeArgs: [[0, 8]]
+      // pipes: [ConfigService.setNames],
       // pipeArgs: [['customer.firstName', 'customer.lastName']]
     },
     // { key: "products", title: "Termékek" },
@@ -83,6 +84,8 @@ export class ConfigService {
 
     {
       key: "product", title: "Termék",
+      pipes: [ConfigService.curveLongString],
+      pipeArgs: [[0, 8]]
       // pipes: [ConfigService.getArrayItems],
       // pipeArgs: [['name']]
     },

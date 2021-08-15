@@ -2,10 +2,15 @@ const mongoose = require("mongoose");
 const idValidator = require("mongoose-id-validator");
 
 const OrderSchema = mongoose.Schema(
+  // {
+  //   customer: {
+  //     type: mongoose.Schema.Types.ObjectId,
+  //     ref: "Customer",
+  //     required: true,
+  //   },
   {
     customer: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Customer",
+      type: String,
       required: true,
     },
     // products: [
@@ -24,9 +29,13 @@ const OrderSchema = mongoose.Schema(
     //   required: true,
     //   default: 0,
     // },
+    // product: {
+    //   type: mongoose.Schema.Types.ObjectId,
+    //   ref: "Product",
+    //   required: true,
+    // },
     product: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Product",
+      type: String,
       required: true,
     },
     quantity: {
