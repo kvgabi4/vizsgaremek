@@ -5,7 +5,7 @@
         "price": 2000,
         "active": true,
         "description": "Érési idő: július vége – augusztus eleje, szedés után 2-3 hétig tárolható, gyümölcs nagysága közepes (110-130 g, hamvas liláspiros csíkozott fedőszíne csaknem az egész gyümölcsfelületet borítja, lapított gömb alakú, a csésze felől enyhén bordázott. Gyümölcs húsa: fehéres, félkemény, túlérve lisztesedik, héja vékony, viaszos, íze kellemesen savas, enyhén illatos. Porzói:Cox narancs renet, Téli arany parmen",
-        "image": "public/images/apple/asztrahani.jpg"
+        "image": "images/apple/asztrahani.jpg"
     },
     {
         "name": "Akane",
@@ -13,7 +13,7 @@
         "price": 2000,
         "active": true,
         "description": "A Jonathan és a Worcester Pearmain alma hibridje. Gyümölcse kicsi vagy közepes, 130-140g tömegű, a Jonathanéhoz hasonló. Húsa fehér, kemény, roppanó, lédús, íze kellemesen édes-savas. Gyümölcse nem hullik, akár egy hónapig is a fán hagyható, anélkül, hogy a beltartalmi értékét befolyásolná. Augusztus harmadik dekádjában szüretelhető, hűtőben két hónapig tárolható. Jól tűri az árúvá készítést és a szállítást is. Kiváló ivólé készíthető belőle. Porzói:részben öntermékeny, Gala, Cox Orange, Gloster, Golden, Granny Smith, Starking, Elstar, Idared, Jonathan klónok, Red Delicious",
-        "image": "public/images/apple/akane.jpg"
+        "image": "images/apple/akane.jpg"
     },
     {
         "name": "Arkansas",
@@ -21,7 +21,7 @@
         "price": 2000,
         "active": true,
         "description": "Oroszországi fajta (1817) hozzánk Amerikából került be.Októbervégén érő,citromos ízű, enyhén illatos. Jó ellenálló képességű, különlegesen mutatós és ízletes, nálunk szinte ismeretlen fajta! Biotermesztésre ajánlott. Porzói: Jonathan ,Golden",
-        "image": "public/images/apple/arkansas.jpg"
+        "image": "images/apple/arkansas.jpg"
     },
     {
         "name": "Arany Parmen",
@@ -29,7 +29,7 @@
         "price": 2000,
         "active": true,
         "description": "Valószínűleg az 1800-as években Franciaországban keletkezett magonc, világszerte elterjedt. Gyümölcse augusztus végén–szeptember elején szedhető, középnagy, tompa kúp alakú. Érése elhúzódó, héja sárga alapszínű, teljes érésben narancssárga és narancspiros fedőszínnel csíkozott. Januárig tárolható, jó termőképességű. Alternanciára hajlamos. A szárazságot nehezen tűri. Porzói: Sárga szépvirágú, Cox narancs renet,Jonathan, Fehér Klára",
-        "image": "public/images/apple/aranyParmen.jpg"
+        "image": "images/apple/aranyParmen.jpg"
     },
     {
         "name": "Batul alma",
@@ -37,7 +37,7 @@
         "price": 2000,
         "active": true,
         "description": "A Batul Erdély Maros menti vidékéről származó almafajta, gyümölcse közepes nagyságú, alakja rendszerint szabályosan lapított gömb. Héja kissé zsíros tapintású, sima és fényes felületű. Az eleinte halványzöld termés éretten szalmasárga színű lesz, napos oldalán élénkpiros fedőszínnel. Húsa fehér, tömött, finom, eleinte roppanó, de éretten olvadó állagú; bőlevű, savanykás-édes, kissé fűszeres ízű. Gyümölcse október első napjaiban szüretelhető, novembertől márciusig fogyasztható. Biotermesztésre ajánlott. Porzói: Téli arany parmen",
-        "image": "public/images/apple/batul.jpg"
+        "image": "images/apple/batul.jpg"
     },
     {
         "name": "Bőr alma",
@@ -45,7 +45,7 @@
         "price": 2000,
         "active": true,
         "description": "A Bőr alma (más néven Parker pepin, Kormos alma) feltehetően angliai eredetű, régi téli almafajta Elsőrendű különösen a savanyú almákat kedvelők számára. Gyümölcse kis-közepes (100 g), lapított gömb alakú. Héja vékony, száraz tapintású, parás-érdes felületű (ezért nevezik bőralmának), amely éretten citromsárga alapszínen, a napos oldalán sárgás-rozsdabarna fedőszínnel borítottá válik. Néha enyhe pír is megjelenik a gyümölcsökön. Gyümölcsének húsa zöldes-sárgásfehér színű, roppanó, de finom állományú, íze jellegzetesen-kellemesen savanykás, fűszeres-zamatos. Október második felében szedhető, novembertől márciusig fogyasztható. A gyümölcsök sokáig a fán maradnak. Borkészítésre igen alkalmas fajta. Túléretten kásásodásra hajlamos. Porzói: Cox narancs renet, Jonathan, Téli arany parmen",
-        "image": "public/images/apple/bor.jpg"
+        "image": "images/apple/bor.jpg"
     },
     {
         "name": "Búzával érő",
@@ -53,7 +53,7 @@
         "price": 2000,
         "active": true,
         "description": "Érési idő: július eleje – közepe. Gyümölcse középnagy, barnáspirossal mosott és csíkozott, gömbölyded alakú Gyümölcs húsa közepesen kemény, savas-édes, lédús, héja hamvas és enyhén viaszos. Friss fogyasztásra vagy konyhai célra ajánlott. Fája későn fordul termőre. Porzói: Kecskeméti vaj, Jonathán",
-        "image": "public/images/apple/buzavalEro.jpg"
+        "image": "images/apple/buzavalEro.jpg"
     },
     {
         "name": "Chardens",
@@ -61,7 +61,7 @@
         "price": 2000,
         "active": true,
         "description": "Zöld gyümölcsű almafajtát a ‘Golden Delicious’ és a ‘Reinette Clochard’ almafajták keresztezésével nemesítették Franciaországban. Gyümölcse nagy vagy igen nagy. Húsa zöldes-krémszínű, harmonikus ízű, a Goldennél magasabb cukor és savtartalmú. Október első dekádjában, 8-10 nappal a Golden Delicious után szüretelhető. Jól tárolható. Porzói: Elstar, Idared, Jonathan klónok, Starkin,Starkimson,Red Chief",
-        "image": "public/images/apple/charden.jpg"
+        "image": "images/apple/charden.jpg"
     },
     {
         "name": "Cigányalma",
@@ -69,7 +69,7 @@
         "price": 2000,
         "active": true,
         "description": "A Kárpát-medencében több sötétvörös fajtát neveztek Cigányalmának. Gyümölcse legfeljebb középnagy (ritkábban nagy) méretű, lapított alakú, gömbölyded. Kocsánya rövid. Héja bőrszerű, felszíne gyengén hamvas, vékony viaszréteggel borított. A sárga alapszínen 40-60 %-ban a narancspirostól tompa barnásvörösig terjedő árnyalatú, gyengén mosott, vagy erősen csíkozott fedőszín borítja a gyümölcsöt. Gyümölcsének húsa kemény, fehér (vagy krém-) színű, illatos, kitűnő ízű, édeskés, fűszeres. Szedési érettségét szeptember közepén éri el, és novembertől január első feléig tárolható. Fája erős növekedésű, szétterülő habitusú. Porzói: Jonathán, Téli arany parmen",
-        "image": "public/images/apple/cigany.jpg"
+        "image": "images/apple/cigany.jpg"
     },
     {
         "name": "Ceglédi piros",
@@ -77,7 +77,7 @@
         "price": 2000,
         "active": true,
         "description": "Cegléd környékén elterjedt tájfajta. Középnagy 120-140 gr tömegű, kúpos-hengeres formájú, fehér, félkemény húsú, enyhén savanykás édes ízű, kásásodásra hajlamos fajta. Július közepétől augusztus közepéig fogyasztható, fája korán termőre fordul. Kimagasló termőképessége mellett csodálatos színe és finom íze teszi az egyik legértékesebb nyári almafajtává hazánkban.  Zöld alapszínén szinte az egész gyümölcsön piros borítás uralkodik vékony héja viaszos. Porzói: Egri piros, Éva",
-        "image": "public/images/apple/ceglediPiros.jpg"
+        "image": "images/apple/ceglediPiros.jpg"
     },
     {
         "name": "Egri piros",
@@ -85,7 +85,7 @@
         "price": 2000,
         "active": true,
         "description": "Eger környékén, Noszvaj községben fedezte fel Kovács Sándor Élénkpiros fedőszínű, 120-150 gr nagyságú. Augusztus elején érik, hűtőházban novemberig tárolható. Húsa fehér, kemény állományú, íze kiváló, savas, kellemesen fűszeres. Gyümölcshullásra nem hajlamos. Porzói: részben öntermékeny, ‘Asztraháni piros’,  ‘Ceglédi piros’  ‘Éva’",
-        "image": "public/images/apple/egriPiros.jpg"
+        "image": "images/apple/egriPiros.jpg"
     },
     {
         "name": "Éva",
@@ -93,7 +93,7 @@
         "price": 2000,
         "active": true,
         "description": "Magyar nemesítésű almafajta (szelektálta Dániel Lajos). Nyári érésű, július utolsó dekádjában – augusztus elején érik. Az egyik legjobb minőségű nyárialmánk, elsősorban friss fogyasztásra ajánlható. Gyümölcse kissé lapított gömb alakú, közepes méretű, 100 gr körüli, mélypiros, sárgás-fehér, tömött húsú, ízletes Jonathan szerű édes-savas. Porzói: Öntermékeny, de jól termékenyítik ‘Ceglédi piros’, ‘Egri piros’",
-        "image": "public/images/apple/eva.jpg"
+        "image": "images/apple/eva.jpg"
     },
     {
         "name": "Florina",
@@ -101,7 +101,7 @@
         "price": 2000,
         "active": true,
         "description": "Gyümölcse középnagy vagy nagy, 170-180g tömegű. Húsa sárgásfehér, kemény, roppanó. Íze édeskés, a cukor és a sav aránya harmonikus. Varasodás rezisztens hibrid fajta, biotermesztésre ajánlott. Szeptember végén, október elején szüretelhető, tavaszig  tárolható. Porzói: Gloster, Gala, Arany parmen, Reglindis, Reka, Golden Delicious, Granny Smith",
-        "image": "public/images/apple/florina.jpg"
+        "image": "images/apple/florina.jpg"
     },
     {
         "name": "Gala",
@@ -109,7 +109,7 @@
         "price": 2000,
         "active": true,
         "description": "A hazánkban kedvelt Gala fajtakör tagja. Gyümölcsei csíkosan pirosak, édeskés ízűek. Fája közepes, jól alakítható. Szedését augusztus végén lehet kezdeni. Porzói: Braeburn, Elstar, Fuji, Gloster, Granny Smith, Idared, Jonathan klónok és a Redaphough, James Grieve, Cox Orange, Starking fajtakör, Golden Delicious",
-        "image": "public/images/apple/gala.jpg"
+        "image": "images/apple/gala.jpg"
     },
     {
         "name": "Gloster",
@@ -117,7 +117,7 @@
         "price": 2000,
         "active": true,
         "description": "Középnagy vagy nagy, 160-200g tömegű. Húsa jellegzetesen zöldesfehér, majd zöldessárga, nyomódásra nem érzékeny, íze enyhén savas, kellemes aromával kísért. Szeptember végén-október elején szüretelhető, fogyasztási érettsége változatlan légterű hűtőtárolóban novembertől februárig, szabályozott légterű hűtőtárolóban május végéig kinyújtható. Porzói: Gála, Elstar, Jonathan, Starking, Akane, Golden klónok, Granny Smith, Idared, Pinova",
-        "image": "public/images/apple/gloster.jpg"
+        "image": "images/apple/gloster.jpg"
     },
     {
         "name": "Golden Delicious",
@@ -125,7 +125,7 @@
         "price": 2000,
         "active": true,
         "description": "Gyümölcse középnagy vagy nagy, 140-180 g tömegű. Húsa sárga, édes, enyhén savas, kissé illatos. Szeptember végén-október elején szüretelhető. Fogyasztási érettségét röviddel a szüretet követő időszaktól decemberig, hűtőtárolóban kb. márciusig megőrzi. Porzói: Braeburn, Elstar, Fuji, Gala, Gloster, Idared, Jonathan.  Granny Smith, Gloster, Summerred, Ozark Gold, Red Delicious, Arany parmen, James Grieve, Discovery, Cox Orange, Gloster,  Pilot",
-        "image": "public/images/apple/goldenDelicious.jpg"
+        "image": "images/apple/goldenDelicious.jpg"
     },
     {
         "name": "Granny Smith",
@@ -133,7 +133,7 @@
         "price": 2000,
         "active": true,
         "description": "Gyümölcse középnagy (150-180 g) vagy nagy, húsa tömör, szilárd, íze mérsékelten savanykás. Gyümölcse élénkzöld, gömbölyded vagy hűvösebb termőhelyen csonka kúp alakú, szimmetrikus, húsa kemény, roppanó, bőlevű, gyengén aromás, héja erősen viaszos, fehér paraszemölcsökkel. Október második dekádjának végén éri el az optimális szüreti érettséget. Fogyasztási érettsége kb. április végéig tart. Porzói: Gloster, Idared, Braeburn, Fuji, Gala, Golden klónok, Jonathan klónok, Red Delicious, Starking változatok, Spartan, Téli arany parmen, Téli banánalma,",
-        "image": "public/images/apple/grannySmith.jpg"
+        "image": "images/apple/grannySmith.jpg"
     },
     {
         "name": "Húsvéti rozmaring",
@@ -141,7 +141,7 @@
         "price": 2000,
         "active": true,
         "description": "Hazai eredetű téli almafajta, gyümölcse középnagy, 120-130g, zöldessárga, napos oldalán halványpiros pírral, kissé megnyúlt gömb alakú. Húsa zöldesfehér, kemény, íze enyhén savanykás. Jól szállítható, és házi körülmények között is jól tárolható. A tárolás során alakul ki kellemes zamata. Igénytelen, a betegségekkel szemben viszonylag ellenálló fajta. Igen kései, október elején vagy közepén szedhető, decembertől júniusig fogyasztható. Porzása: öntermékeny",
-        "image": "public/images/apple/husvetiRozmaring.jpg"
+        "image": "images/apple/husvetiRozmaring.jpg"
     },
     {
         "name": "Idared",
@@ -149,7 +149,7 @@
         "price": 2000,
         "active": true,
         "description": "Gyümölcse középnagy vagy nagy, 170-200g tömegű.  Gyümölcse élénkpiros, fedőszínének tetszetőségét a viaszréteg javítja, lapított gömb alakú, finoman bordázott. Húsa fehéres vajszínű, bőlevű, kemény, roppanó, enyhén savanykás, zamata közepes, héja közepesen vastag. Tárolhatósága kiemelkedően jó. Október elején érik, optimális fogyasztási érettségét csak 3-4 hónapos tárolás után éri el és akár a nyári hónapokig megtartja. Porzói: részlegesen öntermékeny, Golden, Jonathan klónok, Starking, Starkimson, Summerred, Gloster.",
-        "image": "public/images/apple/idared.jpg"
+        "image": "images/apple/idared.jpg"
     },
     {
         "name": "Jonagold",
@@ -157,7 +157,7 @@
         "price": 2000,
         "active": true,
         "description": "Az USA-ból származik, a Golden Delicious alma és Jonathan alma fajták keresztezésével állították elő. Fedőszíne élénkebb piros a gyümölcs nagy részén, erősebb csíkozottsággal. Fogyasztási érettségét, tárolástól függően 4-10 hónapig őrzi meg. Gyümölcse nagy, 220-250g tömegű. Húsa világossárga, puha és olvadó, íze édes, kiváló. Szeptember végén-október, elején szüretelhető. Egy-két hónapos tárolás után már fogyasztható. Triploid, két különböző porzót igényel. Porzói: Vista Bella, Gála, Elstar, Jonathán, Gloster, Red Rome, Idared, Granny Smith, Starking, Starkimson, Golden Delicious, Jerseymac, Julyred, Summerred, Cox Orange, r, Discovery, James Grieve, Goldparmäne, Jerseymac, Julyred, Vista Bella",
-        "image": "public/images/apple/jonagold.jpg"
+        "image": "images/apple/jonagold.jpg"
     },
     {
         "name": "Jonathan",
@@ -165,7 +165,7 @@
         "price": 2000,
         "active": true,
         "description": "Amerikában bukkantak rá, az egész világon elterjedt.Szeptember végétől egészen október végéig szedik. Gyümölcse kis méretű, tetszetős színű és alakú, kellemes zamatú, bő levű, rendszeresen és bőven terem. Porzói: Starking mutánsok, Idared, Gloster, Red Rome, Van Well, Akane, Elstar, Gala, Golden klónok, Granny Smith, Téli arany parmen, Sárga szépvirágú",
-        "image": "public/images/apple/jonathan.jpg"
+        "image": "images/apple/jonathan.jpg"
     },
     {
         "name": "Mutsu",
@@ -173,7 +173,7 @@
         "price": 2000,
         "active": true,
         "description": "Igen nagy, 230-250g tömegű. Húsa sárgásfehér, íze harmonikus, cukor/sav aránya kedvező, üde, kellemes, fűszeres zamattal kísért.Október első dekádjában szüretelhető, amikor a színe világoszölddé változik. Fogyasztási minőségének eléréséhez hűtőtárolást igényel, kb. áprilisig fogyasztható. Triploid, két porzó szükséges. Porzói: Golden, Akane, Elstar, Jonathan, Gloster, Starking típusok, Idared, Red Rome, Granny Smith",
-        "image": "public/images/apple/mutsu.jpg"
+        "image": "images/apple/mutsu.jpg"
     },
     {
         "name": "Nemes sóvári",
@@ -181,7 +181,7 @@
         "price": 2000,
         "active": true,
         "description": "A Felső-Tiszavidékről származik szeptember végétől szedhető – áprilisig fogyasztható. Gyümölcse közepesnél nagyobb, kerekded hengeres. Héja viaszsárga alapszíne halványpirossal mosott szép hamvas, sima, liláspiros csíkozású. Húsa hófehér a héj alatt pirosba játszó, kitűnő zamatú kellemesen illatos, roppanós, olvadó. Bőven terem igénytelen, ellenálló, jó alkalmazkodó képességű fajta. Biotermesztésre ajánlott. Porzói: triploid, ezért két porzófajtát igényel - ‘Cox narancs renet’, ‘Golden Delicious’, ‘Jonathan’, ‘Starking Delicious’, ’Téli arany parmen’.",
-        "image": "public/images/apple/nemesSovari.jpg"
+        "image": "images/apple/nemesSovari.jpg"
     },
     {
         "name": "Nyári fontos",
@@ -189,7 +189,7 @@
         "price": 2000,
         "active": true,
         "description": "Gyümölcse nagy vagy igen nagy, 240g tömegű. Felülete fényes és sima. Húsa kemény, bőlevű, íze erősen savas. Piros színű változata is létezik. Augusztus első és harmadik dekádja között elhúzódóan érik, négy-öt menetben szedendő. Porzói: öntermékeny, Egri piros, Jonathán",
-        "image": "public/images/apple/nyariFontos.jpg"
+        "image": "images/apple/nyariFontos.jpg"
     },
     {
         "name": "Starking",
@@ -197,7 +197,7 @@
         "price": 2000,
         "active": true,
         "description": "Későn fordul termőre, termőképessége jó. Húsa kemény, sárgásfehér színű, kemény, tömör, nem túl leveses, erősen illatos, igen édeskés, valamint alacsony sav tartalmú, a tárolás során kásásodó. Gyümölcse tetszetős, bordó-piros, sötétpirossal csíkozott középnagy-nagy 150-170g tömegű. Szeptember végétől szedhető, novembertől márciusig fogyasztható. Porzói: Summered, Elstar, Gála, Jonathan, Golden, Idared, Red Rome, Breaburn",
-        "image": "public/images/apple/starking.jpg"
+        "image": "images/apple/starking.jpg"
     },
     {
         "name": "Summered",
@@ -205,7 +205,7 @@
         "price": 2000,
         "active": true,
         "description": "A Summerred fajtát Kanadában hozták létre 1961-ben a McIntosh és a Golden Delicious fajták keresztezésével. Gyümölcse  középnagy, 170g , megnyúlt csonkakúp alakú, élénkpiros színű. A Summerred gyümölcshúsa a többi nyári almához képest szilárdabb, a szállítást is jobban tűri, mint társai. Íze enyhén savanykás. Augusztus közepétől kezdve 2-3 héten keresztül érik. A Summerred fajtájú alma körülbelül október közepéig tárolható megfelelő, hűtött körülmények között. Porzói: Vista Bella, Jonathan, Mollies Delicius, Elstar, Gloster, Idared, Starking",
-        "image": "public/images/apple/summered.jpg"
+        "image": "images/apple/summered.jpg"
     },
     {
         "name": "Red Elstar",
@@ -213,7 +213,7 @@
         "price": 2000,
         "active": true,
         "description": "A ‘Golden Delicious’ és az ‘Ingrid Marie’ keresztezéséből származó fajta. A ‘Red Elstar’ gyümölcsei egy héttel korábban kezdenek színeződni az alapfajtánál és éretten sötétebb pirosak annál. Gyümölcse középnagy vagy nagy, 160-240g tömegű. Húsa zöldessárga, közepesen kemény, lédús. Íze finom édeskés-savanykás, erősen aromás. Szeptember elején szedhető. Közvetlenül a szürettől 5-6 hónapig fogyasztható. Porzói: Gála, Gloster, Idared, Granny Smith, a Golden klónok, Jonathan klónok, Red Delicious.",
-        "image": "public/images/apple/redElstar.jpg"
+        "image": "images/apple/redElstar.jpg"
     },
     {
         "name": "Véralma",
@@ -221,7 +221,7 @@
         "price": 2000,
         "active": true,
         "description": "A véralma véletlen keresztezés „terméke”, sok változata ismert. Ágai enyhén vöröses színűek, a tavaszi levelek is rózsaszínűek. A gyümölcs húsa a héj alatt pirosas, íze édes, édes-savanykás, magas vas és antioxidáns tartalommal. Érése: szeptember közepe-vége. Porzói: öntermékeny",
-        "image": "public/images/apple/veralma.jpg"
+        "image": "images/apple/veralma.jpg"
     },
     {
         "name": "Arabitka",
@@ -229,7 +229,7 @@
         "price": 2200,
         "active": true,
         "description": "Magyar fajta, húsa fehér, bőlevű, édeskés ízű.  Gyümölcs színe, alakja: citromsárga, éretten aranysárga, széles, kerekded kúp alakú, de kissé megnyúltabb, mint az Árpával érő. Gyümölcs nagysága kicsi (40-50 g), csomóban hozza, gyümölcs húsa: fehér, bőlevű, édeskés ízű, gyengén illatos, keményebb a húsállománya és kevésbé szottyosodik, mint az Árpával érő vagy más nyári körte. Héja tetszetős, élénk, nem egészen éretten jól szállítható. Biotermesztésre ajánlott. Érési ideje: június vége – július eleje. Porzói: részben öntermékeny, Árpával érő, Diel, Kieffer, Papkörte",
-        "image": "public/images/pear/arabitka.jpg"
+        "image": "images/pear/arabitka.jpg"
     },
     {
         "name": "Árpával érő",
@@ -237,7 +237,7 @@
         "price": 2200,
         "active": true,
         "description": "Gyümölcs nagysága: igen kicsi (35-45 mm), szalmasárga, sötétzöld pontokkal ritkán ellátott, a pontok eltűnők, világoszöld udvarral, igen széles, szinte kerekded körte alakú. Gyümölcs húsa: fehér, puha, bőlevű, C-vitaminban gazdag, héja vékony, puha, fénylő. Érési idő: június vége – július eleje. Porzói: Arabitka, Vilmos körte, Giffard, Mézes, Köcsög körte, Szűcsi őszi",
-        "image": "public/images/pear/arpavalEro.jpg"
+        "image": "images/pear/arpavalEro.jpg"
     },
     {
         "name": "Bohusné vajkörtéje",
@@ -245,7 +245,7 @@
         "price": 2200,
         "active": true,
         "description": "Gyümölcs nagysága: középnagy (~110 g), citromsárga vagy zöldessárga, a napos oldalon barna vagy sötétvörös fedőszínnel, kissé aszimmetrikus körte alakú. Gyümölcs húsa: édes-savas ízű, olvadó, szottyosodásra nem hajlamos, íze zamatos. Érési idő: július vége – augusztus eleje. Porzói: Clapp kedveltje, Vilmos, Bosc kobak, Giffard vajkörte",
-        "image": "public/images/pear/bohusneVajkorteje.jpg"
+        "image": "images/pear/bohusneVajkorteje.jpg"
     },
     {
         "name": "Bosc Kobak",
@@ -253,7 +253,7 @@
         "price": 2200,
         "active": true,
         "description": "Gyümölcse nagy-igen nagy, 180-280g tömegű. Húsa fehéressárga, olvadó, jól szállítható,  tavaszig tárolható. Nagyon érzékeny a szüretidőre, ha túl korán szedjük, nem érik be. Gyümölcse éretten fahéjas barna alapszínű, egész felülete rozsdamázzal fedett, kissé megnyúlt, kocsány felé keskenyedő körte alakú. húsa: fehéressárga, olvadó, gyengén, héja közepes vastagságú, száraz tapintású. Biotermesztésre ajánlott. Érési ideje: szeptember közepe. Porzói: Clapp kedveltje, Vilmos körte, Napoca, Dr.Guyot Gyula, Hardy, Társulati Esperes",
-        "image": "public/images/pear/boscKobak.jpg"
+        "image": "images/pear/boscKobak.jpg"
     },
     {
         "name": "Clapp kedveltje",
@@ -261,7 +261,7 @@
         "price": 2200,
         "active": true,
         "description": "Akár 6 hónapig tárolható ,gyümölcse középnagy, 180-220g tömegű. Húsa fehér, olvadó, bőlevű, illatos,  jellegzetes aromával, augusztus első hetében szüretelhető, 1-2 hónapig tárolható. Gyümölcs szalmasárga, napos oldalon 40-50%-ban pirossal fedett, sűrű és feltűnő paraszemölcsökkel, szabályos körte alakú .Biotermesztésre ajánlott. Érés ideje:augusztus vége-szeptember eleje. Porzói: Bosc kobak, Vilmos, Hardenpont, Napoca, Dr Guyot Gyula, Avranchesi jó Lujza, Esperen bergamottja, Serres Olivér, Téli esperes, Zöld Magdolna, Hardy.",
-        "image": "public/images/pear/clappKedveltje.jpg"
+        "image": "images/pear/clappKedveltje.jpg"
     },
     {
         "name": "Conference",
@@ -269,7 +269,7 @@
         "price": 2200,
         "active": true,
         "description": "Gyümölcs mérete változó, 120-220g tömegű. Gyümölcse sárgásfehér, olvadó, nagyon édes vajkörte. alakja igen megnyúlt körte. Éretten zöldessárga alapszínű, túlnyomó részt hálózatosan vagy foltosan barna rozsdamázzal fedett; vastag héja száraz tapintású. Gyümölcshúsa sárgásfehér, olvadó, nagyon édes vajkörte. Érés ideje: Szeptember első hete közepe, akár 6 hónapig tárolható. Porzói: Clapp kedveltje, Guyot Gyula, Vilmos körte, Piros Vilmos, Hardy vajkörte, Bosc kobak és a Packham’s Triumph fajták.",
-        "image": "public/images/pear/conference.jpg"
+        "image": "images/pear/conference.jpg"
     },
     {
         "name": "Császár körte",
@@ -277,7 +277,7 @@
         "price": 2200,
         "active": true,
         "description": "Származása bizonytalan eredetű, ősrégi fajta. Érési idő: szeptember vége – október eleje ,gyümölcse középnagy, tojásdad, vagy gömbölyded, tompa kúp alakú, fénylő, sima, sárgászöld héjú.Éretten sárga, napos oldalán enyhén piros, rozsda pontozással, fehér húsú, illatos, jó ízű, bőlevű, olvadó, friss fogyasztásra és feldolgozásra egyaránt alkalmas  Termőképesség: gyenge növekedésű, ritkás, szabályos koronát nevel, kötöttebb, tápanyagban gazdag talajon jól terem. Porzói: Vilmos, Hardy vajkörte, Serres Olivér, Társulati esperes, Hardenpont",
-        "image": "public/images/pear/csaszar.jpg"
+        "image": "images/pear/csaszar.jpg"
     },
     {
         "name": "Hardy vajkörte",
@@ -285,7 +285,7 @@
         "price": 2200,
         "active": true,
         "description": "Franciaországból származik. Érési idő: augusztus vége – szeptember vége, gyümölcs nagysága középnagy (145-200 g), éretten sárgás barnáspiros, egyenletesen szétszórva barnaparás, alakja széles tojásdad, egyik oldalán hízottabb. Gyümölcs húsa zöldesfehér, a héj alatt sárgás, tömött, olvadó, puha, bőlevű, kellemesen savas és fűszeres, héja vastag és száraz tapintású. Időben szedve 1-2 hónapig tárolható. Biotermesztésre ajánlott. Porzói: Vilmos, Bosc, Serres Olivér, Nemes Krasszán, Giffard vajkörte, Esperen bergamottja, Társulati Esperes, Avranchesi jó Lujza, Clapp kedveltje.",
-        "image": "public/images/pear/hardy.jpg"
+        "image": "images/pear/hardy.jpg"
     },
     {
         "name": "Nemes krasszán",
@@ -293,7 +293,7 @@
         "price": 2200,
         "active": true,
         "description": "Érési idő: október eleje – közepe, gyümölcse nagy vagy igen nagy (220-300 g), éretten sötét szalmasárga, a napos oldalon gyengén vörös árnyalattal, hálózatos rozsdafoltokkal, hengeres alakú, középen a legszélesebb. Gyümölcs húsa: fehéressárga, olvadó, bőlevű, inkább savas, mint édes, a magház körül és néha az egész gyümölcs kövecses. Porzói: Hardy vajkörte, Packham’s Triumph, Téli esperes",
-        "image": "public/images/pear/nemesKrasszan.jpg"
+        "image": "images/pear/nemesKrasszan.jpg"
     },
     {
         "name": "Serres Olivér",
@@ -301,7 +301,7 @@
         "price": 2200,
         "active": true,
         "description": "Francia fajta, gyümölcs nagysága: közepes vagy kicsi (100-230 g) Gyümölcs színe, alakja: éretten sárgászöld, hálózatosan rozsdamázas, gömbölyű vagy lapított gömb, a csésze körül bordás. Gyümölcs húsa sárgásfehér, olvadó, bőlevű, optimális termőhelyen nagyon jóízű, finoman savas, fűszeres, de száraz helyen apró és kövecses, héja kemény, vastag .Biotermesztésre ajánlott. Érési ideje október eleje. Porzói: Vilmos, Hardenpont, Téli esperes, Bosc kobak, Avranhesi jó Lujza, Zöld Magdolna, Téli Esperes, Társulati esperes, Kieffer, Erdei vaj, Diel, Arabitka.",
-        "image": "public/images/pear/serresOliver.jpg"
+        "image": "images/pear/serresOliver.jpg"
     },
     {
         "name": "Téli esperes",
@@ -309,7 +309,7 @@
         "price": 2200,
         "active": true,
         "description": "Belgiumban egy kolostor kertjében találták, gyümölcse középnagy vagy nagy (150-230 g), sárgászöld, szembetűnő paraszemölcsökkel, hengeres, széles, vaskos, szabálytalan körte, felülete hullámos. Gyümölcs húsa vajfehér, olvadó, illatos, édes, enyhén savanykás, kellemes fűszeres ízű, a magház körül gyakran kövecses. Érési idő: október közepe. Porzói: Vilmos, Zöld Magdolna, Társulati Esperes, Hardenpont, Esperen bergamottja, Nemes Krasszán, Serres Olivér, Papkörte, Kieffer, Diel, Arabitka",
-        "image": "public/images/pear/teliEsperes.jpg"
+        "image": "images/pear/teliEsperes.jpg"
     },
     {
         "name": "Vilmos",
@@ -317,7 +317,7 @@
         "price": 2200,
         "active": true,
         "description": "Angliai eredetű véletlen magonc, 1779-ben már ismert fajta. Érési ideje augusztus vége – szeptember eleje, gyümölcse középnagy vagy nagy (160-220 g), éretten szép sárga, napos oldalon enyhén pirosas bemosódással, csaknem szabályos körte alakú. Gyümölcs húsa fehér, olvadó, bőlevű, illatos, édes-savanykás, muskotályos ízű, héja vékony, sima tapintású, felülete enyhén hullámos, apró barnás paraszemölcsökkel. Biotermesztésre ajánlott. Porzói: Pachams Trimph, Conference, Clapp kedveltje, Dr. Guyot Gyula, Hardenpont, Bosc kobakja, Zöld Magdolna, Társulati esperes, Téli esperes, Serres Olivér, Papkörte, Kieffer, Esperen bergamottja, Avranchesi jó Lújza",
-        "image": "public/images/pear/vilmos.jpg"
+        "image": "images/pear/vilmos.jpg"
     },
     {
         "name": "Bigarreau Burlat",
@@ -325,7 +325,7 @@
         "price": 2500,
         "active": true,
         "description": "Termőképessége közepes, kedvező évjáratokban nagy, gyümölcse átlag 22-24 mm jó víz- és tápanyagellátottság esetén 24-26 mm átmérőjű. Átlagtömege 5-6 gramm. Széles tompa kúp alakú, a hasi varratnál lapított, enyhén kiemelkedő bordával, melynek vonalában a gyümölcs színe világosabb piros (világos sáv). Színe a fogyasztási érettség kezdetén piros, majd az érés előrehaladtával sötét bordóvá válik, héja fényes, vékony. Húsa tömött, közepesen kemény, ropogósba hajló. Íze kellemesen édes-savanykás. Kiváló minőségű étkezési gyümölcs. Kocsánya rövid vagy középhosszú. Magja kicsi, vagy közepesen nagy, félig- esetenként teljesen magvaváló. Érési idejénél fogva a cseresznyelégy nem károsítja. Május végén-, június elején érik. Porzói:  Germersdorfi, Samba, Merchant, Lapins, Münchenbergi korai, Szomolyai fekete, Vera, Van, Valerij Cskalov, Stella",
-        "image": "public/images/cherry/bigarreauBurlat.jpg"
+        "image": "images/cherry/bigarreauBurlat.jpg"
     },
     {
         "name": "Germersdorfi óriás",
@@ -333,7 +333,7 @@
         "price": 2500,
         "active": true,
         "description": "Gyümölcsei 7-10 g tömegűek, 24-27 mm átmérőjűek. A Germersdorfi 3-as és 45-ös klón gyümölcsei a fajtakörön belül a legnagyobbak. Íze már világos pirosan is kellemes édessavanykás, zamatos. Húsa magvaváló, halványpiros, kemény, roppanó, bőlevű. A Germersdorfi fajtakör általában június 18- 25 között érik. Porzói: Katalin, Stella, Hedelfingeni, Solymári gömbölyű, Van, Sam, Margit, Bigarreau Burlat.",
-        "image": "public/images/cherry/germersdorfiOrias.jpg"
+        "image": "images/cherry/germersdorfiOrias.jpg"
     },
     {
         "name": "Linda",
@@ -341,7 +341,7 @@
         "price": 2500,
         "active": true,
         "description": "Termőre fordulása korai, termőképessége igen jó és rendszeres. Gyümölcse nagy, átlag 24 mm átmérőjű, átlag tömege 7,4g, kőmag aránya 4,8%. Alakja kissé megnyúlt, lekerekített vállú, hasi oldalán lapos. Bibepontja kicsi és csúcsosan kiemelkedik. Héja vastag, színe éretten bordópiros, hasi oldalán egy árnyalattal sötétebb. Húsa piros, kemény, durván rostos, egy kissé tapad a maghoz. Íze édes-savas, harmonikus. Magja nagy, sima, ovális. Kocsánya középhosszú. Éretten  szárazon válik a kocsánytól, gépibetakarításra alkalmas. A gyümölcsök a fán minőségromlás nélkül 8-10 napig eltarthatók, így a Germersdorfi-val együtt is szüretelhető. A Germersdorfi óriás előtt néhány nappal, június végén érik. Porzói: Solymári gömbölyű, Kordia, Germersdorfi óriás, Hedelfingeni óriás, Kavics, Stella, Axel",
-        "image": "public/images/cherry/linda.jpg"
+        "image": "images/cherry/linda.jpg"
     },
     {
         "name": "Stella",
@@ -349,7 +349,7 @@
         "price": 2500,
         "active": true,
         "description": "Bőven és rendszeresen terem, gyümölcse nagy, 6-7 g tömegű, átmérője 22-24 mm. Kissé megnyúlt szív alakú, sötét bordópiros, húsa feketés piros, kemény, de nem ropogós, íze közepes. Termései sűrűn állnak, egymáshoz szorulnak. Esős időben felrepednek. Középhosszú kocsányú. Június végén, néhány nappal a Germersdorfi után, de a Hedelfingeni előtt érik. Öntermékeny.",
-        "image": "public/images/cherry/stella.jpg"
+        "image": "images/cherry/stella.jpg"
     },
     {
         "name": "Szomolyai fekete",
@@ -357,7 +357,7 @@
         "price": 2500,
         "active": true,
         "description": "A gyümölcs tömege 4-5 g, átlagos átmérője 18 mm. Héjszíne sötét lilásbordó, teljes érésben bogárfekete. Héja közepesen vastag, szívós ezért jól szállítható. Húsa feketés bordópiros, félkemény, bőlevű, leve erősen festő. Íze édes, jellegzetes zamattal, a legízletesebb cseresznyefajtáink egyike. Gyümölcsének magas a szárazanyagtartalma. A gyorsfagyasztott gyümölcs igazi hungarikum. Kocsánya rövid, géppel rázható. Június 10-12 körül érik. Porzói: Münchebergi korai, Pomázi hosszúszárú, Valerij Cskalov, Bigarreau Burlat, Sándor",
-        "image": "public/images/cherry/szomolyaiFekete.jpg"
+        "image": "images/cherry/szomolyaiFekete.jpg"
     },
     {
         "name": "Althann ringló",
@@ -365,7 +365,7 @@
         "price": 2300,
         "active": true,
         "description": "Korán termőre fordul, rendszeresen és bőven terem. Gyümölcse nagy, 40-45g tömegű, 39-42 mm átmérőjű. Héja zöldessárga, rózsaszínes lila fedőszínnel borított, erősen hamvas. Húsa narancssárga, zöldessárga, kemény, lédús magvaváló, kellemes édes-savas ízű, befőttnek kiváló. Augusztus közepén érik, a Stanley előtt 12 nappal. Porzói: Cacanska naljbolja, Cacanska rodna, Debreceni muskotály, Ageni, Silvia, Stanley, Sermina, Zöld ringló",
-        "image": "public/images/plum/althannRinglo.jpg"
+        "image": "images/plum/althannRinglo.jpg"
     },
     {
         "name": "Besztercei",
@@ -373,7 +373,7 @@
         "price": 2300,
         "active": true,
         "description": "Későn fordul termőre, de utána bőven terem. Gyümölcse kicsi, 15-20 g tömegű, 28-30 mm átmérőjű. Héja sötétkék, hamvas. Húsa sárgászöld-aranysárga, kemény, lédús. A magas cukor és savtartalom kiváló ízt biztosít. Magvaváló. Szeptember eleje-közepén érik, a Stanley előtt 12 nappal. Öntermékeny.",
-        "image": "public/images/plum/besztercei.jpg"
+        "image": "images/plum/besztercei.jpg"
     },
     {
         "name": "Nemtudomka",
@@ -381,7 +381,7 @@
         "price": 2300,
         "active": true,
         "description": "A Felső-Tiszavidéken az ártéri gyümölcsösökben, a Kőrösök felső szakaszán legfőképp a Szilágyságban tekinthető őshonosnak. Gyümölcse: Kicsi-közepes méretű (18-28 mm), alakja gömbölyded-ovális, esetenként kissé megnyúlt. Héjszíne éretten sötétkék, finoman hamvas. Húsa zöldessárga, lédús,kellemes finom zamatú, nem magvaváló. Magas cukortartalma miatt lekvárnak és pálinkának is kiváló. A betegségeknek ellenálló, biotermesztésre ajánlott. Érés ideje: augusztus közepétől szeptember közepéig. Öntermékeny.",
-        "image": "public/images/plum/nemtudomka.jpg"
+        "image": "images/plum/nemtudomka.jpg"
     },
     {
         "name": "Stanley",
@@ -389,7 +389,7 @@
         "price": 2300,
         "active": true,
         "description": "Korán termőre fordul, rendszeresen és bőven terem. Gyümölcse középnagy-nagy 35-40 g tömegű, 30-35 mm átmérőjű. Héja sötétkék, erősen hamvas. Húsa zöldessárga, kemény, jó ízű, éretten magvaváló, repedésre nem hajlamos. Érés ideje: Augusztus vége-szeptember eleje. Porzói: öntermékeny, a termékenyülését segíti: Besztercei, Bluefree, President, Ruth Gerstetter",
-        "image": "public/images/plum/stanley.jpg"
+        "image": "images/plum/stanley.jpg"
     },
     {
         "name": "Vörös szilva",
@@ -397,7 +397,7 @@
         "price": 2300,
         "active": true,
         "description": "Neve már egy 16. századi szójegyzékben is szerepel. Származása ismeretlen. Nagysága közepesnél nagyobb. Alakja hosszas gömbölyded, száras végénél kissé összehúzódik. Színe kékesvörös, vagy sötétkékes-vörös, szürkés pontozatú, hamva világoskék. Belseje aranysárga, lágy, kissé parázs húsú, de lédús, magvától nehezen válik el. Magja hosszúkás, keskeny és hegyes. Koraisága miatt igen jó piaci és gazdasági, feldolgozásra alkalmas minőségű gyümölcs. Fája erőteljes növekedésű, talajban nem válogat, az Alföldön is bő termést ad. Ungi veres szilvának is nevezik. Biotermesztésre ajánlott. Érési ideje: Augusztus közepe-vége. Öntermékeny.",
-        "image": "public/images/plum/voros.jpg"
+        "image": "images/plum/voros.jpg"
     },
     {
         "name": "Zöld ringló",
@@ -405,7 +405,7 @@
         "price": 2300,
         "active": true,
         "description": "Korán-középkorán termőre fordul, bőtermő, de szakaszosan terem. Gyümölcse kzépnagy, 20-25 g tömegű. Héja zöldessárga, napos oldalon pirosan pontozott. Húsa sárgászöld, középkemény állományú, ropogós, lédús, édes, kellemes zamatú, repedésre hajlamos, magvaváló, szállítást csak féléretten tűri. Érés ideje: Augusztus második fele-vége, a Stanley előtt 12  nappal. Porzói: Althan ringló, Ageni, Cacanska rana, Cacanska rodna. Debreceni muskotály, Besztercei, Nancy-Mirabelle.",
-        "image": "public/images/plum/zoldRinglo.jpg"
+        "image": "images/plum/zoldRinglo.jpg"
     },
     {
         "name": "Bergeron",
@@ -413,7 +413,7 @@
         "price": 2500,
         "active": true,
         "description": "Korán fordul termőre, jó termőképességű, de túlkötődésre hajlamos. Gyümölcse középnagy, 40-45 g tömegű. Héja narancssárga, a napos oldal élénkpiros. Húsa narancssárga, kemény, kiváló ízű. Túltermés esetén lisztesedik, íze savasabb lesz. Magvaváló, magbele édes. Fagytűrésével a legbiztonságosabban termő fajta, a fagy ellen elhúzódó virágzásával „védekezik”. 7-10 nappal a Magyar kajszi után érik. Öntemékeny.",
-        "image": "public/images/apricot/bergeron.jpg"
+        "image": "images/apricot/bergeron.jpg"
     },
     {
         "name": "Ceglédi arany",
@@ -421,7 +421,7 @@
         "price": 2500,
         "active": true,
         "description": "Termőképessége kiváló. Gyümölcse középnagy méretű, 40-45 g tömegű. Alapszíne narancssárga, napos oldalán kárminnal mosott. Húsa kemény állományú, élénk narancsszínű, éretten kellemes zamatú. Későn virágzó, fagytűrő. A Magyar kajszi után 6-7 nappal, a Mandulakajszival együtt érik. Öntermékeny.",
-        "image": "public/images/apricot/ceglediArany.jpg"
+        "image": "images/apricot/ceglediArany.jpg"
     },
     {
         "name": "Ceglédi óriás",
@@ -429,7 +429,7 @@
         "price": 2500,
         "active": true,
         "description": "Bőtermő, de nem rendszeresen terem. Gyümölcse nagy vagy igen nagy, 50-80 g tömegű. Héja narancssárga, napos oldalán és a kocsány környékén élénk kárminpirossal mosott, finoman pontozott. Húsa világos narancssárga, lédús, olvadó, teljesen éretten aromás, középkemény. Magbele édes. A Magyar kajszi előtt 5-7 nappal érik (július közepén). Porzói: Magyar kajszi C 235, Ceglédi bíbor, Ceglédi Piroska, Magyar kajszi klónok.",
-        "image": "public/images/apricot/ceglediOrias.jpg"
+        "image": "images/apricot/ceglediOrias.jpg"
     },
     {
         "name": "Gönci magyar kajszi",
@@ -437,7 +437,7 @@
         "price": 2500,
         "active": true,
         "description": "Bőtermő, korán termőre fordul. Magyarország egyik fő fajtája, gyümölcse középnagy, 40-55 g tömegű. Tulajdonsága megegyezik az átlagos magyar kajsziéval. Magja édes, biotermesztésre alkalmas, a legjobb monília ellenálló. Érés ideje: Magyar kajszival egy időben. Öntermékeny.",
-        "image": "public/images/apricot/gonciMagyar.jpg"
+        "image": "images/apricot/gonciMagyar.jpg"
     },
     {
         "name": "Magyar kajszi",
@@ -445,7 +445,7 @@
         "price": 2500,
         "active": true,
         "description": "Korán termőre fordul, de alternanciára hajlamos. Gönci magyar kajszinál gyengébb termőképességű. Gyümölcse középnagy, 45-50 g tömegű. Héja élénk narancssárga, napos oldala kárminpirossal mosott, finoman molyhos. Húsa narancssárga, lédús, igen finom, kemény állományú. Magja édes. Érés ideje: Július közepe. Öntermékeny.",
-        "image": "public/images/apricot/magyar.jpg"
+        "image": "images/apricot/magyar.jpg"
     },
     {
         "name": "Champion",
@@ -453,7 +453,7 @@
         "price": 2500,
         "active": true,
         "description": "Nagyon bőtermő, későn fordul termőre. Nagy átlagosan 140b tömegű, 60 mm feletti átmérőjű, gyümölcse gömb alakú. Alapszíne sárgásfehér, kis részén világos pirossal mosott. Héja durván molyhos. Húsa közepesen kemény, zöldesfehér, a mag körül kissé pirosas. Magvaváló, kitűnő ízű. Rosszul szállítható, nyomódásra érzékeny. Augusztus 2-3. dekádjában – középidőben érik. Öntermékeny.",
-        "image": "public/images/apricot/champion.jpg"
+        "image": "images/apricot/champion.jpg"
     },
     {
         "name": "Cresthaven",
@@ -461,7 +461,7 @@
         "price": 2500,
         "active": true,
         "description": "Általában bőtermő, egyes években közepes. Gyümölcse nagy-igen nagy, átlagosan 150g tömegű, lapított gömb alakú, csúcsán kissé bemélyedt, közepesen vagy alig molyhos héjú. Fedőszíne 50-70 %-ban vörös.  Húsa sárga, mag körül vörös, szilárd állományú, magvaváló. Íze jó, jól tűri a szállítást, tárolást, sokoldalúan felhasználható. Augusztus végén szeptember elején érik. Öntermékeny.",
-        "image": "public/images/apricot/cresthaven.jpg"
+        "image": "images/apricot/cresthaven.jpg"
     },
     {
         "name": "Dixired",
@@ -469,7 +469,7 @@
         "price": 2500,
         "active": true,
         "description": "Későn fordul termőre. Termőképessége jó, termésbiztonsága nem minden évben kielégítő. Gyümölcse nagy, átlagosan 130 g tömegű. Ritkítva és öntözve az A és AA méretű gyümölcs nagy arányban szüretelhető. Alakja gömb, de gyakran részaránytalan. Narancssárga héján 70-80 %-ban intenzív piros fedőszín alakul ki, amely éréskor sötétbordóvá válik.  Húsa sárga, kemény, maghoz kötött. Íze kellemes, savanykás fűszeres. Jól szállítható, érési idejében a legszebb minőséget adja, ”világ fajta”. Érés ideje: Korai érésű, július közepén, a Redhaven előtt érik 2 héttel. Öntermékeny.",
-        "image": "public/images/apricot/dixired.jpg"
+        "image": "images/apricot/dixired.jpg"
     },
     {
         "name": "Mariska",
@@ -477,7 +477,7 @@
         "price": 2500,
         "active": true,
         "description": "Termőképessége és termésbiztonsága jó. Gyümölcse középnagy, 80 g tömegű, 50-60mm átmérőjű, enyhén lapított gömb alakú. felülete sárgászöld, a piros fedőszín csíkozottan jelenik meg. Húsa fehér, bőlevű, éretten félig magvaváló, jellegzetes zamatú, jó ízű. Július 2-3. dekádjában érik. Öntermékeny.",
-        "image": "public/images/apricot/mariska.jpg"
+        "image": "images/apricot/mariska.jpg"
     },
     {
         "name": "Redhaven",
@@ -485,7 +485,7 @@
         "price": 2500,
         "active": true,
         "description": "Rendszeresen és bőven terem, nagy gyümölcsei átlagosan 130 g tömegűek, 60 mm feletti átmérőjű, oldalról lapított, kissé aszimmetrikus gömb alakú. Héja közepesen molyhos, alapszíne sárga, a felület 60-70 %-án csíkozott, mosott, sötétvörös fedőszín borítja. Húsa élénksárga, a mag körül vörös, közepesen szilárd, magvaváló. Július végén-augusztus elején. Öntermékeny.",
-        "image": "public/images/apricot/redhaven.jpg"
+        "image": "images/apricot/redhaven.jpg"
     },
     {
         "name": "Alsószentiváni 117",
@@ -493,7 +493,7 @@
         "price": 3000,
         "active": true,
         "description": "Bőtermő, a hajtások átlag 45 % -a rakódik be terméssel. Korán termőre fordul. Szeptember harmadik dekádjában érik.gyümölcse kb. 36 mm átmérőjű, héja kissé barázdált világosbarna színű, a bél színe sárgásbarna, jó ízű. Béltartalma 48-51%. Könnyen törhető és tisztítható. Olajtartalma magas: 65 %. Fehérjetartalma: 18%. Erős növekedésű, edzett. Fiatalon feltörekvő, később terülő koronát nevel. Gyors növekedésű. A termővesszők oldalrügyei nem hoznak nővirágot, így főként a csúcsrügyön terem. Porzói: Milotai 10, Alsószentiváni 118, Pedro és Tiszacsécsi 2.",
-        "image": "public/images/valnut/alsoszentivani.jpg"
+        "image": "images/valnut/alsoszentivani.jpg"
     },
     {
         "name": "Milotai 10",
@@ -501,7 +501,7 @@
         "price": 3000,
         "active": true,
         "description": "Igen bőtermő, a hajtások átlag 53 %-ban rakódnak be terméssel. Korán termőre fordul. Érési idő: szeptember vége. A termés 35 mm átlag átmérőjű, gömb alakú. Héja sima, tetszetősen rajzolatos, sárgásbarna, a bél világos sárga, jó ízű, béltartalma 47-52%. Könnyen törhető és tisztítható. Olajtartalma magas: 68,4 %, fehérjetartalma: 17,7%. Középerős növekedésű, fiatalon feltörekvő, idősebb korban félgömb alakú. Termővesszői 20-25 %-ban oldalrügyeken is hoznak nővirágot. Porzói: Tiszacsécsi 2, Alsószentiváni 117 , Pedro.",
-        "image": "public/images/valnut/milotai10.jpg"
+        "image": "images/valnut/milotai10.jpg"
     },
     {
         "name": "Tétényi kedvenc",
@@ -509,7 +509,7 @@
         "price": 3000,
         "active": true,
         "description": "Gyümölcse középnagy, 38-44 mm hosszú, papír héjú, béltartalma nagy, 46-50 %, magbele telt, hengeres, világos zsemle színű, kellemesen édes ízű. Termése  lándzsa alakú, félpapír héjú termése kézzel is könnyen törhető. A magbél világos zsemleszínű, hengeres, telt, édes ízű.  Igen bőtermő, a vékony héja miatt a madarak szeretik. Kopálása egyöntetű, a termés éretten sem hajlamos hullásra. Gyengébb növekedési erélyű fát nevel. Érés ideje: szeptember közepe. Porzói: Tétényi bőtermő, Budatétényi 70, Budatétényi 1, Tétényi keményhéjú.",
-        "image": "public/images/almond/tetenyiKedvenc.jpg"
+        "image": "images/almond/tetenyiKedvenc.jpg"
     },
     {
         "name": "Tétényi rekord",
@@ -517,7 +517,7 @@
         "price": 3000,
         "active": true,
         "description": "Kései érésű fajta, amely jól ellenáll a téli és tavaszi fagyoknak. Termése középnagy, telt orsó alakú. A héja vékony, de kemény, könnyen törhető. Magbél aránya 38-42 %, édes ízű. A fája kezdetben középerős, majd erős növekedési erélyű. Teljes éréskor jól rázható. Érés ideje: szeptember vége, október eleje. Porzói: Tétényi keményhéjú, Szigetcsépi 92, Szigetcsépi 58, Tétényi bőtermő, Tétényi kedvenc",
-        "image": "public/images/almond/tetenyiRekord.jpg"
+        "image": "images/almond/tetenyiRekord.jpg"
     },
     {
         "name": "Tétényi bőtermő",
@@ -525,7 +525,7 @@
         "price": 3000,
         "active": true,
         "description": "Termése nagy, hengeres, telt csepp alakú. Héja gyakran morzsásan szétesik, félpapír héjú. Magbél arány 46-50 %, a magbél sajátosan fűszeres zamatú. Vastag zöld burka miatt kandírozott gyümölcs is készíthető belőle. Gyümölcse gépi betakarításra alkalmas. Fája gyenge növekedési erélyű, sűrűsödésre hajlamos. Érés ideje: szeptember közepe. Porzói: Tétényi kedvenc, Budatétényi 1 és Budatétényi 70, Tétényi rekord, Tétényi keményhéjú",
-        "image": "public/images/almond/tetenyiBotermo.jpg"
+        "image": "images/almond/tetenyiBotermo.jpg"
     },
     {
         "name": "Bereczki birs",
@@ -533,7 +533,7 @@
         "price": 2000,
         "active": true,
         "description": "Gyümölcse nagy-igen nagy, 300-500 g tömegű. Húsa fehéressárga, kemény, gyengén leves, íze édeskés, erősen illatos, magvai nagyok. Érés ideje: Szeptember vége-október eleje, januárig fogyasztható. Porzói: részben öntermékeny, Konstantinápolyi, Mezőtúri,Vranja",
-        "image": "public/images/quince/bereczki.jpg"
+        "image": "images/quince/bereczki.jpg"
     },
     {
         "name": "Konstantinápolyi",
@@ -541,6 +541,6 @@
         "price": 2000,
         "active": true,
         "description": "Gyümölcse közepes méretű (200-250g), erősen bordázott, gyakran szabálytalan, körte és alma alakú gyümölcsök egyaránt előfordulnak. Héja narancssárga, molyhos. Húsa fehéressárga, elég kemény, illatos. Ivólének, befőttnek egyaránt kiválóan alkalmas. Fája közepesnél nagyobb növekedési erélyű. Korán termőre forduló. Érés ideje: Október eleje-közepe. Porzói: részben öntermékeny, Berecki, Berecki bőtermő, Mezőtúri, Angersi Champion.",
-        "image": "public/images/quince/konstantinapolyi.jpg"
+        "image": "images/quince/konstantinapolyi.jpg"
     }
 ]

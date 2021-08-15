@@ -64,13 +64,25 @@
             <label for="">Aktív</label>
           </div>
           <div class="form-check my-1">
-            <label class="form-check-label">
+            <label>
               <input class="form-check-input" type="checkbox" name="active" [(ngModel)]="product.active">Aktív
               <span class="form-check-sign">
                 <span class="check"></span>
               </span>
             </label>
           </div>
+        </div>
+
+        <img class="prod_image" [src]="product.image" [alt]="product.image">
+        <div class="form-group mt-3">
+          <div class="d-flex justify-content-between">
+            <label for="">Kép</label>
+            <div [hidden]="productForm.controls.image?.valid" class="error-message mt-1">
+              A névnek nagybetűvel kell kezdődni és 2-20 karkter hosszú lehet!
+            </div>
+          </div>
+          <input name="image" [(ngModel)]="product.image" type="text" class="form-control"
+            required>
         </div>
 
         <!--<button [disabled]="productForm.invalid || clicked" (click)="showHtmlToaster(product)" type="submit"
