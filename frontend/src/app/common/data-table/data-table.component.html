@@ -56,14 +56,17 @@
           </td>
           <td>
             <div class="btn-group text-center">
-              <button (click)="onSelect(row)" class="btn btn-info">
-                <i class="fa fa-pencil-alt"></i>
+              <button *ngIf="entity!=='bill'" (click)="onSelect(row)" class="btn btn-info">
+                <i class="fas fa-pencil-alt"></i>
               </button>
-              <div *ngIf="row.status==='stornózott'" class="btn btn-danger">
-                <i class="fa fa-trash"></i> Stornózott
+              <button *ngIf="entity==='bill'" (click)="onSelect(row)" class="btn btn-info">
+                <i class="fas fa-eye"></i>
+              </button>
+              <div *ngIf="row.status==='stornózott'" class="btn btn-secondary">
+                Stornózott
               </div>
               <button *ngIf="row.status!=='stornózott'" (click)="onDelete(row)" class="btn btn-danger">
-                <i class="fa fa-trash"></i>
+                <i class="fas fa-trash"></i>
               </button>
             </div>
           </td>

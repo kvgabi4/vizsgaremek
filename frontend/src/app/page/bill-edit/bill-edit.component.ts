@@ -4,7 +4,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { Bill } from 'src/app/model/bill';
+import { Order } from 'src/app/model/order';
 import { BillService } from 'src/app/service/bill.service';
+import { OrderService } from 'src/app/service/order.service';
 
 @Component({
   selector: 'app-bill-edit',
@@ -21,12 +23,13 @@ export class BillEditComponent implements OnInit {
       return of(new Bill())
     })
   );
-
+  orders$: Observable<Order[]> = this.orderService.getAll();
   clicked: boolean = false;
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private billService: BillService,
+    private orderService: OrderService,
     private router: Router,
   ) { }
 

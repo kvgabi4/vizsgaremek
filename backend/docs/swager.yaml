@@ -6,7 +6,7 @@ info:
 servers:
   - url: http://localhost:3000
 paths:
-  /bill:
+  /bills:
     get:
       description: Returns a list of bills
       security:
@@ -55,13 +55,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /bill/{bill_id}:
+
+  /bill/{_id}:
     get:
       description: Returns the bill with the given ID
       security:
         - bearerAuth: []
       parameters:
-        - name: bill_id
+        - name: _id
           in: path
           required: true
           schema:
@@ -114,7 +115,68 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /user:
+    # patch:
+    #   description: Updates a bill
+    #   parameters:
+    #     - in: path
+    #       name: _id
+    #       required: true
+    #       schema: 
+    #         type: string
+    #   requestBody:
+    #     required: true
+    #     content:
+    #       application/json:
+    #         schema:
+    #           $ref: '#/components/schemas/Bill'
+    #   responses:
+    #     '200':
+    #       description: Bill has been updated successfully
+    #       content:
+    #         application/json:
+    #           schema:
+    #             $ref: '#/components/schemas/Bill'
+    #     '400':
+    #       description: Invalid request when the post data is invalid
+    #       content:
+    #         application/json:
+    #           schema:
+    #             $ref: '#/components/schemas/Error'
+    #     '500':
+    #       description: Internal server error
+    #       content:
+    #         application/json:
+    #           schema:
+    #             $ref: '#/components/schemas/Error'
+    # delete:
+    #   description: Removes a bill
+    #   parameters:
+    #     - in: path
+    #       name: _id
+    #       required: true
+    #       schema: 
+    #         type: string
+    #   responses:
+    #     '200':
+    #       description: Bill has been deleted successfully
+    #       content:
+    #         application/json:
+    #           schema:
+    #             type: object
+    #             example: {}
+    #     '404':
+    #       description: Bill based on id is doesn't exist
+    #       content:
+    #         application/json:
+    #           schema:
+    #             $ref: '#/components/schemas/Error'
+    #     '500':
+    #       description: Internal server error
+    #       content:
+    #         application/json:
+    #           schema:
+    #             $ref: '#/components/schemas/Error'
+  /users:
     get:
       description: Returns a list of users
       security:
@@ -163,7 +225,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /user/{user_id}:
+  /user/{_id}:
     get:
       description: Returns the user with the given ID
       security:
