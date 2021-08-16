@@ -45,7 +45,8 @@ module.exports.login = async (req, res) => {
 
         res.json({
             accessToken,
-            refreshToken
+            refreshToken,
+            user
         });
     } else {
         res.send('Email or password incorrect.');
