@@ -58,7 +58,9 @@
         </ul>
       </div>
     </div>
-    <div class="sb-sidenav-footer">
+    <div *ngIf="(currentUser$ | async) as currentuser" class="sb-sidenav-footer">
+      <div class="small">Logged in as:</div>
+      {{currentuser.firstName}} {{currentuser.lastName}}
     </div>
   </nav>
 </div>

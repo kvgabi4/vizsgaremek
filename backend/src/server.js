@@ -50,7 +50,7 @@ app.post('/logout', authHandler.logout);
 
 // app.use('/person', authenticateJwt, require('./controllers/person/person.routes'));
 // app.use('/post', authenticateJwt, adminOnly, require('./controllers/post/post.routes'));
-app.use('/bills', authenticateJwt, adminOnly, require('./controllers/bill/routes'));
+app.use('/bills', require('./controllers/bill/routes'));
 app.use('/orders', require('./controllers/order/routes'));
 app.use('/products', require('./controllers/product/routes'));
 app.use('/customers', require('./controllers/customer/routes'));
