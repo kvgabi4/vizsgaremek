@@ -11,6 +11,7 @@ import { OrdersComponent } from './page/orders/orders.component';
 import { ProductEditComponent } from './page/product-edit/product-edit.component';
 import { ProductsComponent } from './page/products/products.component';
 import { UserProfileComponent } from './page/user-profile/user-profile.component';
+import { UsersComponent } from './page/users/users.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: 'bills',
     component: BillsComponent,
+  },
+  {
+    path: 'users',
+    component: UsersComponent,
   },
   {
     path: 'login',

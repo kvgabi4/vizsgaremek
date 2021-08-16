@@ -101,6 +101,21 @@ export class ConfigService {
     {key: "status", title: "Státusz"},
   ];
 
+  userColumns: ITableColumn[] = [
+    {
+      key: "_id", title: "Azonosító",
+      pipes: [ConfigService.curveLongString],
+      pipeArgs: [[0, 6]]
+    },
+    {key: "lastName", title: "Vezetéknév"},
+    {key: "firstName", title: "Keresztnév"},
+    {key: "email", title: "E-mail"},
+    {key: "password", title: "Jelszó"},
+    {key: "role", title: "Szerepkör"},
+    {key: "active", title: "Aktív", htmlOutput: ConfigService.activeOrInactiveSign },
+  ];
+
+
   constructor() {
    }
 
