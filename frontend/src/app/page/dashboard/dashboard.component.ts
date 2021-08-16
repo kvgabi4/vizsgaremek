@@ -98,15 +98,12 @@ export class DashboardComponent implements OnInit {
   ];
   orderChartColor: Color[] = [
     { // first color
-      // backgroundColor: ['#ff9800']
       backgroundColor: ['rgba(100,150,255,.8)']
     },
     { // second color
-      // backgroundColor: ['#4caf80']
       backgroundColor: ['rgba(90,120,220,.8)']
     },
     { // third color
-      // backgroundColor: ['#00bcd4']
       backgroundColor: ['rgba(70,100,190,.8)']
     },
   ];
@@ -115,7 +112,6 @@ export class DashboardComponent implements OnInit {
   billChartLabels: Label[] = ['új számlák száma', 'kifizetett számlák száma'];
   billChartColor: Color[] = [
     {
-      // backgroundColor: ['#ff9800', '#4caf50', '#00bcd4']
       backgroundColor: ['rgba(0,230,230,.9)', 'rgba(10, 160, 180, 0.9)']
     }
   ];
@@ -124,7 +120,6 @@ export class DashboardComponent implements OnInit {
   billSumChartData: ChartDataSets[] = [{ data: [0, 0] }];
   billSumChartColor: Color[] = [
     {
-      // backgroundColor: ['#ff9800', '#8e24aa']
       backgroundColor: ['rgba(0,170,170,.9)', 'rgba(10, 110, 130, 0.9)']
     }
   ];
@@ -149,15 +144,6 @@ export class DashboardComponent implements OnInit {
   ];
   productChartLabels: Label[] = [''];
   productChartColor: Color[] = [
-    // {
-    //   backgroundColor: ['#ff9800']
-    // },
-    // {
-    //   backgroundColor: ['#8e24aa']
-    // },
-    // {
-    //   backgroundColor: ['#00bcd4']76 175 80
-    // },
     {
       backgroundColor: ['rgba(180, 250, 150, 0.9)']
     },
@@ -172,15 +158,12 @@ export class DashboardComponent implements OnInit {
   customerChartData: ChartDataSets[] = [
     {
     data: [0, 0],
-    // borderColor: ['#fff'],
-    // borderWidth: [0]
   },
   ];
   customerChartLabels: Label[] = ['aktív vásárlók', 'inaktív vásárlók'];
   customerChartColor: Color[] = [
     {
       backgroundColor: ['rgba(255, 190, 20, 0.9)', 'rgba(255,255,150,.8)']
-      // backgroundColor: [ '#4caf50', '#00bcd4' ]
     }
   ];
 
@@ -215,15 +198,15 @@ export class DashboardComponent implements OnInit {
           data.filter(o => o.status === 'új').length;
         const paidBills: number =
           data.filter(o => o.status === 'kifizetett').length
-        // const newBillsSum: number =
-        //   data.filter(o => o.status === 'új').
-        //   reduce((acc, one) => acc + parseInt('' + one.amount), 0)
-        // const paidBillsSum: number =
-        //   data.filter(o => o.status === 'kifizetett').
-        //     reduce((acc, one) => acc + parseInt('' + one.amount), 0)
+        const newBillsSum: number =
+          data.filter(o => o.status === 'új').
+          reduce((acc, one) => acc + parseInt('' + one.amount), 0)
+        const paidBillsSum: number =
+          data.filter(o => o.status === 'kifizetett').
+            reduce((acc, one) => acc + parseInt('' + one.amount), 0)
 
         this.billChartData[0].data = [newBills, paidBills];
-        // this.billSumChartData[0].data = [newBillsSum, paidBillsSum];
+        this.billSumChartData[0].data = [newBillsSum, paidBillsSum];
         // console.log(this.billChartData)
       }
     );
@@ -235,8 +218,6 @@ export class DashboardComponent implements OnInit {
           data.filter(o => o.active).length;
         const inactiveProducts: number =
           data.filter(o => !o.active).length;
-        // const activeAndFeaturedProducts: number =
-        //   data.filter(o => o.active && o.featured).length;
 
         data.forEach((o, i) => {
             Math.random()
@@ -256,8 +237,6 @@ export class DashboardComponent implements OnInit {
 
         this.productChartData[0].data = [ activeProducts ];
         this.productChartData[1].data = [ inactiveProducts ];
-        // this.productChartData[2].data = [ activeAndFeaturedProducts ];
-        // console.log(this.productAllChartData, this.productAllChartLabels)
       }
     );
 

@@ -15,7 +15,7 @@ export class PieChartComponent implements OnInit {
 
   public pieChartOptions: ChartOptions = {
     legend: {
-      labels: { fontColor: 'white' },
+      labels: { fontColor: 'black' },
       align: 'end',
       position: 'right',
     },
