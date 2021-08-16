@@ -9,6 +9,10 @@ export class SorterPipe implements PipeTransform {
     if (!Array.isArray(value) || !column) {
       return value;
     }
+    // if (column === 'address') {
+    //   value = value.map(item => `${item.address.zip} ${item.address.city} ${item.address.street}`)
+    //   console.log(value)
+    // }
 
     return value.sort(function (a: any, b: any) {
 
@@ -18,6 +22,12 @@ export class SorterPipe implements PipeTransform {
         }
         return b[column] - a[column];
       } else {
+        if (typeof a[column] === 'object') {
+          if (direct) {
+            return a[column].zip - b[column].zip;
+          }
+          return b[column].zip - a[column].zip;
+        }
         const aA: string = ('' + a[column]).toLowerCase();
         const bB: string = ('' + b[column]).toLowerCase();
         if (direct) {
