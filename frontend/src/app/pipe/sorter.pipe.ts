@@ -6,7 +6,7 @@ export class SorterPipe implements PipeTransform {
 
   transform(value: any[] | null, column: string, direct: boolean): any[] | null {
 
-    if(!Array.isArray(value) || !column){
+    if (!Array.isArray(value) || !column) {
       return value;
     }
 
@@ -18,10 +18,6 @@ export class SorterPipe implements PipeTransform {
         }
         return b[column] - a[column];
       } else {
-        // if (typeof a[column] === 'object' && typeof b[column] === 'object') {
-        //   a[column] = Object.values(a[column]).join('');
-        //   b[column] = Object.values(b[column]).join('');
-        // }
         const aA: string = ('' + a[column]).toLowerCase();
         const bB: string = ('' + b[column]).toLowerCase();
         if (direct) {
