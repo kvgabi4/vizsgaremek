@@ -10,6 +10,7 @@ import { OrderEditComponent } from './page/order-edit/order-edit.component';
 import { OrdersComponent } from './page/orders/orders.component';
 import { ProductEditComponent } from './page/product-edit/product-edit.component';
 import { ProductsComponent } from './page/products/products.component';
+import { UserEditComponent } from './page/user-edit/user-edit.component';
 import { UserProfileComponent } from './page/user-profile/user-profile.component';
 import { UsersComponent } from './page/users/users.component';
 
@@ -57,6 +58,10 @@ const routes: Routes = [
   {
     path: 'product/:_id',
     component: ProductEditComponent,
+  },
+  {
+    path: 'user/:_id',
+    component: UserEditComponent,
   },
   {
     path: 'profile',
