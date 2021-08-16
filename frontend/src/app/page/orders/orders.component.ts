@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 import { Order } from 'src/app/model/order';
 import { ITableColumn, ConfigService } from 'src/app/service/config.service';
 import { OrderService } from 'src/app/service/order.service';
@@ -21,26 +20,15 @@ export class OrdersComponent implements OnInit {
   filterKey: string[] = this.filterKeys[1];
   color: string[] = ['bg-primary', 'btn-outline-primary'];
   phrase: string = '';
-  // price: number[] = [];
 
   constructor(
     private config: ConfigService,
     private orderService: OrderService,
     private router: Router,
     private toastr: ToasterService
-  ) {
-    // this.filterKeys.forEach(item => item[0] === 'price'? );
-   }
+  ) { }
 
   ngOnInit(): void {
-    // this.list$.subscribe(
-    //   response => response.forEach((order, index) => {
-    //     this.price[index] = 0;
-    //     order.products.map(
-    //       (prod, ind) => this.price[index] += prod.price * order.amounts[ind])
-    //     }
-    //   )
-    // );
   }
 
   onSelectOne(order: Order): void {

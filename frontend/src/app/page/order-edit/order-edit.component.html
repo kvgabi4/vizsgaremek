@@ -52,7 +52,6 @@
             min=1>
         </div>
 
-        <!-- <button type="button" (click)="submitPrice(orderForm, order)"></button> -->
         <div class="form-group mt-3">
           <div class="d-flex justify-content-between">
             <label for="">Ár</label>
@@ -63,42 +62,6 @@
           <input class="custom-select border col-12 mr-5" name="price" [(ngModel)]="order.price" type="number"
             required>
         </div>
-        <!-- <div *ngIf="!order.product.price" class="form-group mt-3">
-          <div class="d-flex justify-content-between">
-            <label for="">Ár</label>
-            <div [hidden]="orderForm.controls.price?.valid" class="error-message mt-1 text-end">
-              Add meg a végösszeget!
-            </div>
-          </div>
-          <input class="custom-select border col-12 mr-5" name="price" [(ngModel)]="order.price" type="number"
-            required>
-        </div>
-
-        <div *ngIf="order.product.price" class="form-group mt-3">
-          <div class="d-flex justify-content-between">
-            <label for="">Ár</label>
-          </div>
-          <input class="custom-select border col-12 mr-5" name="price" [(ngModel)]="order.product.price * order.quantity" type="number"
-            disabled>
-        </div> -->
-
-        <!-- <div class="form-group mt-3">
-          <div class="d-flex justify-content-between">
-            <label for="">Termékek</label>
-          </div>
-          <input name="orders" [value]="order.products" type="text" class="form-control"
-            disabled pattern=".{6,}" required>
-            <div [hidden]="orderForm.controls.products?.valid" class="error-message mt-1 text-end">
-              Válassz terméket a listából!
-            </div>
-            <select class="custom-select border col-12 mr-5" name="product" [(ngModel)]="order.products" required >
-              <option *ngFor="let product of products$ | async" [value]="[product._id]">{{product.name}} - {{product.category}}</option>
-            </select>
-            <div [hidden]="orderForm.controls.orders?.valid" class="error-message mt-1 text-end">
-              Add meg a mennyiséget (tő)!
-            </div>
-            <input class="custom-select border col-12 mr-5" name="amount" [(ngModel)]="order.orders[0].amount" type="number" required >
-        </div> -->
 
         <div class="form-group mt-3">
           <div class="d-flex justify-content-between">
@@ -118,8 +81,6 @@
               Válassz státuszt (új, kiszállított, kifizetett)!
             </div>
           </div>
-          <!-- <input name="status" [(ngModel)]="order.status" type="text" class="form-control"
-            pattern="^'new'||'shipped'||'paid'$" required> -->
 
           <select class="custom-select border col-12 mr-5" name="status" [(ngModel)]="order.status" required>
             <option *ngFor="let key of ['új', 'kiszállított', 'kifizetett']" [value]="[key]">{{key}}</option>
@@ -137,12 +98,6 @@
             pattern="^.{2,100}$"></textarea>
         </div>
 
-        <!--<button [disabled]="orderForm.invalid || clicked" (click)="showHtmlToaster(order)" type="submit"
-          class="btn btn-success btn-block btn-lg mt-2">
-          <i *ngIf="!clicked" class="fa fa-save"></i>
-          <i *ngIf="clicked" class="fa fa-refresh"></i>
-        </button>--->
-        <!-- <button [disabled]="orderForm.invalid || clicked" (click)="showNotification('top','center', order)" type="submit" class="btn btn-success btn-block btn-lg mt-2"> -->
         <button [disabled]="orderForm.invalid || clicked" type="submit" class="btn btn-success col-12 btn-lg mt-5">
           <i *ngIf="!clicked" class="fas fa-save"></i>
           <i *ngIf="clicked" class="fas fa-sync"></i>
