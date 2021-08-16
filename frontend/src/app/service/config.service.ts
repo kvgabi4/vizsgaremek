@@ -47,7 +47,7 @@ export class ConfigService {
     {key: "category", title: "Kategória"},
     {key: "price", title: "Ár", pipes: [new CurrencyPipe('hu-HU')], pipeArgs: [['HUF', 'symbol', '3.0']]},
     {key: "active", title: "Aktív", htmlOutput: ConfigService.activeOrInactiveSign },
-    {key: "image", title: "Kép"},
+    {key: "image", title: "Kép", htmlOutput:ConfigService.showImage},
     {
       key: "description", title: "Leírás",
       pipes: [ConfigService.curveLongString],
@@ -166,6 +166,16 @@ export class ConfigService {
   static setNames(data: any, key: string): string {
     return `${data.lastName} ${data.firstName}`
   }
+
+  static showImage(url: string): string {
+    return `<img
+              src="http://localhost:3000/${url}"
+              alt="${url}"
+              class="product_image"
+            >`;
+  }
+
+
 
   // static sqlDate(jsTime: number): string | number | boolean | undefined {
   //   const options: Intl.DateTimeFormatOptions = {
