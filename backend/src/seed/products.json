@@ -453,7 +453,7 @@
         "price": 2500,
         "active": true,
         "description": "Nagyon bőtermő, későn fordul termőre. Nagy átlagosan 140b tömegű, 60 mm feletti átmérőjű, gyümölcse gömb alakú. Alapszíne sárgásfehér, kis részén világos pirossal mosott. Héja durván molyhos. Húsa közepesen kemény, zöldesfehér, a mag körül kissé pirosas. Magvaváló, kitűnő ízű. Rosszul szállítható, nyomódásra érzékeny. Augusztus 2-3. dekádjában – középidőben érik. Öntermékeny.",
-        "image": "images/apricot/champion.jpg"
+        "image": "images/peach/champion.jpg"
     },
     {
         "name": "Cresthaven",
@@ -461,7 +461,7 @@
         "price": 2500,
         "active": true,
         "description": "Általában bőtermő, egyes években közepes. Gyümölcse nagy-igen nagy, átlagosan 150g tömegű, lapított gömb alakú, csúcsán kissé bemélyedt, közepesen vagy alig molyhos héjú. Fedőszíne 50-70 %-ban vörös.  Húsa sárga, mag körül vörös, szilárd állományú, magvaváló. Íze jó, jól tűri a szállítást, tárolást, sokoldalúan felhasználható. Augusztus végén szeptember elején érik. Öntermékeny.",
-        "image": "images/apricot/cresthaven.jpg"
+        "image": "images/peach/cresthaven.jpg"
     },
     {
         "name": "Dixired",
@@ -469,7 +469,7 @@
         "price": 2500,
         "active": true,
         "description": "Későn fordul termőre. Termőképessége jó, termésbiztonsága nem minden évben kielégítő. Gyümölcse nagy, átlagosan 130 g tömegű. Ritkítva és öntözve az A és AA méretű gyümölcs nagy arányban szüretelhető. Alakja gömb, de gyakran részaránytalan. Narancssárga héján 70-80 %-ban intenzív piros fedőszín alakul ki, amely éréskor sötétbordóvá válik.  Húsa sárga, kemény, maghoz kötött. Íze kellemes, savanykás fűszeres. Jól szállítható, érési idejében a legszebb minőséget adja, ”világ fajta”. Érés ideje: Korai érésű, július közepén, a Redhaven előtt érik 2 héttel. Öntermékeny.",
-        "image": "images/apricot/dixired.jpg"
+        "image": "images/peach/dixired.jpg"
     },
     {
         "name": "Mariska",
@@ -477,7 +477,7 @@
         "price": 2500,
         "active": true,
         "description": "Termőképessége és termésbiztonsága jó. Gyümölcse középnagy, 80 g tömegű, 50-60mm átmérőjű, enyhén lapított gömb alakú. felülete sárgászöld, a piros fedőszín csíkozottan jelenik meg. Húsa fehér, bőlevű, éretten félig magvaváló, jellegzetes zamatú, jó ízű. Július 2-3. dekádjában érik. Öntermékeny.",
-        "image": "images/apricot/mariska.jpg"
+        "image": "images/peach/mariska.jpg"
     },
     {
         "name": "Redhaven",
@@ -485,7 +485,7 @@
         "price": 2500,
         "active": true,
         "description": "Rendszeresen és bőven terem, nagy gyümölcsei átlagosan 130 g tömegűek, 60 mm feletti átmérőjű, oldalról lapított, kissé aszimmetrikus gömb alakú. Héja közepesen molyhos, alapszíne sárga, a felület 60-70 %-án csíkozott, mosott, sötétvörös fedőszín borítja. Húsa élénksárga, a mag körül vörös, közepesen szilárd, magvaváló. Július végén-augusztus elején. Öntermékeny.",
-        "image": "images/apricot/redhaven.jpg"
+        "image": "images/peach/redhaven.jpg"
     },
     {
         "name": "Alsószentiváni 117",

@@ -34,14 +34,13 @@ export class ConfigService {
       pipeArgs: [['zip', 'city', 'street']]
     },
     {key: "active", title: "Aktív", htmlOutput: ConfigService.activeOrInactiveSign },
-    // {key: "orders", title: "Megrendelések" }
   ];
 
   productColumns: ITableColumn[] = [
     {
       key: "_id", title: "Azonosító",
       pipes: [ConfigService.curveLongString],
-      pipeArgs: [[0, 6]]
+      pipeArgs: [[0, 8]]
     },
     {key: "name", title: "Megnevezés"},
     {key: "category", title: "Kategória"},
@@ -65,51 +64,16 @@ export class ConfigService {
       key: "customer", title: "Vásárló",
       pipes: [ConfigService.curveLongString],
       pipeArgs: [[0, 8]]
-      // pipes: [ConfigService.setNames],
-      // pipeArgs: [['customer.firstName', 'customer.lastName']]
     },
-    // { key: "products", title: "Termékek" },
-
-    // {
-    //   key: "products", title: "Termékek",
-    //   pipes: [ConfigService.getArrayItems],
-    //   pipeArgs: [['name']]
-    // },
-    // {
-    //   key: "amounts", title: "Mennyiségek",
-    //   // pipes: [ConfigService.getArrayItems],
-    //   // pipeArgs: [['name']]
-    // },
-    // {key: "price", title: "Ár összesen", pipes: [new CurrencyPipe('hu-HU')], pipeArgs: [['HUF', 'symbol', '3.0']]},
 
     {
       key: "product", title: "Termék",
       pipes: [ConfigService.curveLongString],
       pipeArgs: [[0, 8]]
-      // pipes: [ConfigService.getArrayItems],
-      // pipeArgs: [['name']]
     },
     {
-      key: "price", title: "Ár",
-      // pipes: [ConfigService.getArrayItems],
-      // pipeArgs: [['name']]
+      key: "price", title: "Ár", pipes: [new CurrencyPipe('hu-HU')], pipeArgs: [['HUF', 'symbol', '3.0']]
     },
-
-    // {key: "products[0].amounts", title: "Mennyiségek"},
-    // db.json:
-    // "products": [
-    //   {
-    //     "productId": "987fgh",
-    //     "amount": 3
-    //   },
-    //   {
-    //     "productId": "999fff",
-    //     "amount": 15
-    //   }
-    // ],
-
-
-    // {key: "date", title: "Dátum", pipes: [ConfigService.sqlDate]},
     {key: "date", title: "Dátum"},
     {key: "status", title: "Státusz"},
     {
@@ -129,21 +93,15 @@ export class ConfigService {
       key: "order", title: "Megrendelés száma",
       pipes: [ConfigService.curveLongString],
       pipeArgs: [[0, 8]]
-      // pipes: [ConfigService.setData],
-      // pipes: [ConfigService.curveLongString],
-      // pipeArgs: [[0, 6]]
     },
     {
-      key: "amount", title: "Végösszeg",
-      // pipes: [ConfigService.curveLongString],
-      // pipeArgs: [[0, 6]]
+      key: "amount", title: "Végösszeg", pipes: [new CurrencyPipe('hu-HU')], pipeArgs: [['HUF', 'symbol', '3.0']]
     },
     {key: "date", title: "Dátum"},
     {key: "status", title: "Státusz"},
   ];
 
   constructor() {
-    console.log(this.orderColumns)
    }
 
   static activeOrInactiveSign(v: boolean): string {
@@ -174,19 +132,6 @@ export class ConfigService {
               class="product_image"
             >`;
   }
-
-
-
-  // static sqlDate(jsTime: number): string | number | boolean | undefined {
-  //   const options: Intl.DateTimeFormatOptions = {
-  //     year: 'numeric',
-  //     month: 'numeric',
-  //     day: 'numeric',
-  //     hour: 'numeric',
-  //     minute: 'numeric'
-  //   };
-  //   return Intl.DateTimeFormat('hu', options).format(jsTime);
-  // }
 
   static curveLongString(
     data: string,
