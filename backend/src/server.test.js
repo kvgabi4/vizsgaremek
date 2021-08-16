@@ -44,7 +44,7 @@ describe('REST API integration tests', () => {
 
     beforeEach(done => {
         // const { username, password, host } = config.get('database');
-        const { host } = config.get('database');
+        // const { host } = config.get('database');
 
         // {
         //     "database": {
@@ -55,17 +55,17 @@ describe('REST API integration tests', () => {
         // }
         
 
-        // mongoose
-            // .connect(`mongodb://${host}/${databasename}`, {
-            // // .connect(host, {
-            //     useNewUrlParser: true,
-            //     useUnifiedTopology: true
-            // })
+        const { databasename, host } = config.get('database');
         mongoose
-            .connect(`mongodb+srv://NodeUser:y4iVtgYt6N5oeOHY@cluster0.td68u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`, {
+            .connect(`mongodb://${host}/${databasename}`, {
                 useNewUrlParser: true,
                 useUnifiedTopology: true
             })
+        // mongoose
+        //     .connect(`mongodb+srv://NodeUser:y4iVtgYt6N5oeOHY@cluster0.td68u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`, {
+        //         useNewUrlParser: true,
+        //         useUnifiedTopology: true
+        //     })
             .then(() => {
                 done();
             })

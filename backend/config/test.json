@@ -2,6 +2,6 @@
     "database": {
         "username": "NodeUser",
         "password": "y4iVtgYt6N5oeOHY",
-        "host": "cluster0.td68u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+        "host": "mongo:27017/JsetDB?retryWrites=true&w=majority"
     }
 }

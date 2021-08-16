@@ -1,0 +1,6 @@
+{
+    "database": {
+        "databasename": "JestDB",        
+        "host": "localhost:27017"
+    }
+}

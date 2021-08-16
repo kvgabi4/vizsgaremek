@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { LOCALE_ID, NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { registerLocaleData } from '@angular/common';
 import localeHu from '@angular/common/locales/hu';
@@ -31,6 +31,7 @@ import { InfoCardComponent } from './common/info-card/info-card.component';
 import { BarChartComponent } from './common/chart/bar-chart/bar-chart.component';
 import { ChartsModule } from 'ng2-charts';
 import { PieChartComponent } from './common/chart/pie-chart/pie-chart.component';
+import { JwtInterceptorInterceptor } from './service/jwt-interceptor.interceptor.service';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,12 @@ import { PieChartComponent } from './common/chart/pie-chart/pie-chart.component'
     })
   ],
   providers: [
-    {provide: LOCALE_ID, useValue: 'hu-HU'}
+    { provide: LOCALE_ID, useValue: 'hu-HU'},
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtInterceptorInterceptor,
+      multi: true
+    },
   ],
   bootstrap: [AppComponent]
 })
