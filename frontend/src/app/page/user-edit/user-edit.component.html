@@ -58,8 +58,11 @@
         <div class="form-group mt-3">
           <div class="d-flex justify-content-between">
             <label for="">Szerepkör</label>
+            <div [hidden]="userForm.controls.role?.valid" class="error-message mt-1">
+              Válassz státuszt (új, kifizetett)!
+            </div>
           </div>
-          <select class="custom-select border col-12 mr-5" name="role" [(ngModel)]="user.role" required>
+          <select class="custom-select border col-12 mr-5" name="role" [(ngModel)]="user.role">
             <option value="" selected disabled hidden>1</option>
             <option *ngFor="let role of [1, 2, 3]" [value]="[role]">{{role}}
             </option>
