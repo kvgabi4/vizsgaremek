@@ -41,7 +41,7 @@ mongoose
 
 app.use(cors());
 app.use(morgan('combined', { stream: logger.stream }));
-app.use(express.static('public'));
+// app.use(express.static('kpublic'));
 app.use(bodyParser.json());
 
 // Router.
@@ -58,7 +58,7 @@ app.use('/customers', authenticateJwt, require('./controllers/customer/routes'))
 app.use('/users', authenticateJwt, require('./controllers/user/routes'));
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-// app.use('/public', express.static(path.join(__dirname, "public")));
+app.use('/public', express.static(path.join(__dirname, "public")));
 // app.get('*', (req, res) => {
 //     res.sendFile(path.join(__dirname, 'public/index.html'));
 //  });
