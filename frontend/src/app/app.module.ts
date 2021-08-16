@@ -32,6 +32,7 @@ import { BarChartComponent } from './common/chart/bar-chart/bar-chart.component'
 import { ChartsModule } from 'ng2-charts';
 import { PieChartComponent } from './common/chart/pie-chart/pie-chart.component';
 import { JwtInterceptorInterceptor } from './service/jwt-interceptor.interceptor.service';
+import { SorterPipe } from './pipe/sorter.pipe';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { JwtInterceptorInterceptor } from './service/jwt-interceptor.interceptor
     UserProfileComponent,
     InfoCardComponent,
     BarChartComponent,
-    PieChartComponent
+    PieChartComponent,
+    SorterPipe
   ],
   imports: [
     BrowserModule,

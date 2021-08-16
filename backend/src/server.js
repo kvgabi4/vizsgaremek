@@ -7,6 +7,7 @@ const morgan = require('morgan');
 const swaggerUi = require('swagger-ui-express');
 const YAML = require('yamljs');
 const cors = require('./config/cors');
+const path = require('path');
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
@@ -51,11 +52,16 @@ app.post('/logout', authHandler.logout);
 // app.use('/person', authenticateJwt, require('./controllers/person/person.routes'));
 // app.use('/post', authenticateJwt, adminOnly, require('./controllers/post/post.routes'));
 app.use('/bills', authenticateJwt, require('./controllers/bill/routes'));
-app.use('/orders', require('./controllers/order/routes'));
-app.use('/products', require('./controllers/product/routes'));
-app.use('/customers', require('./controllers/customer/routes'));
-app.use('/users', require('./controllers/user/routes'));
+app.use('/orders', authenticateJwt, require('./controllers/order/routes'));
+app.use('/products', authenticateJwt, require('./controllers/product/routes'));
+app.use('/customers', authenticateJwt, require('./controllers/customer/routes'));
+app.use('/users', authenticateJwt, require('./controllers/user/routes'));
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+// app.use('/public', express.static(path.join(__dirname, "public")));
+// app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, 'public/index.html'));
+//  });
 
 app.use( (err, req, res, next) => {
     res.status(err.statusCode);
